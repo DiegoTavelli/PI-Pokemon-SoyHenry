@@ -6,12 +6,12 @@ const routes = require('./routes/index.js');
 require('./db.js');
 
 const server = express();
-const cors = require('cors')
+// const cors = require('cors')
 server.name = 'API';
 
 server.use(express.urlencoded({ extended: true, limit: '50mb' }));
 server.use(express.json({ limit: '50mb' }));
-server.use(cors());
+// server.use(cors());
 server.use(cookieParser());
 server.use(morgan('dev'));
 server.use((req, res, next) => {
