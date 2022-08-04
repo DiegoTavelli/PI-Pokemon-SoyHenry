@@ -1,21 +1,14 @@
 const { Router } = require('express');
-const axios = require('axios').default;
+// const axios = require('axios');
 const { Type } = require('../db.js')
 
 const router = Router();
+// const { getTypes } = require('../middlewares/middlewares')
 
-router.get('/', async (req, res) => {
-
-  const response = await axios.get('https://pokeapi.co/api/v2/type');
-  let dbResponse = await Type.findAll();
-  if (!dbResponse) {
-    response.data.results.map(async (t) => {
-      await Type.create({
-        name: t.name
-      })
-    });
-  }
-  return res.send(await Type.findAll());
+router.get('/', async (req, res, next) => {
+  return Type.findAll()
+    .then((types) => res.send(types))
+    .catch((err) => next(err))
 })
 
 

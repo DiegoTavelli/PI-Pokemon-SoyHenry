@@ -3,7 +3,7 @@ const { DataTypes } = require('sequelize');
 // Luego le injectamos la conexion a sequelize.
 module.exports = (sequelize) => {
   // define model
-  sequelize.define('pokemon', {
+  return sequelize.define('pokemon', {
     id: {
       type: DataTypes.UUID,
       primaryKey: true,
@@ -32,9 +32,10 @@ module.exports = (sequelize) => {
     weight: {
       type: DataTypes.INTEGER,
     },
+    image: {
+      type: DataTypes.STRING,
+    }
   }, {
     timestamps: false,
   });
 };
-// /^[0-9A-F]{8}-[0-9A-F]{4}-4[0-9A-F]{3}-[89AB][0-9A-F]{3}-[0-9A-F]{12}$/i.test(id)
-// regex uuidv4
