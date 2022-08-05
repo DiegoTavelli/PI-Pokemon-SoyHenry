@@ -41,7 +41,7 @@ const getAll = async () => {
     });
     if (db.length) {
       //If have Pokemons in db, spread to join db and Api Response.
-      dbApi = [...db, ...pokemonApi];
+      dbApi = [...pokemonApi, ...db];
     } else {
       //If don't have any on db, just return what's in the Api.
       dbApi = [...pokemonApi]
@@ -99,8 +99,7 @@ const getByName = async (name) => {
       where: {
         name: name
       },
-      include:
-      {
+      include: {
         model: Type,
         as: 'type'
       }

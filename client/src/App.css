@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  background-image:radial-gradient(rgb(193, 5, 5),rgb(8, 8, 122));
+  min-height: 900px;
+  min-width: 450px;
 }
 
 .App-logo {

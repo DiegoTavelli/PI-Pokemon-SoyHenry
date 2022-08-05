@@ -1,7 +1,6 @@
 const { Router } = require('express');
 const router = Router();
 const axios = require('axios');
-
 const { Pokemon, Type } = require('../db')
 const { getAll, getById, getByName } = require('../middlewares/middlewares')
 
@@ -52,7 +51,7 @@ router.post('/', async (req, res, next) => {
       speed: Number(speed),
       height: Number(height),
       weight: Number(weight),
-      image: 'https://media.giphy.com/media/DRfu7BT8ZK1uo/giphy.gif'
+      image: "https://www.freeiconspng.com/uploads/pokeball-3d-png-20.png",
     };
 
     let types = [typeOne, typeTwo ? typeTwo : null];
@@ -60,10 +59,9 @@ router.post('/', async (req, res, next) => {
     return await Pokemon.create(pokemon)
       .then((pkm) => {
         pkm.addType(types);
-
         return res.send({ info: "Pokemon successfully created" }) // { info: "Pokemon successfully created" }
       })
-    // await pokemon.addTypes(type);
+
   } catch (error) {
     next("Error on post '/' route");
   }

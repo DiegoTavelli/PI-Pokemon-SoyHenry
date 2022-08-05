@@ -1,0 +1,10 @@
+.waitingBall {
+  margin-top: 254px;
+  border-radius: 1000px;
+  max-width: 300px;
+  box-shadow: 1px 1px 20px 1px rgb(9, 5, 75);
+  }
+
+  .card {
+  background-image: url("../../images/backCard.png");
+  }
