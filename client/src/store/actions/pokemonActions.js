@@ -11,6 +11,6 @@ export function getPokemons() {
         type: GET_POKEMONS,
         payload: response.data
       });
-    }).catch((error) => console.log(error))
+    }).catch((error) => console.log("Error on getPokemons actions", error))
   };
 }

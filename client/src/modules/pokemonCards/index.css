@@ -1,3 +1,7 @@
+.fullCard {
+margin-top: 100px;
+}
+
 .waitingBall {
 margin-top: 180px;
 margin-right: 30px;
@@ -12,40 +16,105 @@ box-shadow: 1px 1px 20px 1px rgb(9, 5, 75);
   /* margin: auto; */
   border-radius: 50px;
   box-shadow: 1px 1px 20px 1px rgb(9, 5, 75);
-  /* max-width: 300px; */
-  margin-top: 30px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
   min-height: 400px;
+  min-width: 200px;
+  max-width: 400px;
   min-width: 200px;
   width: 300px;
   }
+  
 
   .Card:hover {
-    transform: scale(1.05);
-    box-shadow: 3px 3px 30px 2px rgb(156, 126, 198);
-  }
+    transform: scale(1.02) rotate(0.1deg)  ;
+    box-shadow: 3px 3px 15px 2px rgb(156, 126, 198);
+    
+    }
 
 .imagePokemon {
   max-width: 190px;
+  margin-top: 20px;
   }
 
  .imagePokemon:hover {
-  transform: scale(1.05);
+  transform:rotate(3deg) scale(1.06);
+  /* transform: rotate(-3deg); */
  } 
+
+ img {
+  transition: transform .7s ease-in-out;
+}
 
 .loading {
   margin-top: 5px;
   margin-right: 10px;
   display: inline-block;
   max-width: 160px;
-  
 }
 
 .cardName {
-text-decoration: none;
+  font-size: 1.1rem;
+  margin-top: 28px;
+  margin-left: -15px;
+  text-decoration: none;
+  color: rgb(212, 233, 24);
+  box-sizing: content-box;
+  width: 100%;
+  transform: rotate(30deg);
+}
+
+.cardTypeIcon {
+  margin-left: 180px;
+  margin-top: -10px;
+  padding: 0;
 }
 
 .cardTypes {
+  /* box-shadow: 10px 1px 2000px 10px rgb(146, 141, 15); */
+  padding: 0;
+  /* border-radius: 100px; */
+  text-transform: capitalize;
+  font-size: 1rem;
+  margin-top: -20px;
+  margin-left: 180px;
   text-decoration: none;
+  /* background-color: red; */
+  color: rgb(212, 233, 24);
+}
+
+@media only screen and (max-width: 640px) {
+.Card {
+  /* margin: 0rem 1rem; */
+  /* padding: -10px; */
+   /* margin-top: 60px; */
+   /*margin-bottom: 0px; */
+  /* position: relative; */
+  /* margin-right: 30px; */
+  max-width: 40%;
+  }
+  .cardName {
+    margin-left: -10px;
+    /* margin-bottom: 20px; */
+  }
+.detailPic {
+  max-width: 60%;
+}
+.cardTypes {
+  margin-right: 10px;
+}
+}
+
+@media only screen and (max-width: 590px) {
+  .Card {
+    /* margin: 0rem 1rem; */
+    /* padding: -10px; */
+     /* margin-top: 60px; */
+     /*margin-bottom: 0px; */
+    /* position: relative; */
+    /* margin-right: 30px; */
+    max-width: 10%;
+    }
 }

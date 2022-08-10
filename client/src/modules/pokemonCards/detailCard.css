@@ -1,10 +1,189 @@
+
 .waitingBall {
-  margin-top: 254px;
+  margin-top: 154px;
   border-radius: 1000px;
   max-width: 300px;
   box-shadow: 1px 1px 20px 1px rgb(9, 5, 75);
   }
+  
+
+.allDetailCard {
+  background-image: url('../../images/background.jpg');
+  box-shadow: .5px .5px 20px 10px rgb(9, 5, 75);
+  transform: blur();
+  display:flex;
+  justify-content: center;
+  margin-top: 65px;
+  /* margin-left: 100px; */
+}
 
   .card {
+  /* padding: -10; */
+  z-index: 0;
+  ;
+  margin-top: 40px;
+  margin-left: -300px;
+  margin-right: 0;
+  margin-bottom: 100px;
+  max-width: 500px;
+  min-width: 300px;
+  /* max-height: 500px; */
   background-image: url("../../images/backCard.png");
+  border-radius: 50px;
+  box-shadow: .5px .5px 20px .5px rgb(9, 5, 75);
+  }
+
+  .detailsData {
+    margin-top: 150px;
+    margin-left: 100px;
+  }
+ 
+  .cardNotFound {
+    /* background-image: url('../../images/background.jpg'); */
+    margin-top: 100px;
+    
+    }
+  .detailPic {
+   max-width: 400px;
+   
+  }
+
+  .detailPicNotFound {
+    border-radius: 50px;
+    box-shadow: 2px 2px 1rem rgb(187, 3, 77);
+  }
+
+  .detailName {
+    text-decoration: dotted;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-size: 1.7rem;
+    color: rgb(212, 233, 24);
+    margin-top: 20px;
+    margin-left: 0px;
+    box-sizing: content-box;
+    width: 100%;
+    /* transform: rotate(29deg); */
+    cursor: default;
+  }
+
+  .loading {
+    /* margin-bottom: 400px; */
+  }
+
+.parraf {
+  display: fixed;
+    background-color: rgba(20, 136, 199, 0.835);
+    background-size: 90px;
+    margin-top: -10px;
+    margin-right: 20px;
+    font-weight:bold;
+    color: rgb(210, 185, 84);
+    font-size: 1.3rem;
+    padding: .5rem 1.5rem;
+    border: 2px solid rgba(20, 136, 199, 0.569);
+    cursor: default;
+    transition: all .3s ease;
+    border-radius: 13px;
+}
+
+.parrafId {
+  display: fixed;
+    /* background-color: rgba(20, 136, 199, 0.835); */
+    background-size: 90px;
+    /* margin-top: -100px; */
+    margin-right: 20px;
+        font-weight:bold;
+    color: rgb(210, 185, 84);
+    font-size: 2rem;
+    padding: .5rem 1.5rem;
+    cursor: default;
+      
+}
+
+  .homeBtnDetails {
+    /* background-image: url('../../images/home2.png'); */
+    display: fixed;
+    background-color: rgba(20, 136, 199, 0.835);
+    background-size: 90px;
+    /* margin-top: -100px; */
+    margin-right: 20px;
+    font-weight:bold;
+    color: rgb(210, 185, 84);
+    font-size: 1rem;
+    padding: .5rem 1.5rem;
+    border: 2px solid rgba(20, 136, 199, 0.569);
+    cursor: pointer;
+    transition: all .3s ease;
+    border-radius: 13px;
+  }
+  
+  .homeBtnDetails:hover {
+    background-color: rgba(20, 136, 199, 0.432);
+    box-shadow: 2px 2px 1rem rgb(187, 3, 77),
+    -.3rem -.3rem 1rem rgb(31, 7, 149);
+    border: 2px solid rgba(20, 136, 199, 0.227);
+  }
+  
+  .homeBtnDetails:active {
+    box-shadow: .3rem .3rem 1rem rgb(8, 8, 122),
+    -.3rem -.3rem 1rem rgb(187, 3, 35)
+  }
+  
+  .createBtnDetails {
+    /* background-image: url('../../images/home2.png'); */
+    /* display: fixed; */
+    background-color: rgba(20, 136, 199, 0.835);
+    background-size: 90px;
+    /* margin-top: -100px; */
+    /* margin-left: 800px; */
+    font-weight:bold;
+    color: rgb(210, 185, 84);
+    font-size: 1rem;
+    padding: .5rem 1.5rem;
+    border: 2px solid rgba(20, 136, 199, 0.569);
+    cursor: pointer;
+    transition: all .3s ease;
+    border-radius: 13px;
+  }
+  
+  .createBtnDetails:hover {
+    background-color: rgba(20, 136, 199, 0.432);
+    box-shadow: 2px 2px 1rem rgb(187, 3, 77),
+    -.3rem -.3rem 1rem rgb(31, 7, 149);
+    border: 2px solid rgba(20, 136, 199, 0.227);
+  }
+  
+  .createBtnDetails:active {
+    box-shadow: .3rem .3rem 1rem rgb(8, 8, 122),
+    -.3rem -.3rem 1rem rgb(187, 3, 35)
+  }
+
+  
+
+@media only screen and (max-width: 635px) {
+  .card {
+  z-index: 0;
+  padding: -10px;
+  margin-top: 40px;
+  margin-left: 320px;
+  margin-right: auto;
+  margin-bottom: 100px;
+  max-width: 300px;
+  min-width: 150px;
+  /* max-height: 500px; */
+  background-image: url("../../images/backCard.png");
+  border-radius: 50px;
+  box-shadow: .5px .5px 20px .5px rgb(9, 5, 75);
+  }
+}
+
+  @media only screen and (max-width: 640px) {
+    .cardNotFound {
+      max-width: 300px;
+    }
+    .detailPicNotFound {
+    max-width: 300px;
+    }
+       
   }

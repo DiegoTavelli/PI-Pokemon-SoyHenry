@@ -5,7 +5,7 @@ const { Type } = require('../db.js')
 const router = Router();
 // const { getTypes } = require('../middlewares/middlewares')
 
-router.get('/', async (req, res, next) => {
+router.get('/', (req, res, next) => {
   return Type.findAll()
     .then((types) => res.send(types))
     .catch((err) => next(err))

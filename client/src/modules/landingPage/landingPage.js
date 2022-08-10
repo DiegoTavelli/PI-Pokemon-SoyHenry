@@ -1,13 +1,13 @@
 import React from "react";
 import './landingPage.css';
-import { NavLink } from 'react-router-dom';
 import { useState } from 'react'
-import { withRouter } from "react-router-dom";
+// import { NavLink } from 'react-router-dom';
+// import { withRouter } from "react-router-dom";
 
-import gifIntro from '../../images/gifIntro.gif';
-import gifStart from '../../images/gifStart.gif';
-import logo from '../../images/pokemon.png'
-import welcomeLogo from '../../images/welcomeLogo.png'
+import gifIntro from 'images/gifIntro.gif';
+import gifStart from 'images/gifStart.gif';
+import logo from 'images/pokemon.png'
+import welcomeLogo from 'images/welcomeLogo.png'
 
 
 export default function LandingPage(props) {

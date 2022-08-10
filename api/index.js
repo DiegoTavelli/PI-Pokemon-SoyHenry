@@ -19,25 +19,9 @@
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
-const { Type } = require('./src/db')
-const axios = require('axios');
-
-
-let getTypes = async () => {
-  const response = await axios.get('https://pokeapi.co/api/v2/type');
-  await Promise.all(
-    response.data.results.map((type, i) => {
-      let types = {
-        id: ++i,
-        name: type.name
-      };
-      Type.findOrCreate({ where: { name: types.name } })
-    })
-  )
-}
+const { getTypes } = require('./src/middlewares/middlewareType.js')
 
 getTypes();
-
 
 // Syncing all the models at once.
 conn.sync({ force: false }).then(() => {

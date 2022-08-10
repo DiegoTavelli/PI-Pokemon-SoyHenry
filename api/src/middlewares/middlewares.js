@@ -1,5 +1,5 @@
 const axios = require('axios');
-// const express = require('express');
+const express = require('express');
 const { Pokemon, Type } = require('../db.js');
 
 const getAll = async () => {
@@ -14,7 +14,7 @@ const getAll = async () => {
 
     // Promise.all to call each url and push info to pokemonApi.
     await Promise.all(
-      dbApi.map(async (el) => {
+      dbApi?.map(async (el) => {
         if (el.url) {
           const response = await axios.get(el.url);
           const r = response.data;
@@ -36,7 +36,7 @@ const getAll = async () => {
     const db = await Pokemon.findAll({
       include: {
         model: Type,
-        as: 'type'
+        as: 'types'
       }
     });
     if (db.length) {
@@ -53,44 +53,6 @@ const getAll = async () => {
   }
 };
 
-const getById = async (id) => {
-  let pokeId = {};
-  const regex = /^[0-9A-F]{8}-[0-9A-F]{4}-4[0-9A-F]{3}-[89AB][0-9A-F]{3}-[0-9A-F]{12}$/i;
-
-  try {
-    //if regexp test true for UUID I return it from my db.
-    if (regex.test(id)) {
-      let fromDb = await Pokemon.findByPk(
-        id, {
-        include: {
-          model: Type,
-          as: 'type'
-        }
-      });
-      if (fromDb) return fromDb;
-      return 'There are no matches'
-    }
-    //else I go to the API to get it.
-    const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`);
-    const r = response.data;
-    pokeId = {
-      id: r.id,
-      name: r.name,
-      hp: r.stats[0].base_stat,
-      attack: r.stats[1].base_stat,
-      defense: r.stats[2].base_stat,
-      speed: r.stats[5].base_stat,
-      height: r.height,
-      weight: r.weight,
-      img: r.sprites.other["official-artwork"]["front_default"],
-      type: r.types.map((t) => t.type.name),
-    }
-    return pokeId;
-
-  } catch (error) {
-    return 'There are no matches';
-  }
-};
 
 const getByName = async (name) => {
   let pokeName = {};
@@ -101,7 +63,7 @@ const getByName = async (name) => {
       },
       include: {
         model: Type,
-        as: 'type'
+        as: 'types'
       }
     });//
     if (fromDb) return fromDb;
@@ -122,10 +84,48 @@ const getByName = async (name) => {
     };
     return pokeName;
   } catch (error) {
-    return 'There are no matches';
+    return 'There are no matches getByName';
   }
 }
 
+const getById = async (id) => {
+  let pokeId = {};
+  const regex = /^[0-9A-F]{8}-[0-9A-F]{4}-4[0-9A-F]{3}-[89AB][0-9A-F]{3}-[0-9A-F]{12}$/i;
+
+  try {
+    //if regexp test true for UUID I return it from my db.
+    if (regex.test(id)) {
+      let fromDb = await Pokemon.findByPk(
+        id, {
+        include: {
+          model: Type,
+          as: 'types'
+        }
+      });
+      if (fromDb) return fromDb;
+      return 'There are no matches getById'
+    }
+    //else I go to the API to get it.
+    const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`);
+    const r = response.data;
+    pokeId = {
+      id: r.id,
+      name: r.name,
+      hp: r.stats[0].base_stat,
+      attack: r.stats[1].base_stat,
+      defense: r.stats[2].base_stat,
+      speed: r.stats[5].base_stat,
+      height: r.height,
+      weight: r.weight,
+      img: r.sprites.other["official-artwork"]["front_default"],
+      type: r.types.map((t) => t.type.name),
+    }
+    return pokeId;
+
+  } catch (error) {
+    return 'There are no matches getById';
+  }
+};
 
 module.exports = {
   getAll,

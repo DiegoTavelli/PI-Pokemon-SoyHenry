@@ -11,8 +11,9 @@
   margin-top: 30px;
   border-radius: 1000px;
   box-shadow: 1px 1px 20px 1px rgb(9, 5, 75);
-  max-width: 300px;
+  max-width: 320px;
   margin-left: -51px;
+  
 }
 
 .logo {
@@ -22,9 +23,8 @@
   margin-left: -51px;
 }
 
-
 .backG {
   align-content: center;
-  min-height: 900px;
+  /* min-height: 900px; */
   }
 

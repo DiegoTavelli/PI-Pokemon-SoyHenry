@@ -1,18 +1,29 @@
 import React from 'react';
-import { Fragment } from 'react'
 import { useEffect } from 'react'
-import { connect } from 'react-redux'
-// import { NavLink } from 'react-router-dom';
-import { getDetails } from '../../store/actions/detailCardActions'
-import ballWaiting from '../../images/ballWaiting.gif'
-import loading from '../../images/loading.png'
+import { connect, useDispatch } from 'react-redux'
+import { useParams } from 'react-router-dom';
 import './detailCard.css'
 
+// actions
+import { getDetails } from '../../store/actions/detailCardActions.js'
+import { clearPokemon } from '../../store/actions/clearPokemonActions';
+
+//images
+import ballWaiting from '../../images/ballWaiting.gif'
+import loading from '../../images/loading.png'
+import giphy from '../../images/giphy.webp'
+
 function DetailCard({ details, getDetails }) {
+  const dispatch = useDispatch();
+  const { id } = useParams();
 
+  useEffect(() => {
+    getDetails(id)
+    return () => {
+      dispatch(clearPokemon())
+    }
+  }, []);
 
-  useEffect(() => getDetails(), []);
-  console.log(details)
   if (!details) {
     return (
       <div>
@@ -20,23 +31,43 @@ function DetailCard({ details, getDetails }) {
         <br></br>
         <img src={loading} alt='Loading...' className='loading' />
       </div>
-    )
-  } else {
-    // const { name, image, id, height, weight, hp, attack, defense, speed, typeOne, typeTwo, } = details;
+    );
+  } else if (!details.id) {
     return (
-      <Fragment className='card'>
-        <img src={details.img ? details.img : details.image} alt='Pokemon Pic' />
-        <p>{details.name}</p>
-        <p># {details.id}</p>
-        <p>{details.hp}</p>
-        <p>{details.attack}</p>
-        <p>{details.defense}</p>
-        <p>{details.speed}</p>
-        <p>{details.height}</p>
-        <p>{details.weight}</p>
-        {/* <p>{typeOne}</p>
-        <p>{typeTwo}</p> */}
-      </Fragment>
+      <div>
+        <div className='cardNotFound'>
+          <br></br>
+          <p className='detailName' >{details.name}</p>
+          <img className='detailPicNotFound' src={giphy} alt='notFoundLogo' />
+          <p className='parrafId' >We couldn't find Pokemon with that name</p>
+        </div>
+      </div>
+    )
+  }
+  else {
+    return (
+      <div className='allDetailCard' >
+        <div className='card'>
+          <br></br>
+          <p className='detailName' >{details.name}</p>
+          <p className='parrafId' ># {details.id}</p>
+          <img
+            src={details.img ? details.img : details.image}
+            alt='https://media.giphy.com/media/DRfu7BT8ZK1uo/giphy.gif'
+            className='detailPic'
+          />
+        </div>
+        <div className='detailsData' >
+          <p className='parraf' >Hp: {details.hp}</p>
+          <p className='parraf' >Attack: {details.attack}</p>
+          <p className='parraf' >Defense: {details.defense}</p>
+          <p className='parraf' >Speed: {details.speed}</p>
+          <p className='parraf' >Height: {details.height}</p>
+          <p className='parraf' >Weight: {details.weight}</p>
+          <p className='parraf' >Type: {details.types ? details.types[0].name : details.type[0]}</p>
+          {/* <p className='parraf' >{details.types ? details.types[1].name : details.type[1] ? details.type[1] : ''}</p> */}
+        </div>
+      </div>
     )
   }
 }
@@ -55,7 +86,7 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(DetailCard)
+export default connect(mapStateToProps, mapDispatchToProps)(DetailCard);
 
 
 

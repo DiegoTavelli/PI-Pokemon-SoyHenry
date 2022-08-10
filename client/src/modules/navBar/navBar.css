@@ -1,0 +1,397 @@
+* {
+  box-sizing: border-box;
+ }
+
+ .selectForm {
+  margin-right: 20px;
+ }
+
+ .onlyForm {
+margin: 0;
+ }
+
+.formNav {
+  min-height: 136px;
+  /* display: flex; */
+  flex-direction: row;
+  justify-content: center;
+  z-index: 1;
+  justify-content: space-between;
+  /* gap: 2rem; */
+  /* padding: 1rem 10rem; */
+  width: 100%;
+  /* margin-top: 10px; */
+  position:fixed;
+  background-image:radial-gradient(rgba(193, 35, 35, 0.286),rgba(8, 8, 122, 0.218));
+  /* background-color: red; */
+}
+
+.formNavDetails {
+  min-height: 70px;
+  /* display: flex; */
+  flex-direction: row;
+  justify-content: center;
+  z-index: 1;
+  justify-content: space-between;
+  /* gap: 2rem; */
+  /* padding: 1rem 10rem; */
+  width: 100%;
+  /* margin-top: 10px; */
+  position:fixed;
+  background-image:radial-gradient(rgba(193, 35, 35, 0.286),rgba(8, 8, 122, 0.218));
+  /* background-color: red; */
+}
+
+@media only screen and (max-width: 650px) {
+  
+  .formNav {
+    min-height: 150px;
+    min-width: 650px;
+  align-items: center;
+  }
+  .searchInput {
+    align-items: left;
+  }
+}
+
+.searchInput {
+  margin-top: 5px;
+  max-height: 20px;
+  margin-bottom: 8px;
+  margin-left: 20px;
+  background: rgb(255, 255, 255);
+  font-weight:bold;
+  color: rgb(10, 73, 107);
+  font-size: 1.3rem;
+  padding: 16px 4rem;
+  border: 1.2px solid rgb(20, 136, 199);
+  cursor:text;
+  transition: all .3s ease;
+  /* border-top: rgb(193, 35, 35);
+  border-bottom: rgb(8, 8, 122); */
+  border-radius: 13px;
+  box-shadow: .04rem .04rem 1rem rgb(193, 35, 35),
+  -.04rem -.04rem 1rem rgb(8, 8, 122)
+}
+
+
+input {
+  text-align: center;
+}
+
+.searchInput:hover {
+  box-shadow: 2px 2px 1rem rgb(187, 3, 77),
+  -2rem -2rem -1rem rgb(31, 7, 149);
+  
+}
+
+.searchInput:active {
+  /* border-style: none; */
+  box-shadow: .15rem .15rem .5rem rgb(8, 8, 122),
+  -.1rem -.1rem .5rem rgb(187, 3, 35);
+}
+
+.searchInput:focus {
+  outline: none;
+}
+
+.searchInput::placeholder {
+  font: 22px/3 sans-serif;
+}
+
+/* search button */
+.searchButton {
+  margin-left: 10px;
+  /* display:flexbox; */
+  /* background-image: url('../../images/search.png'); */
+  background-color: rgba(20, 136, 199, 0.8);
+  font-weight:bold;
+  color: rgb(210, 185, 84);
+  font-size: 1rem;
+  padding: .5rem 1.5rem;
+  border: 2px solid rgb(20, 136, 199);
+  cursor: pointer;
+  transition: all .2s ease;
+  border-radius: 50px;
+  /* border-top: rgb(193, 35, 35);
+  border-bottom: rgb(8, 8, 122); */
+  /* box-shadow: .5rem .5rem 1rem rgb(193, 35, 35),
+  -.5rem -.5rem 1rem rgb(8, 8, 122) */
+}
+
+.searchButton:hover {
+  background-color: rgba(20, 136, 199);
+  border: 2px solid rgba(20, 136, 199);
+  /* box-shadow: 2px 2px 1rem rgb(187, 3, 77),
+  -.3rem -.3rem 1rem rgb(31, 7, 149) */
+}
+
+.searchButton:active {
+  box-shadow: .1rem .1rem 10rem rgb(8, 8, 122),
+  -.3rem -.3rem 1rem rgb(187, 3, 35)
+}
+
+.homeAndCreate {
+display: flex;
+}
+
+
+/* home button */
+.homeButton {
+  /* background-image: url('../../images/home2.png'); */
+  /* display:flex; */
+  background-color: rgba(20, 136, 199, 0.835);
+  background-size: 90px;
+  margin-bottom: 3px;
+  margin-top: 10px;
+  margin-right: 10px;
+  font-weight:bold;
+  color: rgb(210, 185, 84);
+  font-size: 1rem;
+  padding: .5rem 1.5rem;
+  border: 2px solid rgba(20, 136, 199, 0.569);
+  cursor: pointer;
+  transition: all .3s ease;
+  border-radius: 13px;
+}
+
+.homeButton:hover {
+  background-color: rgba(20, 136, 199, 0.432);
+  box-shadow: 2px 2px 1rem rgb(187, 3, 77),
+  -.3rem -.3rem 1rem rgb(31, 7, 149);
+  border: 2px solid rgba(20, 136, 199, 0.227);
+}
+
+.homeButton:active {
+  box-shadow: .3rem .3rem 1rem rgb(8, 8, 122),
+  -.3rem -.3rem 1rem rgb(187, 3, 35)
+}
+
+.homeButtonDetails {
+margin-left: 400px;
+}
+
+.createButton {
+  margin-right: 10px;
+  /* background-image: url('../../images/home2.png'); */
+  display: flexbox;
+  background-color: rgba(20, 136, 199, 0.835);
+  background-size: 90px;
+  margin-top: 10px;
+  /* margin-left: 800px; */
+  font-weight:bold;
+  color: rgb(210, 185, 84);
+  font-size: 1rem;
+  padding: .5rem 1.5rem;
+  border: 2px solid rgba(20, 136, 199, 0.569);
+  cursor: pointer;
+  transition: all .3s ease;
+  border-radius: 13px;
+}
+
+.createButton:hover {
+  background-color: rgba(20, 136, 199, 0.432);
+  box-shadow: 2px 2px 1rem rgb(187, 3, 77),
+  -.3rem -.3rem 1rem rgb(31, 7, 149);
+  border: 2px solid rgba(20, 136, 199, 0.227);
+}
+
+.createButton:active {
+  box-shadow: .3rem .3rem 1rem rgb(8, 8, 122),
+  -.3rem -.3rem 1rem rgb(187, 3, 35)
+}
+
+.createButtonDetails {
+  
+}
+
+.filters {
+  /* display:table; */
+  max-height: 10px;
+ 
+}
+
+.selectOption1 {
+  /* background-image: url('../../images/home2.png'); */
+  display:table-row;
+  background-color: rgba(20, 136, 199, 0.835);
+  background-size: 90px;
+  /* margin-top: -100px; */
+  margin-left: -85px;
+  font-weight:bold;
+  color: rgb(210, 185, 84);
+  font-size: 1rem;
+  /* padding: .5rem 1.5rem; */
+  border: 2px solid rgba(20, 136, 199, 0.569);
+  cursor: pointer;
+  transition: all .3s ease;
+  border-radius: 13px;
+}
+
+.selectOption1:active {
+  box-shadow: .3rem .3rem 1rem rgb(8, 8, 122),
+  -.3rem -.3rem 1rem rgb(187, 3, 35)
+}
+.selectOption1:focus {
+  outline: none;
+}
+
+.selectOption1:after {
+  border-radius: 50px;
+
+}
+
+.selectOption2 {
+  /* background-image: url('../../images/home2.png'); */
+  display:table-row;
+  background-color: rgba(20, 136, 199, 0.835);
+  background-size: 90px;
+  /* margin-top: -100px; */
+  margin-left: 10px;
+  font-weight:bold;
+  color: rgb(210, 185, 84);
+  font-size: 1rem;
+  /* padding: .5rem 1.5rem; */
+  border: 2px solid rgba(20, 136, 199, 0.569);
+  cursor: pointer;
+  transition: all .3s ease;
+  border-radius: 13px;
+}
+
+.selectOption2:active {
+  box-shadow: .3rem .3rem 1rem rgb(8, 8, 122),
+  -.3rem -.3rem 1rem rgb(187, 3, 35)
+}
+.selectOption2:focus {
+  outline: none;
+}
+
+.selectOption2:after {
+  border-radius: 50px;
+
+}
+
+.selectOption3 {
+  /* background-image: url('../../images/home2.png'); */
+  display:table-row;
+  background-color: rgba(20, 136, 199, 0.835);
+  background-size: 90px;
+  /* margin-top: -100px; */
+  margin-left: 10px;
+  font-weight:bold;
+  color: rgb(210, 185, 84);
+  font-size: 1rem;
+  /* padding: .5rem 1.5rem; */
+  border: 2px solid rgba(20, 136, 199, 0.569);
+  cursor: pointer;
+  transition: all .3s ease;
+  border-radius: 13px;
+}
+
+.selectOption3:active {
+  box-shadow: .3rem .3rem 1rem rgb(8, 8, 122),
+  -.3rem -.3rem 1rem rgb(187, 3, 35)
+}
+.selectOption3:focus {
+  outline: none;
+}
+
+.selectOption3:after {
+  border-radius: 50px;
+
+}
+
+
+@media only screen and (max-width: 600px) {
+  .searchInput {
+    padding: 10px .004rem;
+    margin-left: -80px;
+  }
+  .searchButton {
+    padding: .2rem .5rem;
+  }
+  
+  .selectOption1 {
+  margin-left: -80px;
+  padding: -0.9rem -1.59em;
+  } 
+  .selectOption2 {
+    padding: -1rem 1rem;
+    } 
+    .selectOption3 {
+    padding: -1rem 1rem;
+    }
+  .homeButton {
+    margin-left: 220px;
+    padding: .2rem .5rem;
+  }
+  .createButton {
+    padding: .2rem .5rem;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .searchInput {
+    max-width: 30%;
+    padding: 10px -5rem;
+    margin-left: -250px;
+  }
+  .searchButton {
+    padding: .1rem .2rem; 
+    
+  }
+  .homeButton {
+    padding: .1rem .2rem;
+    margin-left: 130px; 
+  }
+  .selectOption1 {
+  margin-left: -230px;
+  padding: -1rem 1rem;
+  max-width: 20%;
+} 
+.selectOption2 {
+  padding: -1rem 1rem;
+  max-width: 20%;
+} 
+.selectOption3 {
+  padding: -1rem 1rem;
+  max-width: 20%;
+  } 
+  
+  .createButton {
+    padding: .1rem .2rem; 
+  }
+}
+
+@media only screen and (max-width: 348px) {
+  .searchInput {
+    max-width: 30%;
+    padding: 10px -5rem;
+    margin-left: -370px;
+  }
+  .searchButton {
+    padding: .1rem .2rem; 
+    
+  }
+  .homeButton {
+    padding: .1rem .2rem;
+    margin-left: 75px; 
+  }
+  .selectOption1 {
+  margin-left: -385px;
+  padding: -1rem 1rem;
+  max-width: 10%;
+} 
+.selectOption2 {
+  padding: -1rem 1rem;
+  max-width: 10%;
+} 
+.selectOption3 {
+  padding: -1rem 1rem;
+  max-width: 10%;
+  } 
+  
+  .createButton {
+    padding: .1rem .2rem; 
+  }
+}
