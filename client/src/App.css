@@ -3,7 +3,7 @@
   background-image:radial-gradient(rgb(193, 35, 35),rgb(8, 8, 122));
   overflow-x: scroll;
   scroll-behavior:calc(1);
-  width: 100vw;
+  /* width: 100vw; */
   text-align: center;
   background-size: cover;
   /* min-height: 800px; */

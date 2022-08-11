@@ -10,7 +10,7 @@ import { useDispatch } from 'react-redux';
 import { Footer } from './modules/footer/footer';
 import { getTypes } from './store/actions/getTypesActions';
 import { getPokemons } from './store/actions/pokemonActions';
-
+import CreatePokemon from './modules/createPokemon/createPokemon'
 
 function App() {
   const [isRefreshed, setIsRefreshed] = useState('')
@@ -26,7 +26,9 @@ function App() {
       <React.StrictMode>
         <Route exact path='/' component={LandingPage} />
         <Route path='/pokemons' render={() => <NavBar refresh={setIsRefreshed} />} />
+        <Route path='/create' render={() => <NavBar refresh={setIsRefreshed} />} />
         <Route exact path='/pokemons' render={() => <PokemonCards refresh={isRefreshed} />} />
+        <Route exact path='/create' render={() => <CreatePokemon refresh={isRefreshed} />} />
         <Route path='/pokemons/:id' component={DetailCard} />
         <Footer />
       </React.StrictMode>

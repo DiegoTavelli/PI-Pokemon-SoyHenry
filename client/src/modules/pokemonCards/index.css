@@ -21,28 +21,31 @@ box-shadow: 1px 1px 20px 1px rgb(9, 5, 75);
   margin-left: 10px;
   margin-right: 10px;
   min-height: 400px;
-  min-width: 200px;
   max-width: 400px;
   min-width: 200px;
   width: 300px;
   }
   
-
   .Card:hover {
-    transform: scale(1.02) rotate(0.1deg)  ;
     box-shadow: 3px 3px 15px 2px rgb(156, 126, 198);
-    
-    }
-
-.imagePokemon {
-  max-width: 190px;
-  margin-top: 20px;
+    transform: scale(1.02) rotate(.1deg)  ;
+  }
+  
+  .Card:hover > .imagePokemon {
+    transform: scale(1.02) rotate(2deg)  ;
   }
 
+.imagePokemon {
+  margin-top: 10px;
+  min-width: 220px;
+  max-width: 220px;
+  min-height: 220px;
+  max-height: 220px;
+  }
+/* 
  .imagePokemon:hover {
   transform:rotate(3deg) scale(1.06);
-  /* transform: rotate(-3deg); */
- } 
+  }  */
 
  img {
   transition: transform .7s ease-in-out;
@@ -85,7 +88,13 @@ box-shadow: 1px 1px 20px 1px rgb(9, 5, 75);
   color: rgb(212, 233, 24);
 }
 
-@media only screen and (max-width: 640px) {
+.buttonPagination {
+ justify-content: center; 
+ margin-top: -500px;
+}
+
+
+@media only screen and (max-width: 657px) {
 .Card {
   /* margin: 0rem 1rem; */
   /* padding: -10px; */

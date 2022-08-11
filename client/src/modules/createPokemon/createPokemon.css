@@ -1,0 +1,158 @@
+.container {
+  background-image: url('../../images/background.jpg');
+  
+}
+
+.createForm {
+  min-width: 300px;
+  display: flex;
+  width: 25%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.danger {
+  border: red 1px solid;
+}
+.error {
+  color: red;
+  text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black,
+    1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+}
+
+.container {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.createInputs {
+  margin-top: 5px;
+  max-height: 20px;
+  margin-bottom: 8px;
+  margin-left: 20px;
+  background: rgb(255, 255, 255);
+  font-weight:bold;
+  color: rgb(10, 73, 107);
+  font-size: 1.3rem;
+  padding: 13px 4rem;
+  border: 1.2px solid rgb(20, 136, 199);
+  cursor:text;
+  transition: all .3s ease;
+  /* border-top: rgb(193, 35, 35);
+  border-bottom: rgb(8, 8, 122); */
+  border-radius: 13px;
+  box-shadow: .04rem .04rem 1rem rgb(193, 35, 35),
+  -.04rem -.04rem 1rem rgb(8, 8, 122)
+}
+
+input {
+  text-align: center;
+}
+
+.createInputs:hover {
+  box-shadow: 2px 2px 1rem rgb(187, 3, 77),
+  -2rem -2rem -1rem rgb(31, 7, 149);
+}
+
+.createInputs:active {
+  /* border-style: none; */
+  box-shadow: .15rem .15rem .5rem rgb(8, 8, 122),
+  -.1rem -.1rem .5rem rgb(187, 3, 35);
+}
+
+.createInputs:focus {
+  outline: none;
+}
+
+.createInputs::placeholder {
+  font: 22px/3 sans-serif;
+}
+
+.selectOptionCreate {
+  margin-left: 10px;
+  background-color: rgba(20, 136, 199, 0.29);
+  font-weight:bold;
+  color: rgb(60, 117, 232);
+  font-size: 1rem;
+  padding: .5rem .5rem;
+  border: 2px solid rgb(20, 136, 199);
+  cursor: pointer;
+  transition: all .2s ease;
+  border-radius: 50px;
+  max-width: 100%;
+}
+
+.selectOptionCreate:hover {
+  background-color: rgba(20, 136, 199, 0.442);
+  border: 2px solid rgba(20, 136, 199);
+}
+
+.selectOptionCreate:active {
+  background-color: rgba(20, 136, 199, 0.442);
+  box-shadow: .1rem .1rem 10rem rgb(8, 8, 122),
+  -.3rem -.3rem 1rem rgb(187, 3, 35)
+}
+
+.createButtonPkm {
+  background-color: rgba(20, 136, 199, 0.835);
+  background-size: 90px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-left: 20px;
+  font-weight:bold;
+  color: rgb(210, 185, 84);
+  font-size: 1rem;
+  padding: .5rem 1.5rem;
+  border: 2px solid rgba(20, 136, 199, 0.569);
+  cursor: pointer;
+  transition: all .3s ease;
+  border-radius: 13px;
+}
+
+.createButtonPkm:hover {
+  background-color: rgba(20, 136, 199, 0.432);
+  box-shadow: 2px 2px 1rem rgb(187, 3, 77),
+  -.3rem -.3rem 1rem rgb(31, 7, 149);
+  border: 2px solid rgba(20, 136, 199, 0.227);
+}
+
+.createButtonPkm:active {
+  box-shadow: .3rem .3rem 1rem rgb(8, 8, 122),
+  -.3rem -.3rem 1rem rgb(187, 3, 35)
+}
+.createButtonPkm:disabled {
+  background-color: red;
+}
+
+.labelNames {
+  color: rgba(20, 136, 199, 0.569);
+  font-style:italic;
+  font-size: 1.2rem;
+}
+
+.contImages {
+  display: grid;
+}
+
+.gifCreate {
+  margin-top: -60px;
+  /* margin-left: -390px; */
+  margin-right: 100px;
+  max-height: 300px;
+  max-width: 500px;
+  border-radius: 50px;
+}
+
+.createYourOwn {
+  margin-top: 40px;
+  max-height: 100px;
+  max-width: 500px;
+
+}
+
+.pokemonBanner {
+  margin-top: -60px;
+  max-height: 150px;
+  max-width: 600px;
+}

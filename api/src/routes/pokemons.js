@@ -48,7 +48,7 @@ router.post('/', async (req, res, next) => {
       speed: Number(speed),
       height: Number(height),
       weight: Number(weight),
-      image: image || "https://www.freeiconspng.com/uploads/pokeball-3d-png-20.png",
+      image: image,
     });
 
     let types = [typeOne, typeTwo ? typeTwo : null];

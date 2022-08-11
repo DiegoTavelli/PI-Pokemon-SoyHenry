@@ -38,20 +38,28 @@ function NavBar({ refresh }) {
   }
 
   const finyByType = (e) => {
-    console.log(e.target.value)
+    // console.log(e.target.value)
     dispatch(filterType(e.target.value));
   }
 
   const handleGoHome = () => {
-    history.push('/')
+    history.push('/');
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   }
 
   const handleGoBack = () => {
-    history.push('/pokemons')
+    history.push('/pokemons');
   }
 
   const handleCreate = () => {
-    history.push('/create')
+    history.push('/create');
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   }
 
   if (window.location.pathname === '/pokemons') {
@@ -75,9 +83,10 @@ function NavBar({ refresh }) {
           </div>
         </form>
         <div className='filters' >
-          <select onChange={(e) => finyByType(e)} className='selectOption1' ><option value='all'>all types</option>{allTypes?.map((t) => {
-            return <option key={t.id} value={t.name} >{t.name}</option>
-          })}</select>
+          <select onChange={(e) => finyByType(e)} className='selectOption1' >
+            <option value='all'>all types</option>{allTypes?.map((t) => {
+              return <option key={t.id} value={t.name} >{t.name}</option>
+            })}</select>
           <select onChange={(e) => submitAZ(e)} className='selectOption2' >
             <option value='sort' >Sort</option>
             <option value='asc' >A-Z</option>
@@ -91,6 +100,14 @@ function NavBar({ refresh }) {
         </div>
       </nav>
     );
+  } else if (window.location.pathname === '/create') {
+    return (
+      <nav className='formNavDetailsCreate'>
+        <div className='onlyHome'>
+          <button onClick={handleGoBack} className='homeButton homeButtonHome'>Go Back</button>
+        </div>
+      </nav>
+    )
   } else {
     return (
       <nav className='formNavDetails'>
@@ -98,19 +115,6 @@ function NavBar({ refresh }) {
           <button onClick={handleGoBack} className='homeButton homeButtonDetails'>Go Back</button>
           <button onClick={handleCreate} className='createButton'>Create</button>
         </div>
-        {/* <form onSubmit={submit} className='onlyForm' >
-          <div>
-            <input
-              type="text"
-              id='searchpkm'
-              value={pokemon}
-              onChange={handleInputChange}
-              className='searchInput'
-              placeholder="Search Pokemon..."
-            />
-            <button type="submit" className='searchButton'>Search</button>
-          </div>
-        </form> */}
       </nav>
     )
   }

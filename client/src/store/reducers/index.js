@@ -4,13 +4,14 @@ import { GET_BY_NAME } from '../actions/getByNameActions'
 import { GET_TYPES } from '../actions/getTypesActions'
 import { CLEAR_POKEMON } from '../actions/clearPokemonActions';
 import { FILTER_AZ, FILTER_POKEMONS, FILTER_TYPE } from '../actions/filterPokemonsActions'
-
+import { CREATE_POKEMON } from 'store/actions/createPokemonActions';
 const initialState = {
   pokemons: [],
   copyPokemon: [],
   details: null,
   byName: null,
   types: [],
+  createPokemon: {},
 };
 
 const reducer = (state = initialState, action) => {
@@ -92,6 +93,11 @@ const reducer = (state = initialState, action) => {
         ...state,
         pokemons: filtAll ? filtAll : pokemons
       };
+    case CREATE_POKEMON:
+      return {
+        ...state,
+        createPokemon: action.payload,
+      };
     default:
       return {
         state,
@@ -101,14 +107,3 @@ const reducer = (state = initialState, action) => {
 
 export default reducer;
 
-// case FILTER_TYPE:
-//       let pokemons = state.copyPokemon;
-//       console.log(action.payload)
-//       let filtPkm =
-//         action.payload === 'all' ? pokemons :
-//           pokemons.type ? pokemons.filter((p) => p.type.includes(action.payload)) :
-//             pokemons.filter((p) => p.types === action.payload)
-//       return {
-//         ...state,
-//         pokemons: filtPkm
-//       };

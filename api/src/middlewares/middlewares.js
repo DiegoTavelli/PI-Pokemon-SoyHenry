@@ -53,9 +53,7 @@ const getAll = async () => {
   }
 };
 
-
 const getByName = async (name) => {
-  let pokeName = {};
   try {
     let fromDb = await Pokemon.findOne({
       where: {
@@ -67,7 +65,7 @@ const getByName = async (name) => {
       }
     });//
     if (fromDb) return fromDb;
-
+    let pokeName = {};
     const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`);
     const r = response.data;
     pokeName = {
