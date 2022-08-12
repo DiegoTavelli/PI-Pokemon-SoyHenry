@@ -50,7 +50,7 @@ function CreatePokemon() {
       setError('');
       setState({
         ...state,
-        [e.target.name]: e.target.value,
+        [e.target.name]: e.target.value.toLowerCase(),
       });
     }
   }
@@ -107,7 +107,7 @@ function CreatePokemon() {
 
   const pushIfReady = () => {
     finalValidation();
-    dispatch(createPokemon(state))
+    dispatch(createPokemon(state.toLowerCase()))
     dispatch(getPokemons())
     alert('🎉 Pokemon successfully created! 🥳');
     history.push(`/pokemons`);
