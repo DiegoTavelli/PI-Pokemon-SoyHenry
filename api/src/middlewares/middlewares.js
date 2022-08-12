@@ -5,7 +5,7 @@ const { Pokemon, Type } = require('../db.js');
 const getAll = async () => {
   let dbApi = [];
   try {
-    const response = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=151');
+    const response = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=70');
 
     // save the API response to the Array to map.
     dbApi = [...response.data.results];
