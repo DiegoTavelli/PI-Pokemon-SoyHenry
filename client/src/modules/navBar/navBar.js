@@ -43,7 +43,7 @@ function NavBar({ refresh }) {
   }
 
   const handleGoHome = () => {
-    history.push('/pokemons');
+    history.push('/');
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
