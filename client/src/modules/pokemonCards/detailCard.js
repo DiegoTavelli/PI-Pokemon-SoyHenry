@@ -9,6 +9,7 @@ import { getDetails } from '../../store/actions/detailCardActions.js'
 import { clearPokemon } from '../../store/actions/clearPokemonActions';
 
 //images
+import pokeBall from 'images/pokeball.png'
 import ballWaiting from '../../images/ballWaiting.gif'
 import loading from '../../images/loading.png'
 import giphy from '../../images/giphy.webp'
@@ -24,16 +25,13 @@ function DetailCard({ details, getDetails }) {
     }
   }, []);
 
-  if (!details) {
-    return (
-      <div>
-        <img src={ballWaiting} alt='Loading...' className='waitingBall' />
-        <br></br>
-        <img src={loading} alt='Loading...' className='loading' />
-      </div>
-    );
-  } else if (!details.id) {
-    return (
+  return !details ?
+    <div>
+      <img src={ballWaiting} alt='Loading...' className='waitingBall' />
+      <br></br>
+      <img src={loading} alt='Loading...' className='loading' />
+    </div>
+    : !details.id ?
       <div>
         <div className='cardNotFound'>
           <br></br>
@@ -42,17 +40,14 @@ function DetailCard({ details, getDetails }) {
           <p className='parrafId' >We couldn't find Pokemon with that name</p>
         </div>
       </div>
-    )
-  }
-  else {
-    return (
+      :
       <div className='allDetailCard' >
         <div className='card'>
           <br></br>
           <p className='detailName' >{details.name}</p>
           <p className='parrafId' ># {details.id}</p>
           <img
-            src={details.img ? details.img : details.image}
+            src={details.img ? details.img : details.image ? details.image : pokeBall}
             alt='https://media.giphy.com/media/DRfu7BT8ZK1uo/giphy.gif'
             className='detailPic'
           />
@@ -68,8 +63,8 @@ function DetailCard({ details, getDetails }) {
           {/* <p className='parraf' >{details.types ? details.types[1].name : details.type[1] ? details.type[1] : ''}</p> */}
         </div>
       </div>
-    )
-  }
+
+
 }
 
 const mapStateToProps = (state) => {

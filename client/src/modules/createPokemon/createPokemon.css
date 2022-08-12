@@ -1,6 +1,7 @@
 .container {
   background-image: url('../../images/background.jpg');
-  
+  background-attachment:fixed;
+  margin-bottom: -190px;
 }
 
 .createForm {
@@ -27,14 +28,15 @@
 }
 
 .createInputs {
+  
   margin-top: 5px;
   max-height: 20px;
   margin-bottom: 8px;
   margin-left: 20px;
-  background: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.227);
   font-weight:bold;
-  color: rgb(10, 73, 107);
-  font-size: 1.3rem;
+  color: rgb(210, 185, 84);
+  font-size: 1.23rem;
   padding: 13px 4rem;
   border: 1.2px solid rgb(20, 136, 199);
   cursor:text;
@@ -42,12 +44,14 @@
   /* border-top: rgb(193, 35, 35);
   border-bottom: rgb(8, 8, 122); */
   border-radius: 13px;
-  box-shadow: .04rem .04rem 1rem rgb(193, 35, 35),
-  -.04rem -.04rem 1rem rgb(8, 8, 122)
 }
 
 input {
   text-align: center;
+}
+
+input::placeholder {
+  color: rgba(0, 0, 0, 0.661);
 }
 
 .createInputs:hover {
@@ -62,6 +66,8 @@ input {
 }
 
 .createInputs:focus {
+  box-shadow: .04rem .04rem 1rem rgb(193, 35, 35),
+  -.04rem -.04rem 1rem rgb(8, 8, 122);
   outline: none;
 }
 
@@ -126,9 +132,10 @@ input {
 }
 
 .labelNames {
-  color: rgba(20, 136, 199, 0.569);
+  color: rgba(210, 185, 84, 0.998);
   font-style:italic;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 
 .contImages {

@@ -16,6 +16,13 @@ const Pagination = ({ pkmnPerPage, totalPkmn, paginate }) => {
     });
   }
 
+  const topHandler = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+
   return (
     <nav>
       <ul className='pagination'>
@@ -31,6 +38,12 @@ const Pagination = ({ pkmnPerPage, totalPkmn, paginate }) => {
             {` ${number}`}
           </button>
         ))}
+        <div>
+          <button
+            onClick={topHandler}
+            className='pageLink pageLinkUp'
+          >🔼</button>
+        </div>
       </ul>
     </nav>
   );

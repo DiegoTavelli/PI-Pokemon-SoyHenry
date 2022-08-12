@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useHistory } from 'react-router-dom';
 import { createPokemon } from 'store/actions/createPokemonActions';
 import { getPokemons } from 'store/actions/pokemonActions';
+
 import rollingPokeball from '../../images/rollingPokeball.gif'
 import createYourOwn from '../../images/create your own.png'
 import pokemonBanner from '../../images/pokemon.png'
@@ -55,8 +56,9 @@ function CreatePokemon() {
   }
 
   function handleChangeImage(e) {
-    if (!/[a]/.test(e.target.value)) {
-      setError('');
+    const regexp = new RegExp("jpg|jpeg|png|gif|JPG|JPEG|PNG|GIF");
+    if (!regexp.test(e.target.value)) {
+      setError('AA');
     }
     setState({
       ...state,
@@ -205,7 +207,7 @@ function CreatePokemon() {
           autoComplete='off'
           className='createInputs'
           name='image'
-          placeholder='image'
+          placeholder='url link jpg or gif'
           value={image}
           onChange={(e) => handleChangeImage(e)}
         ></input>

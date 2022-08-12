@@ -12,6 +12,7 @@ const Mapping = ({ pokemons }) => {
       behavior: 'smooth'
     });
   }, [])
+
   return (
     <div>
       {pokemons?.map((pokemon) => {
@@ -29,7 +30,7 @@ const Mapping = ({ pokemons }) => {
               <br></br>
               <p className='cardName' >{pokemon.name.toUpperCase()}</p>
               <img src={pokemon.img ? pokemon.img : pokemon.image ? pokemon.image : pokeBall}
-                alt='https://media.giphy.com/media/DRfu7BT8ZK1uo/giphy.gif'
+                alt='Pokemon'
                 className='imagePokemon'
               />
               <br></br>

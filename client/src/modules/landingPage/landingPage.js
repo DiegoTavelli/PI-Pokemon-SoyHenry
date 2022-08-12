@@ -18,7 +18,6 @@ export default function LandingPage() {
       history.push('/pokemons')
     }, 1500)
   }
-
   return (
     <div className="backG">
       <div><img src={welcomeLogo} alt='' className="welcome" /></div>

@@ -23,6 +23,7 @@ const { getTypes } = require('./src/middlewares/middlewareType.js')
 
 getTypes();
 
+
 // Syncing all the models at once.
 conn.sync({ force: false }).then(() => {
   server.listen(3001, () => {
