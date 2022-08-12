@@ -5,6 +5,8 @@
 }
 
 .createForm {
+  background-image: linear-gradient(rgba(255, 0, 0, 0.14), rgba(0, 0, 255, 0.117));
+  border-radius: 40px;
   min-width: 300px;
   display: flex;
   width: 25%;
@@ -32,7 +34,7 @@
   margin-top: 5px;
   max-height: 20px;
   margin-bottom: 8px;
-  margin-left: 20px;
+  /* margin-left: 20px; */
   background: rgba(255, 255, 255, 0.227);
   font-weight:bold;
   color: rgb(210, 185, 84);

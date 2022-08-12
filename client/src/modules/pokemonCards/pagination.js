@@ -1,6 +1,7 @@
 import React from "react";
 import "./pagination.css";
 
+
 const Pagination = ({ pkmnPerPage, totalPkmn, paginate }) => {
   const pageNumbers = [];
 

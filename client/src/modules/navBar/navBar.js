@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import './navBar.css';
 import { getByName } from 'store/actions/getByNameActions';
-import { filterAZ, filterPokemons, filterType } from 'store/actions/filterPokemonsActions'
+import { filterAZ, filterPokemons, filterType, filterAttack } from 'store/actions/filterPokemonsActions'
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import { getPokemons } from 'store/actions/pokemonActions';
 
 
 function NavBar({ refresh }) {
@@ -25,12 +26,18 @@ function NavBar({ refresh }) {
   const handleInputChange = (e) => {
     setPokemons(e.target.value);
   }
-
+  //official - created
   const submitFilter = (e) => {
     // e.preventDefault();
     // console.log(e.target.value)
     dispatch(filterPokemons(e.target.value))
     history.push('/pokemons')
+    refresh(e.target.value);
+  }
+
+  const submitAttack = (e) => {
+    dispatch(filterAttack(e.target.value))
+    refresh(e.target.value);
   }
 
   const submitAZ = (e) => {
@@ -38,12 +45,14 @@ function NavBar({ refresh }) {
     refresh(e.target.value);
   }
 
-  const finyByType = (e) => {
+  const findByType = (e) => {
     // console.log(e.target.value)
     dispatch(filterType(e.target.value));
+    refresh(e.target.value);
   }
 
   const handleGoHome = () => {
+    dispatch(getPokemons());
     history.push('/');
     window.scrollTo({
       top: 0,
@@ -84,7 +93,7 @@ function NavBar({ refresh }) {
           </div>
         </form>
         <div className='filters' >
-          <select onChange={(e) => finyByType(e)} className='selectOption1' >
+          <select onChange={(e) => findByType(e)} className='selectOption1' >
             <option value='all'>all types</option>{allTypes?.map((t) => {
               return <option key={t.id} value={t.name} >{t.name}</option>
             })}</select>
@@ -97,6 +106,11 @@ function NavBar({ refresh }) {
             <option value='all'>all origins</option>
             <option value='official'>Officials</option>
             <option value='created'>Created</option>
+          </select>
+          <select onChange={(e) => submitAttack(e)} className='selectOption3' >
+            <option value='none'>attack</option>
+            <option value='up'>atack ⬆</option>
+            <option value='down'>atack ⬇</option>
           </select>
         </div>
       </nav>

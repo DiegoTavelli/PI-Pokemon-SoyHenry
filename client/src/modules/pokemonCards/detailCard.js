@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect } from 'react'
 import { connect, useDispatch } from 'react-redux'
 import { useParams } from 'react-router-dom';
+import setIcon from '../pokemonCards/setIcon'
 import './detailCard.css'
 
 // actions
@@ -24,6 +25,7 @@ function DetailCard({ details, getDetails }) {
       dispatch(clearPokemon())
     }
   }, []);
+
 
   return !details ?
     <div>
@@ -59,8 +61,11 @@ function DetailCard({ details, getDetails }) {
           <p className='parraf' >Speed: {details.speed}</p>
           <p className='parraf' >Height: {details.height}</p>
           <p className='parraf' >Weight: {details.weight}</p>
-          <p className='parraf' >Type: {details.types ? details.types[0].name : details.type[0]}</p>
-          {/* <p className='parraf' >{details.types ? details.types[1].name : details.type[1] ? details.type[1] : ''}</p> */}
+          <p className='parraf' >Type: {
+            details.types ? details.types[0].name :
+              details.type[0].concat(', ', details.types
+                ? details.types[1].name : details.type[1]
+                  ? details.type[1] : '')}</p>
         </div>
       </div>
 
