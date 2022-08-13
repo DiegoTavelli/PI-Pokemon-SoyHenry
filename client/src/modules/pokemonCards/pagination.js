@@ -3,6 +3,7 @@ import "./pagination.css";
 
 
 const Pagination = ({ pkmnPerPage, totalPkmn, paginate }) => {
+
   const pageNumbers = [];
 
   for (let i = 1; i <= Math.ceil(totalPkmn / pkmnPerPage); i++) {
@@ -11,13 +12,6 @@ const Pagination = ({ pkmnPerPage, totalPkmn, paginate }) => {
 
   const clickHandler = (number) => {
     paginate(number)
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  }
-
-  const topHandler = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
@@ -39,12 +33,7 @@ const Pagination = ({ pkmnPerPage, totalPkmn, paginate }) => {
             {` ${number}`}
           </button>
         ))}
-        <div>
-          <button
-            onClick={topHandler}
-            className='pageLink pageLinkUp'
-          >🔼</button>
-        </div>
+
       </ul>
     </nav>
   );

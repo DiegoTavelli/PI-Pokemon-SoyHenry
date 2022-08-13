@@ -34,28 +34,6 @@ margin-bottom: 0;
   -.3rem -.3rem 1rem rgb(187, 3, 35)
 }
 
-.pageLinkUp {
-  border: 2.4px solid rgba(20, 136, 199, 0.569);
-  border-style:dotted;
-  /* font-size: 1.4rem; */
-  background-color: rgba(192, 25, 31, 0.49);
-  padding: .8rem 1rem;
-  margin-top: 0.2rem;
-}
-
-.pageLinkUp:hover {
-  /* font-size: 1.4rem; */
-  border: transparent;
-  background-color: rgba(210, 185, 84, 0.792);
-  padding: .8rem 1rem;
-  margin-top: 0.2rem;
-}
-
-.pageLinkUp:hover:before {
-  content: "Go"
-}
-
-
 .topPagination {
   scroll-behavior: smooth;
   margin-left: 10px;

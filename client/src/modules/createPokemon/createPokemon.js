@@ -4,12 +4,13 @@ import { useHistory } from 'react-router-dom';
 import { createPokemon } from 'store/actions/createPokemonActions';
 import { getPokemons } from 'store/actions/pokemonActions';
 
-import rollingPokeball from '../../images/rollingPokeball.gif'
-import createYourOwn from '../../images/create your own.png'
-import pokemonBanner from '../../images/pokemon.png'
+import rollingPokeball from 'images/rollingPokeball.gif'
+import createYourOwn from 'images/create your own.png'
+import pokemonBanner from 'images/pokemon.png'
 import ballWaiting from 'images/ballWaiting.gif'
 import loading from 'images/loading.png'
 import './createPokemon.css'
+
 
 
 function CreatePokemon() {
@@ -56,10 +57,10 @@ function CreatePokemon() {
   }
 
   function handleChangeImage(e) {
-    const regexp = new RegExp("jpg|jpeg|png|gif|JPG|JPEG|PNG|GIF");
-    if (!regexp.test(e.target.value)) {
+    if (!/(.jpg|.png|.gif)$/g.test(e.target.value)) {
       setError('AA');
     }
+    setError('');
     setState({
       ...state,
       [e.target.name]: e.target.value,
@@ -151,7 +152,6 @@ function CreatePokemon() {
           value={hp}
           onChange={(e) => validateNumber(e)}
         ></input>
-        {/* {!error ? null : <span className='error'>{error}</span>} */}
         <label className='labelNames' >Attack</label>
         <input
           autoComplete='off'
@@ -161,7 +161,6 @@ function CreatePokemon() {
           value={attack}
           onChange={(e) => validateNumber(e)}
         ></input>
-        {/* {!error ? null : <span className='error'>{error}</span>} */}
         <label className='labelNames' >Defense</label>
         <input
           autoComplete='off'
@@ -171,7 +170,6 @@ function CreatePokemon() {
           value={defense}
           onChange={(e) => validateNumber(e)}
         ></input>
-        {/* {!error ? null : <span className='error'>{error}</span>} */}
         <label className='labelNames' >Speed</label>
         <input
           autoComplete='off'
@@ -181,7 +179,6 @@ function CreatePokemon() {
           value={speed}
           onChange={(e) => validateNumber(e)}
         ></input>
-        {/* {!error ? null : <span className='error'>{error}</span>} */}
         <label className='labelNames' >Height</label>
         <input
           autoComplete='off'
@@ -191,7 +188,6 @@ function CreatePokemon() {
           value={height}
           onChange={(e) => validateNumber(e)}
         ></input>
-        {/* {!error ? null : <span className='error'>{error}</span>} */}
         <label className='labelNames' >Weight</label>
         <input
           autoComplete='off'
@@ -201,7 +197,6 @@ function CreatePokemon() {
           value={weight}
           onChange={(e) => validateNumber(e)}
         ></input>
-        {/* {!error ? null : <span className='error'>{error}</span>} */}
         <label className='labelNames' >Image</label>
         <input
           autoComplete='off'
@@ -211,7 +206,6 @@ function CreatePokemon() {
           value={image}
           onChange={(e) => handleChangeImage(e)}
         ></input>
-        {/* {!error ? null : <span className='error'>{error}</span>} */}
         <label className='labelNames' >Primary Type</label>
         <select
           className='selectOptionCreate'
@@ -219,17 +213,15 @@ function CreatePokemon() {
           value={typeOne}
           onChange={(e) => handleChange(e)}
         >
-          {types &&
-            types.map((type, i) => (
-              <option key={i} value={type.name} name={type.name} placeholder=' ' >
-                {type.name}
-              </option>
-            ))}
+          {types?.map((type, i) => (
+            <option key={i} value={type.name} name={type.name} placeholder=' ' >
+              {type.name}
+            </option>
+          ))}
           <option defaultValue='default'>
             {null}
           </option>
         </select>
-
         <label className='labelNames' >Secundary Type</label>
         <select
           className='selectOptionCreate'
@@ -237,12 +229,11 @@ function CreatePokemon() {
           value={typeTwo}
           onChange={(e) => handleChange(e)}
         >
-          {types &&
-            types.map((type, i) => (
-              <option key={i} value={type.name} name={type.name}  >
-                {type.name}
-              </option>
-            ))}
+          {types?.map((type, i) => (
+            <option key={i} value={type.name} name={type.name}  >
+              {type.name}
+            </option>
+          ))}
           <option defaultValue={null}>
             {null}
           </option>

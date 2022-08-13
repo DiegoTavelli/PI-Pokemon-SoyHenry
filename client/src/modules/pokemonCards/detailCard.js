@@ -6,14 +6,14 @@ import setIcon from '../pokemonCards/setIcon'
 import './detailCard.css'
 
 // actions
-import { getDetails } from '../../store/actions/detailCardActions.js'
-import { clearPokemon } from '../../store/actions/clearPokemonActions';
+import { getDetails } from 'store/actions/detailCardActions.js'
+import { clearPokemon } from 'store/actions/clearPokemonActions';
 
 //images
 import pokeBall from 'images/pokeball.png'
-import ballWaiting from '../../images/ballWaiting.gif'
-import loading from '../../images/loading.png'
-import giphy from '../../images/giphy.webp'
+import ballWaiting from 'images/ballWaiting.gif'
+import loading from 'images/loading.png'
+import giphy from 'images/giphy.webp'
 
 function DetailCard({ details, getDetails }) {
   const dispatch = useDispatch();
@@ -53,6 +53,7 @@ function DetailCard({ details, getDetails }) {
             alt='https://media.giphy.com/media/DRfu7BT8ZK1uo/giphy.gif'
             className='detailPic'
           />
+          <p> </p>
         </div>
         <div className='detailsData' >
           <p className='parraf' >Hp: {details.hp}</p>
@@ -63,13 +64,11 @@ function DetailCard({ details, getDetails }) {
           <p className='parraf' >Weight: {details.weight}</p>
           <p className='parraf' >Type: {
             details.types ? details.types[0].name :
-              details.type[0].concat(', ', details.types
-                ? details.types[1].name : details.type[1]
-                  ? details.type[1] : '')}</p>
+              details.type[0].concat(details.types
+                ? ', ' + details.types[1].name : details.type[1]
+                  ? ', ' + details.type[1] : '')}{setIcon(details)}</p>
         </div>
       </div>
-
-
 }
 
 const mapStateToProps = (state) => {

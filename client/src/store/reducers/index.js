@@ -85,7 +85,7 @@ const reducer = (state = initialState, action) => {
       };
     case FILTER_ATTACK:
       let sortAttack =
-        action.payload === 'up'
+        action.payload === 'down'
           ? state.pokemons.sort((a, b) => {
             if (a.attack > b.attack) {
               return 1;
@@ -95,7 +95,7 @@ const reducer = (state = initialState, action) => {
             }
             return 0;
           })
-          : action.payload === 'down' ?
+          : action.payload === 'up' ?
             state.pokemons.sort((a, b) => {
               if (a.attack > b.attack) {
                 return -1;

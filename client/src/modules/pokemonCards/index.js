@@ -1,11 +1,9 @@
 // import { Fragment } from 'react'
 import { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
-// import { NavLink } from 'react-router-dom';
 import Mapping from './mapping';
 import { getPokemons } from 'store/actions/pokemonActions.js'
-import Pagination from '../../modules/pokemonCards/pagination'
-// import setIcon from './setIcon';
+import Pagination from 'modules/pokemonCards/pagination'
 import ballWaiting from 'images/ballWaiting.gif'
 import loading from 'images/loading.png'
 import './index.css'
@@ -31,7 +29,7 @@ function PokemonCards({ pokemons, refresh }) {
   if (!pokemons) {
     return (
       <div>
-        <img src={ballWaiting} alt=' ' className='waitingBall' />
+        <img src={ballWaiting} alt='Loading...' className='waitingBall' />
         <br></br>
         <img src={loading} alt='Loading...' className='loading' />
       </div>
