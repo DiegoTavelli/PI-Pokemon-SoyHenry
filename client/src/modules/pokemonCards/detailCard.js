@@ -66,7 +66,7 @@ function DetailCard({ details, getDetails }) {
             details.types ? details.types[0].name :
               details.type[0].concat(details.types
                 ? ', ' + details.types[1].name : details.type[1]
-                  ? ', ' + details.type[1] : '')}{setIcon(details)}</p>
+                  ? ', ' + details.type[1] : ' ')}{setIcon(details)}</p>
         </div>
       </div>
 }

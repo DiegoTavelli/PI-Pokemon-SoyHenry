@@ -33,8 +33,20 @@ router.post('/', async (req, res, next) => {
   const { name, hp, attack, defense, speed, height, weight, typeOne, typeTwo, image } = req.body;
 
   try {
+
     if (!name || !hp || !attack || !defense || !speed || !height || !weight || !typeOne) {
-      return res.json({ info: "Some of the arguments are not valid" });
+      return res.status(400).json({ info: "Some of the arguments are not valid" });
+    }
+
+    if (typeof name !== 'string' || typeof typeOne !== 'string' || typeof typeTwo !== 'string') {
+      return res.status(400).json({ info: "Name, typeOne and typeTwo must be String" });
+    }
+
+    if (
+      typeof hp !== 'number' || typeof attack !== 'number'
+      || typeof defense !== 'number' || typeof speed !== 'number'
+      || typeof height !== 'number' || typeof weight !== 'number') {
+      return res.status(400).json({ info: "hp, attack defense speed height and weight must be Number" })
     }
     // search in db if there is a Pokemon with that name.
     let exist = await Pokemon.findOne({ where: { name: name } });

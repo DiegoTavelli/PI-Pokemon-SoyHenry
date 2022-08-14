@@ -8,11 +8,11 @@
   
 
 .allDetailCard {
+  display:flex;
   background-image: url('../../images/background.jpg');
   background-attachment:fixed;
   box-shadow: .5px .5px 20px 10px rgb(9, 5, 75);
   filter: blur(0px);
-  display:flex;
   justify-content: center;
   margin-top: 65px;
   margin-bottom: -180px;
@@ -48,8 +48,6 @@
     min-height: 400px;
     max-width: 400px;
     min-width: 200px;
-    
-   
   }
 
   .detailPicNotFound {
@@ -71,11 +69,7 @@
     cursor: default;
   }
 
-  .loading {
-    /* margin-bottom: 300px; */
-  }
-
-.parraf {
+  .parraf {
   display: fixed;
     background-color: rgba(20, 136, 199, 0.835);
     background-size: 90px;

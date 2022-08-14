@@ -25,17 +25,13 @@ function PokemonCards({ pokemons, refresh }) {
   const currentPkmns = pokemons?.slice(indexOfFistPkmn, indexOfLastPkmn);
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
-  // console.log(pokemons)
-  if (!pokemons) {
-    return (
-      <div>
-        <img src={ballWaiting} alt='Loading...' className='waitingBall' />
-        <br></br>
-        <img src={loading} alt='Loading...' className='loading' />
-      </div>
-    );
-  };
-  return (
+  return !pokemons ?
+    <div>
+      <img src={ballWaiting} alt='Loading...' className='waitingBall' />
+      <br></br>
+      <img src={loading} alt='Loading...' className='loading' />
+    </div>
+    :
     <div className='fullCard'>
       <div>
         <Mapping pokemons={currentPkmns} />
@@ -48,7 +44,6 @@ function PokemonCards({ pokemons, refresh }) {
         </div>
       </div>
     </div>
-  );
 };
 
 const mapStateToProps = (state) => {

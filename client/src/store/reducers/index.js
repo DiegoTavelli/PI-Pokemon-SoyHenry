@@ -47,11 +47,11 @@ const reducer = (state = initialState, action) => {
         details: action.payload,
       };
     case FILTER_POKEMONS:
-      let pkmState = state.copyPokemon
+      let pkmState = state?.copyPokemon
       let pkmFilter =
         action.payload === 'official' ?
-          pkmState.filter((p) => typeof p.id === 'number') :
-          pkmState.filter((p) => typeof p.id !== 'number')
+          pkmState?.filter((p) => typeof p.id === 'number') :
+          pkmState?.filter((p) => typeof p.id !== 'number')
       return {
         ...state,
         pokemons: action.payload === 'all' ? pkmState : pkmFilter,
@@ -59,7 +59,7 @@ const reducer = (state = initialState, action) => {
     case FILTER_AZ:
       let sort =
         action.payload === 'asc'
-          ? state.pokemons.sort((a, b) => {
+          ? state.pokemons?.sort((a, b) => {
             if (a.name > b.name) {
               return 1;
             }
@@ -69,7 +69,7 @@ const reducer = (state = initialState, action) => {
             return 0;
           })
           : action.payload === 'desc' ?
-            state.pokemons.sort((a, b) => {
+            state.pokemons?.sort((a, b) => {
               if (a.name > b.name) {
                 return -1;
               }
@@ -78,7 +78,7 @@ const reducer = (state = initialState, action) => {
               }
               return 0;
             })
-            : state.pokemons
+            : state.pokemons ? state.pokemons : null;
       return {
         ...state,
         pokemons: sort
@@ -86,7 +86,7 @@ const reducer = (state = initialState, action) => {
     case FILTER_ATTACK:
       let sortAttack =
         action.payload === 'down'
-          ? state.pokemons.sort((a, b) => {
+          ? state.pokemons?.sort((a, b) => {
             if (a.attack > b.attack) {
               return 1;
             }
@@ -96,7 +96,7 @@ const reducer = (state = initialState, action) => {
             return 0;
           })
           : action.payload === 'up' ?
-            state.pokemons.sort((a, b) => {
+            state.pokemons?.sort((a, b) => {
               if (a.attack > b.attack) {
                 return -1;
               }
@@ -105,19 +105,19 @@ const reducer = (state = initialState, action) => {
               }
               return 0;
             })
-            : state.pokemons
+            : state.pokemons ? state.pokemons : null;
       return {
         ...state,
         pokemons: sortAttack
       };
     case FILTER_TYPE:
-      const pokemons = state.copyPokemon;
-      const filtApi = pokemons.filter((p) => p.type);
-      const fromApi = filtApi.filter((p) => p.type.find((el) => el.toString() === action.payload));
+      const pokemons = state?.copyPokemon;
+      const filtApi = pokemons?.filter((p) => p.type);
+      const fromApi = filtApi?.filter((p) => p.type.find((el) => el.toString() === action.payload));
 
-      const filtDb = state.pokemons.filter((p) => p.types);
-      const fromDb = filtDb.filter((p) => p.types.find((el) => el.name.toString() === action.payload));
-      const both = [...fromApi, ...fromDb];
+      const filtDb = state.pokemons?.filter((p) => p.types);
+      const fromDb = filtDb?.filter((p) => p.types.find((el) => el.name.toString() === action.payload));
+      const both = fromApi && fromDb ? [...fromApi, ...fromDb] : null;
       const filtAll = action.payload === 'all' ? pokemons : both;
       return {
         ...state,
