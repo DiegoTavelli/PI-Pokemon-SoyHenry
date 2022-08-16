@@ -26,7 +26,6 @@ function DetailCard({ details, getDetails }) {
     }
   }, []);
 
-
   return !details ?
     <div>
       <img src={ballWaiting} alt='Loading...' className='waitingBall' />
@@ -63,9 +62,9 @@ function DetailCard({ details, getDetails }) {
           <p className='parraf' >Height: {details.height}</p>
           <p className='parraf' >Weight: {details.weight}</p>
           <p className='parraf' >Type: {
-            details.types ? details.types[0].name :
+            details.types ? details.types[0]?.name :
               details.type[0].concat(details.types
-                ? ', ' + details.types[1].name : details.type[1]
+                ? ', ' + details.types[1]?.name : details.type[1]
                   ? ', ' + details.type[1] : ' ')}{setIcon(details)}</p>
         </div>
       </div>

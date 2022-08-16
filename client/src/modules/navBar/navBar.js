@@ -49,6 +49,7 @@ function NavBar({ refresh }) {
     // console.log(e.target.value)
     dispatch(filterType(e.target.value));
     refresh(e.target.value);
+
   }
 
   const handleGoHome = () => {

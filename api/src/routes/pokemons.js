@@ -43,9 +43,9 @@ router.post('/', async (req, res, next) => {
     }
 
     if (
-      typeof hp !== 'number' || typeof attack !== 'number'
-      || typeof defense !== 'number' || typeof speed !== 'number'
-      || typeof height !== 'number' || typeof weight !== 'number') {
+      typeof Number(hp) !== 'number' || typeof Number(attack) !== 'number'
+      || typeof Number(defense) !== 'number' || typeof Number(speed) !== 'number'
+      || typeof Number(height) !== 'number' || typeof Number(weight) !== 'number') {
       return res.status(400).json({ info: "hp, attack defense speed height and weight must be Number" })
     }
     // search in db if there is a Pokemon with that name.
@@ -63,7 +63,7 @@ router.post('/', async (req, res, next) => {
       image: image,
     });
 
-    let types = [typeOne, typeTwo ? typeTwo : null];
+    let types = [typeOne ? typeOne : 'unknown', typeTwo ? typeTwo : 'unknown'];
 
     for (let i = 0; i < types.length; i++) {
       let eachType = await Type.findOne({

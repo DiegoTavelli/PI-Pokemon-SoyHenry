@@ -18,7 +18,7 @@ const Mapping = ({ pokemons }) => {
       {pokemons?.map((pokemon) => {
         let typesTo = [];
         if (pokemon.types) {
-          typesTo = [`${pokemon.types[0].name}, ${pokemon.types[1] ? pokemon.types[1].name : ' '}`];
+          typesTo = [`${pokemon.types[0]?.name}, ${pokemon.types[1]?.name}`];
         } else if (pokemon.type) {
           typesTo = [`${pokemon.type[0]}${pokemon.type[1] ? ', ' + pokemon.type[1] : ' '}`]
         } else {

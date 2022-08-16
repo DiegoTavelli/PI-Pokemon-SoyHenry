@@ -12,24 +12,24 @@ import loading from 'images/loading.png'
 import './createPokemon.css'
 
 
-
 function CreatePokemon() {
   const dispatch = useDispatch();
   const history = useHistory();
   const types = useSelector((store) => store.types);
-  // const pokemons = useSelector((store) => store.pokemons);
+  const pokemons = useSelector((store) => store.pokemons);
   const [error, setError] = useState('');
+  const [errorSubmit, setErrorSubmit] = useState(' ');
   const [state, setState] = useState({
-    name: '',
-    hp: '',
-    attack: '',
-    defense: '',
-    speed: '',
-    height: '',
-    weight: '',
-    typeOne: '',
-    typeTwo: '',
-    image: '',
+    name: "",
+    hp: "",
+    attack: "",
+    defense: "",
+    speed: "",
+    height: "",
+    weight: "",
+    typeOne: "",
+    typeTwo: "",
+    image: "",
   })
   const {
     name,
@@ -44,38 +44,22 @@ function CreatePokemon() {
     typeTwo
   } = state;
 
+
   function validateString(e) {
-    if (!/^[a-z\s]{0,255}$/i.test(e.target.value)) {
+    if (!/^[a-záéíóú]*$/i.test(e.target.value)) {
       setError('Name must contains only letters');
     } else {
       setError('');
       setState({
         ...state,
-        [e.target.name]: e.target.value.toLowerCase(),
+        [e.target.name]: e.target.value
       });
     }
-  }
-
-  function handleChangeImage(e) {
-    if (!/(.jpg|.png|.gif)$/g.test(e.target.value)) {
-      setError('AA');
-    }
-    setError('');
-    setState({
-      ...state,
-      [e.target.name]: e.target.value,
-    })
-  }
-
-  function handleChange(e) {
-    setState({
-      ...state,
-      [e.target.name]: e.target.value,
-    });
+    finalValidation();
   }
 
   function validateNumber(e) {
-    if (!/^[0-9]\d*$/.test(e.target.value)) {
+    if (!/^[0-9]*$/.test(e.target.value)) {
       setError(`${e.target.name} must contain only numbers`)
     } else {
       setError('');
@@ -84,32 +68,48 @@ function CreatePokemon() {
         [e.target.name]: e.target.value,
       });
     }
+    finalValidation();
   }
 
-  // let ready = false;
-  // const finalValidation = () => {
-  //   return name === '' ? alert('You must enter the name') :
-  //     hp === '' ? alert('You must enter Hp value') :
-  //       attack === '' ? alert('You must enter Attack value') :
-  //         defense === '' ? alert('You must enter Defense value') :
-  //           speed === '' ? alert('You must enter Speed value') :
-  //             height === '' ? alert('You must enter Height value') :
-  //               weight === '' ? alert('You must enter Weight value') :
-  //                 attack === '' ? alert('You must enter Attack value') :
-  //                   typeOne === '' ? alert('You must enter Primary Type at least') :
-  //                     ready = true;
-  // }
+  function handleChangeInputs(e) {
+    setState({
+      ...state,
+      [e.target.name]: e.target.value,
+    });
+    finalValidation();
+  }
+
+  function handleChangeImage(e) {
+    if (!/[.jpg|.png|.gif]$/g.test(e.target.value)) {
+      setError('AA');
+    } else {
+      setError('');
+    }
+    setState({
+      ...state,
+      [e.target.name]: e.target.value,
+    });
+  }
 
   const finalValidation = () => {
-    if (!name || !hp || !attack || !defense || !speed || !height || !weight || !typeOne) {
-      setError('e')
+    if (name === "" || hp === "" || attack === "" || defense === "" || speed === "" || height === "" || weight === "") {
+      setErrorSubmit('You have to complete mandatory fields');
+    } else {
+      setErrorSubmit('');
     }
   }
 
   const pushIfReady = () => {
-    finalValidation();
-    dispatch(createPokemon(state.toLowerCase()))
-    dispatch(getPokemons())
+    let findPkm = pokemons.filter((p) => p.name.toLowerCase() === name);
+    console.log(findPkm)
+    if (typeOne === "") return alert('Primary Type is mandatory');
+    if (typeTwo === "") state.typeTwo = null;
+    if (findPkm.includes(name)) {
+      return alert('That Pokemon name already exist');
+    }
+
+    dispatch(createPokemon(state));
+    dispatch(getPokemons());
     alert('🎉 Pokemon successfully created! 🥳');
     history.push(`/pokemons`);
   }
@@ -134,7 +134,7 @@ function CreatePokemon() {
       </div>
       <form type='submit' className='createForm'>
         {!error ? null : <span className='error'>{error}</span>}
-        <label className='labelNames' >Name</label>
+        <label className='labelNames' >Name *</label>
         <input
           autoComplete='off'
           className={error ? error && 'createInputs' : 'createInputs'}
@@ -143,16 +143,15 @@ function CreatePokemon() {
           value={name}
           onChange={(e) => validateString(e)}
         ></input>
-        <label className='labelNames' >Hp</label>
+        <label className='labelNames' >Hp *</label>
         <input
           autoComplete='off'
           className='createInputs'
           name='hp'
           placeholder='hp'
-          value={hp}
           onChange={(e) => validateNumber(e)}
         ></input>
-        <label className='labelNames' >Attack</label>
+        <label className='labelNames' >Attack *</label>
         <input
           autoComplete='off'
           className='createInputs'
@@ -161,7 +160,7 @@ function CreatePokemon() {
           value={attack}
           onChange={(e) => validateNumber(e)}
         ></input>
-        <label className='labelNames' >Defense</label>
+        <label className='labelNames' >Defense *</label>
         <input
           autoComplete='off'
           className='createInputs'
@@ -170,7 +169,7 @@ function CreatePokemon() {
           value={defense}
           onChange={(e) => validateNumber(e)}
         ></input>
-        <label className='labelNames' >Speed</label>
+        <label className='labelNames' >Speed *</label>
         <input
           autoComplete='off'
           className='createInputs'
@@ -179,7 +178,7 @@ function CreatePokemon() {
           value={speed}
           onChange={(e) => validateNumber(e)}
         ></input>
-        <label className='labelNames' >Height</label>
+        <label className='labelNames' >Height *</label>
         <input
           autoComplete='off'
           className='createInputs'
@@ -188,7 +187,7 @@ function CreatePokemon() {
           value={height}
           onChange={(e) => validateNumber(e)}
         ></input>
-        <label className='labelNames' >Weight</label>
+        <label className='labelNames' >Weight *</label>
         <input
           autoComplete='off'
           className='createInputs'
@@ -206,12 +205,12 @@ function CreatePokemon() {
           value={image}
           onChange={(e) => handleChangeImage(e)}
         ></input>
-        <label className='labelNames' >Primary Type</label>
+        <label className='labelNames' >Primary Type *</label>
         <select
           className='selectOptionCreate'
           name='typeOne'
           value={typeOne}
-          onChange={(e) => handleChange(e)}
+          onChange={(e) => handleChangeInputs(e)}
         >
           {types?.map((type, i) => (
             <option key={i} value={type.name} name={type.name} placeholder=' ' >
@@ -227,7 +226,7 @@ function CreatePokemon() {
           className='selectOptionCreate'
           name='typeTwo'
           value={typeTwo}
-          onChange={(e) => handleChange(e)}
+          onChange={(e) => handleChangeInputs(e)}
         >
           {types?.map((type, i) => (
             <option key={i} value={type.name} name={type.name}  >
@@ -238,19 +237,33 @@ function CreatePokemon() {
             {null}
           </option>
         </select>
-
         <button
           className='createButtonPkm'
           type='submit'
           onClick={(e) => handleSubmit(e)}
-          disabled={error}
+          disabled={errorSubmit}
         >
           Create Pokemon
         </button>
       </form>
     </div >
-
-
 }
 
 export default CreatePokemon;
+
+
+
+
+// let ready = false;
+// const finalValidation = () => {
+//   return name === '' ? alert('You must enter the name') :
+//     hp === '' ? alert('You must enter Hp value') :
+//       attack === '' ? alert('You must enter Attack value') :
+//         defense === '' ? alert('You must enter Defense value') :
+//           speed === '' ? alert('You must enter Speed value') :
+//             height === '' ? alert('You must enter Height value') :
+//               weight === '' ? alert('You must enter Weight value') :
+//                 attack === '' ? alert('You must enter Attack value') :
+//                   typeOne === '' ? alert('You must enter Primary Type at least') :
+//                     ready = true;
+// }
