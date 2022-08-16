@@ -38,9 +38,9 @@ router.post('/', async (req, res, next) => {
       return res.status(400).json({ info: "Some of the arguments are not valid" });
     }
 
-    if (typeof name !== 'string' || typeof typeOne !== 'string' || typeof typeTwo !== 'string') {
-      return res.status(400).json({ info: "Name, typeOne and typeTwo must be String" });
-    }
+    // if (typeof name !== 'string' || typeof typeOne !== 'string' || typeof typeTwo !== 'string') {
+    //   return res.status(400).json({ info: "Name, typeOne and typeTwo must be String" });
+    // }
 
     if (
       typeof Number(hp) !== 'number' || typeof Number(attack) !== 'number'
