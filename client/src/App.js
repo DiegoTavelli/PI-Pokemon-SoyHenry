@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Route } from 'react-router';
+import { Route } from 'react-router-dom';
 import './App.css';
 
 import PokemonCards from './modules/pokemonCards'
@@ -11,6 +11,7 @@ import { Footer } from './modules/footer/footer';
 import { getTypes } from './store/actions/getTypesActions';
 import { getPokemons } from './store/actions/pokemonActions';
 import CreatePokemon from './modules/createPokemon/createPokemon'
+// import wrongPathPage from 'modules/pokemonCards/wrongPathPage';
 
 function App() {
   const [isRefreshed, setIsRefreshed] = useState('')
@@ -24,12 +25,13 @@ function App() {
   return (
     <div className="App">
       <React.StrictMode>
-        <Route exact path='/' component={LandingPage} />
+        <Route exact path='/' render={() => <LandingPage />} />
         <Route path='/pokemons' render={() => <NavBar refresh={setIsRefreshed} />} />
         <Route path='/create' render={() => <NavBar refresh={setIsRefreshed} />} />
         <Route exact path='/pokemons' render={() => <PokemonCards refresh={isRefreshed} />} />
         <Route exact path='/create' render={() => <CreatePokemon refresh={isRefreshed} />} />
         <Route path='/pokemons/:id' component={DetailCard} />
+        {/* <Route path='*' component={wrongPathPage} /> */}
         <Footer />
       </React.StrictMode>
     </div>

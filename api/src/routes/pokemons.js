@@ -77,6 +77,18 @@ router.post('/', async (req, res, next) => {
   }
 });
 
+router.delete('/:id', async (req, res) => {
+  const { id } = req.params;
+  const findToDelete = await Pokemon.findOne({
+    where: {
+      id: id
+    }
+  });
+  return res.json(await findToDelete.destroy({
+    truncate: true
+  }));
+});
+
 
 
 module.exports = router;

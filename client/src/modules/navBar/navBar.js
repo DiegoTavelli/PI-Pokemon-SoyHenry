@@ -52,25 +52,28 @@ function NavBar({ refresh }) {
 
   }
 
-  const handleGoHome = () => {
+  const handleGoHome = (e) => {
     dispatch(getPokemons());
     history.push('/');
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     });
+    refresh(e.target.value);
   }
 
   const handleGoBack = () => {
     history.push('/pokemons');
+    // refresh(e.target.value);
   }
 
-  const handleCreate = () => {
+  const handleCreate = (e) => {
     history.push('/create');
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     });
+    refresh(e.target.value);
   }
 
   if (window.location.pathname === '/pokemons') {

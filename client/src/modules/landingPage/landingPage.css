@@ -1,3 +1,11 @@
+
+.backG {
+  display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+align-items: center;
+  }
+
 .welcome {
   margin-left: -51px;
   align-items: center;
@@ -22,9 +30,4 @@
   max-width: 400px;
   margin-left: -51px;
 }
-
-.backG {
-  align-content: center;
-  /* min-height: 900px; */
-  }
 

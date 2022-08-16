@@ -2,6 +2,7 @@
   background-image: url('../../images/background.jpg');
   background-attachment:fixed;
   margin-bottom: -190px;
+  
 }
 
 .createForm {
@@ -143,6 +144,7 @@ input::placeholder {
 
 .contImages {
   display: grid;
+  
 }
 
 .gifCreate {
@@ -165,4 +167,21 @@ input::placeholder {
   margin-top: -60px;
   max-height: 150px;
   max-width: 600px;
+}
+
+@media only screen and (max-width: 815px) {
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.createYourOwn {
+  margin-bottom: 100px;
+
+}
+
+.pokemonBanner {
+  margin-top: 10px;
+
+}
+
 }

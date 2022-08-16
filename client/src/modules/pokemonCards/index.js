@@ -24,7 +24,9 @@ function PokemonCards({ pokemons, refresh }) {
   const indexOfFistPkmn = indexOfLastPkmn - pkmnPerPage;
   const currentPkmns = pokemons?.slice(indexOfFistPkmn, indexOfLastPkmn);
 
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  let paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+
   return !pokemons ?
     <div>
       <img src={ballWaiting} alt='Loading...' className='waitingBall' />
@@ -34,7 +36,11 @@ function PokemonCards({ pokemons, refresh }) {
     :
     <div className='fullCard'>
       <div>
-        <Mapping pokemons={currentPkmns} />
+        <Mapping
+          pokemons={currentPkmns}
+          paginate={paginate}
+          refresh={refresh}
+        />
         <div>
           <Pagination
             pkmnPerPage={pkmnPerPage}

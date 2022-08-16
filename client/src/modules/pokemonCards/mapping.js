@@ -4,15 +4,19 @@ import setIcon from "./setIcon";
 import pokeBall from 'images/pokeball.png'
 import './index.css'
 
-const Mapping = ({ pokemons }) => {
+const Mapping = ({ pokemons, paginate, refresh }) => {
 
   useEffect(() => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: 'auto'
     });
+    return () => refresh
   }, [])
 
+  if (!pokemons[0]?.name) {
+    paginate(1);
+  }
   return (
     <div>
       {pokemons?.map((pokemon) => {

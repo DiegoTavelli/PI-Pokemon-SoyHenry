@@ -8,30 +8,32 @@
   
 .allDetailCard {
   display:flex;
+  flex-direction: row;
+  justify-content: center;
   background-image: url('../../images/background.jpg');
   background-attachment:fixed;
   box-shadow: .5px .5px 20px 10px rgb(9, 5, 75);
   filter: blur(0px);
-  justify-content: center;
   margin-top: 65px;
   margin-bottom: -180px;
+  /* margin: 0 auto; */
+  
 }
 
-  .card {
-  /* padding: -10; */
-  z-index: 0;
-  ;
-  margin-top: 40px;
-  margin-left: -300px;
-  margin-right: 0;
-  margin-bottom: 100px;
-  max-width: 500px;
-  min-width: 300px;
-  /* max-height: 500px; */
-  background-image: url("../../images/backCard.png");
-  border-radius: 50px;
-  box-shadow: .5px .5px 20px .5px rgb(9, 5, 75);
-  }
+.card {
+align-items: center;
+z-index: 0;
+margin-top: 40px;
+/* margin-left: -300px;
+margin-right: 0;
+margin-bottom: 100px; */
+max-width: 500px;
+min-width: 300px;
+/* max-height: 500px; */
+background-image: url("../../images/backCard.png");
+border-radius: 50px;
+box-shadow: .5px .5px 20px .5px rgb(9, 5, 75);
+}
 
   .detailsData {
     margin-top: 150px;
@@ -158,29 +160,51 @@
 
   
 
-@media only screen and (max-width: 635px) {
+@media only screen and (max-width: 700px) {
+  .allDetailCard {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
   .card {
+  /* flex-direction: column; */
   z-index: 0;
-  padding: -10px;
+  max-height: 450px;
   margin-top: 40px;
-  margin-left: 320px;
-  margin-right: auto;
-  margin-bottom: 100px;
-  max-width: 300px;
+  max-width: 270px;
   min-width: 150px;
-  /* max-height: 500px; */
   background-image: url("../../images/backCard.png");
   border-radius: 50px;
   box-shadow: .5px .5px 20px .5px rgb(9, 5, 75);
+  align-self: center;
+  }
+
+  .detailsData {
+    margin-top: 150px;
+    min-width: 200px;
+    max-width: 350px;
+    align-self: center;
+  }
+
+  .detailPic {
+    padding: 30%;
+    margin-right: 100px;
+    /* align-self: center; */
+  }
+
+  .parrafId {
+    padding: 0;
+    margin-bottom: -80px;
   }
 }
 
-  @media only screen and (max-width: 657px) {
+  /* @media only screen and (max-width: 657px) {
     .cardNotFound {
       max-width: 300px;
     }
     .detailPicNotFound {
     max-width: 300px;
+    min-width: 200px;
     }
        
-  }
+  } */

@@ -8,9 +8,11 @@ const setIcon = (p) => {
   } else {
     con = p.type
   }
+
   if (con[0] === "normal" && con[1]) {
     index = 1;
   }
+
   switch (con[index]?.name || con[index]) {
     case "normal":
       return "🔰";

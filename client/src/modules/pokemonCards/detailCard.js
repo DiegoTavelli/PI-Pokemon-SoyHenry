@@ -10,6 +10,7 @@ import { getDetails } from 'store/actions/detailCardActions.js'
 import { clearPokemon } from 'store/actions/clearPokemonActions';
 
 //images
+import background from '../../images/background.jpg'
 import pokeBall from 'images/pokeball.png'
 import ballWaiting from 'images/ballWaiting.gif'
 import loading from 'images/loading.png'
@@ -49,7 +50,7 @@ function DetailCard({ details, getDetails }) {
           <p className='parrafId' ># {details.id}</p>
           <img
             src={details.img ? details.img : details.image ? details.image : pokeBall}
-            alt='https://media.giphy.com/media/DRfu7BT8ZK1uo/giphy.gif'
+            alt='pokemon'
             className='detailPic'
           />
           <p> </p>

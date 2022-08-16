@@ -1,5 +1,7 @@
 .fullCard {
 display: flex;
+flex-direction: column;
+flex-wrap: wrap;
 /* max-width: 1400px; */
 align-items: center;
 margin-top: 100px;
@@ -97,37 +99,38 @@ margin-bottom: -240px;
  margin-top: -500px;
 }
 
-
 @media only screen and (max-width: 657px) {
-.Card {
-  /* margin: 0rem 1rem; */
-  /* padding: -10px; */
-   /* margin-top: 60px; */
-   /*margin-bottom: 0px; */
-  /* position: relative; */
-  /* margin-right: 30px; */
-  max-width: 40%;
+  .fullCard {
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    /* max-width: 1400px; */
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: -240px;
+    }
+  
+  .Card {
+    /* display: flex; */
+    /* flex-direction: row; */
+    
   }
   .cardName {
     margin-left: -10px;
-    /* margin-bottom: 20px; */
   }
-.detailPic {
-  max-width: 60%;
-}
-.cardTypes {
-  margin-right: 10px;
-}
+  
+  .detailPic {
+    max-width: 60%;
+  }
+  .cardTypes {
+    margin-right: 10px;
+  }
 }
 
+/* 
 @media only screen and (max-width: 590px) {
   .Card {
-    /* margin: 0rem 1rem; */
-    /* padding: -10px; */
-     /* margin-top: 60px; */
-     /*margin-bottom: 0px; */
-    /* position: relative; */
-    /* margin-right: 30px; */
+  
     max-width: 10%;
     }
-}
+} */
