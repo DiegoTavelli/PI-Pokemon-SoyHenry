@@ -32,6 +32,7 @@ const Mapping = ({ pokemons, paginate, refresh }) => {
           <Link key={pokemon.id} to={`/pokemons/${pokemon.name}`}  >
             <div className='Card' >
               <br></br>
+              {/* <p className='idCard' >{typeof pokemon.id === 'number' ? '#' + pokemon.id : '  '}</p> */}
               <p className='cardName' >{pokemon.name[0].toUpperCase() + pokemon.name.slice(1)}</p>
               <img src={pokemon.img ? pokemon.img : pokemon.image ? pokemon.image : pokeBall}
                 alt='Pokemon'
@@ -39,8 +40,12 @@ const Mapping = ({ pokemons, paginate, refresh }) => {
               />
               <br></br>
               <br></br>
-              <p className='cardTypeIcon'>{setIcon(pokemon)} </p>
-              <p className='cardTypes'>{typesTo} </p>
+              <div className='contTypId' >
+                <p className='cardTypeIcon' >
+                  {typeof pokemon.id === 'number' ? '# ' + pokemon.id : '#' + pokemon.id.slice(0, 3) + '..'}
+                </p>
+                <p className='cardTypes'>{setIcon(pokemon) + ' ' + typesTo} </p>
+              </div>
             </div>
           </Link>
         );

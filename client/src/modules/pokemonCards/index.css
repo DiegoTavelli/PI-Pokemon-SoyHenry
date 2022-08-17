@@ -19,14 +19,13 @@ margin-bottom: -240px;
 .Card {
   display:inline-block;
   background-image: url("../../images/backCard.png");
-  /* margin: auto; */
   border-radius: 50px;
   box-shadow: 1px 1px 20px 1px rgb(9, 5, 75);
   margin-top: 40px;
-  margin-bottom: 15px;
-  margin-left: 10px;
-  margin-right: 10px;
-  min-height: 400px;
+  margin-bottom: 12px;
+  margin-left: 12px;
+  margin-right: 12px;
+  min-height: 415px;
   max-width: 400px;
   min-width: 200px;
   width: 300px;
@@ -43,10 +42,11 @@ margin-bottom: -240px;
 
 .imagePokemon {
   margin-top: 10px;
-  min-width: 220px;
-  max-width: 220px;
-  min-height: 220px;
-  max-height: 220px;
+  margin-bottom: 0px;
+  min-width: 200px;
+  max-width: 200px;
+  min-height: 200px;
+  max-height: 200px;
   }
 /* 
  .imagePokemon:hover {
@@ -66,8 +66,8 @@ margin-bottom: -240px;
 
 .cardName {
   font-size: 1.2rem;
-  margin-top: 28px;
-  margin-left: -15px;
+  margin-top: 40px;
+  margin-left: 0px;
   text-decoration: none;
   color: rgb(212, 233, 24);
   box-sizing: content-box;
@@ -75,23 +75,45 @@ margin-bottom: -240px;
   transform: rotate(30deg);
 }
 
-.cardTypeIcon {
-  margin-left: 180px;
-  margin-top: -10px;
-  padding: 0;
+.contTypId {
+  /* display: flex; */
+  flex-direction: row;
 }
 
+.idCard {
+/* display: flex; */
+margin-right: 20px;
+margin-top: 0px;
+}
+
+.cardTypeIcon {
+  border-radius: 30px;
+  box-shadow: .1rem -.5rem .1rem  rgba(11, 123, 188, 0.467);
+  color: rgba(159, 205, 22, 0.722);
+  font-size: 1.4rem;
+  font-style:oblique;
+ display: flex;
+  margin-left: 3px;
+  margin-right: 215px;
+  margin-top: -15px;
+  margin-bottom: 12px;
+  padding-left: 18px;
+  }
+ 
+
 .cardTypes {
-  /* box-shadow: 10px 1px 2000px 10px rgb(146, 141, 15); */
-  padding: 0;
-  /* border-radius: 100px; */
+  z-index: 1;
+  display: flex;
   text-transform: capitalize;
   font-size: 1rem;
-  margin-top: -20px;
-  margin-left: 180px;
+  margin-top: -30px;
+  margin-left: 210px;
   text-decoration: none;
-  /* background-color: red; */
   color: rgb(212, 233, 24);
+}
+
+.Card:hover > .cardTypeIcon {
+  transform: scale(1.02) rotate(2deg);
 }
 
 .buttonPagination {
@@ -110,11 +132,6 @@ margin-bottom: -240px;
     margin-bottom: -240px;
     }
   
-  .Card {
-    /* display: flex; */
-    /* flex-direction: row; */
-    
-  }
   .cardName {
     margin-left: -10px;
   }
