@@ -2,7 +2,7 @@ import React from 'react';
 import './detailCard.css'
 import giphy from 'images/giphy.webp'
 
-export default function wrongPathPage() {
+export default function WrongPathPage() {
   return (
     <div>
       <div className='cardNotFound'>

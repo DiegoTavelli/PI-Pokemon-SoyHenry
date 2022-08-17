@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import setIcon from "./setIcon";
 import pokeBall from 'images/pokeball.png'
 import './index.css'
@@ -29,7 +29,7 @@ const Mapping = ({ pokemons, paginate, refresh }) => {
           typesTo = ['undefined'];
         }
         return (
-          <NavLink key={pokemon.id} to={`/pokemons/${pokemon.name}`}  >
+          <Link key={pokemon.id} to={`/pokemons/${pokemon.name}`}  >
             <div className='Card' >
               <br></br>
               <p className='cardName' >{pokemon.name.toUpperCase()}</p>
@@ -42,7 +42,7 @@ const Mapping = ({ pokemons, paginate, refresh }) => {
               <p className='cardTypeIcon'>{setIcon(pokemon)} </p>
               <p className='cardTypes'>{typesTo} </p>
             </div>
-          </NavLink>
+          </Link>
         );
       })}
     </div>

@@ -33,9 +33,9 @@ function DetailCard({ byName, getByName, details, getDetails }) {
   }, []);
 
   return !byName ?
-    <div>
-      <img src={loading} alt='Loading...' className='loading' />
+    <div className='loadingPage' >
       <img src={ballWaiting} alt='Loading...' className='waitingBall' />
+      <img src={loading} alt='Loading...' className='loading' />
       <br></br>
     </div>
     : !byName?.id && !details?.name ?

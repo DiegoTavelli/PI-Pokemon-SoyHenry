@@ -3,11 +3,11 @@ import './landingPage.css';
 import { useState } from 'react'
 import { useHistory } from "react-router-dom";
 
-import gifIntro from 'images/gifIntro.gif';
+import videoLanding from '../../images/MiVideoFinal.mp4'
 import gifStart from 'images/gifStart.gif';
+import gifIntro from 'images/gifIntro.gif';
 import logo from 'images/pokemon.png'
 import welcomeLogo from 'images/welcomeLogo.png'
-import videoLanding from '../../images/MiVideoFinal.mp4'
 
 export default function LandingPage() {
   const [selectedGif, setSelectedGif] = useState(gifIntro);
@@ -15,9 +15,10 @@ export default function LandingPage() {
   const delay = (e) => {
     e.preventDefault()
     setTimeout(() => {
-      history.push('/pokemons')
+      history.push('/pokemons');
     }, 1500)
   }
+
   return (
     <div className="backG">
       <video src={videoLanding} autoPlay loop muted className="video" />
