@@ -26,9 +26,9 @@ export default function LandingPage() {
         <div onClick={delay}>
           <img src={selectedGif} alt='loading...' className="gif"
             onClick={() => setSelectedGif(gifStart)} />
-          <div>
-            <img src={logo} alt='' className="logo" />
-          </div>
+        </div>
+        <div>
+          <img src={logo} alt='' className="logo" />
         </div>
       </div>
     </div>
