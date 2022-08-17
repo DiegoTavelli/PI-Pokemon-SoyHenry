@@ -64,7 +64,7 @@ router.post('/', async (req, res, next) => {
       image: image,
     });
 
-    let types = [typeOne ? typeOne : 'unknown', typeTwo ? typeTwo : 'unknown'];
+    let types = [typeOne, typeTwo ? typeTwo : ""];
 
     for (let i = 0; i < types.length; i++) {
       let eachType = await Type.findOne({
