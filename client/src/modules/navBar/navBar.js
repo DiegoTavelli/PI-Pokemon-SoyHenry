@@ -16,9 +16,9 @@ function NavBar({ refresh }) {
   const submit = (e) => {
     e.preventDefault();
     if (pokemon !== '') {
-      let toLower = pokemon.toLowerCase()
-      dispatch(getByName(toLower));
-      history.push(`/pokemons/${toLower}`)
+      let toLowerName = pokemon.toLowerCase()
+      dispatch(getByName(toLowerName));
+      history.push(`/pokemons/${toLowerName}`)
       setPokemons('')
     }
   }

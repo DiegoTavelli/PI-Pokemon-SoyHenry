@@ -101,7 +101,7 @@ function CreatePokemon() {
 
   const pushIfReady = async () => {
     let findPkm = await pokemons?.filter((p) => p.name.toLowerCase() === name.toLowerCase());
-    console.log(findPkm)
+    // console.log(findPkm)
     if (typeOne === "") return alert('Primary Type is mandatory');
     if (findPkm[0]?.id) {
       return alert('That Pokemon name already exist');

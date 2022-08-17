@@ -29,7 +29,7 @@ const Mapping = ({ pokemons, paginate, refresh }) => {
           typesTo = ['undefined'];
         }
         return (
-          <NavLink key={pokemon.id} to={`/pokemons/${pokemon.id}`}  >
+          <NavLink key={pokemon.id} to={`/pokemons/${pokemon.name}`}  >
             <div className='Card' >
               <br></br>
               <p className='cardName' >{pokemon.name.toUpperCase()}</p>

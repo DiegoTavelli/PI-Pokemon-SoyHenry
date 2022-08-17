@@ -1,9 +1,12 @@
 
 .waitingBall {
-  margin-top: 354px;
   border-radius: 1000px;
   max-width: 300px;
   box-shadow: 1px 1px 20px 1px rgb(9, 5, 75);
+}
+
+.loading {
+  margin-top: 154px;
   }
   
 .allDetailCard {
