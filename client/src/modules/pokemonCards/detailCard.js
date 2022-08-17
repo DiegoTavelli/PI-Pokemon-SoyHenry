@@ -10,7 +10,6 @@ import { getDetails } from 'store/actions/detailCardActions.js'
 import { clearPokemon } from 'store/actions/clearPokemonActions';
 
 //images
-import background from '../../images/background.jpg'
 import pokeBall from 'images/pokeball.png'
 import ballWaiting from 'images/ballWaiting.gif'
 import loading from 'images/loading.png'

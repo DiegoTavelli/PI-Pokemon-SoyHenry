@@ -1,33 +1,59 @@
-
 .backG {
-  display: flex;
+background-image: none;
+position: absolute;
+display: flex;
 flex-direction: column;
-flex-wrap: wrap;
+justify-content: center;
 align-items: center;
-  }
+padding: 0;
+overflow-x: hidden;
+}
+
+.allData {
+  position: absolute;
+display: flex;
+flex-direction: column;
+/* flex-wrap: wrap; */
+justify-content: center;
+align-items: center;
+padding: 0;
+}
+
+.video {
+object-fit: cover;
+width: 120%;
+height: 110vh;
+}
 
 .welcome {
-  margin-left: -51px;
-  align-items: center;
-  margin-right: 3px;
-  margin-top: 130px;
-  max-width: 180px;
-  
+margin-left: -51px;
+align-items: center;
+margin-right: 3px;
+margin-top: 130px;
+max-width: 180px;
 }
 
 .gif {
-  margin-top: 30px;
-  border-radius: 1000px;
-  box-shadow: 1px 1px 20px 1px rgb(9, 5, 75);
-  max-width: 320px;
-  margin-left: -51px;
+margin-top: 30px;
+border-radius: 1000px;
+box-shadow: 1px 1px 20px 1px rgb(9, 5, 75);
+max-width: 320px;
+margin-left: -51px;
   
 }
 
 .logo {
-  margin-right: 3px;
-  margin-top: 20px;
-  max-width: 400px;
-  margin-left: -51px;
+margin-right: 3px;
+margin-top: 20px;
+max-width: 400px;
+margin-left: -51px;
 }
 
+@media only screen and (max-width: 445px) {
+.welcome logo gif {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 10px;
+}
+}

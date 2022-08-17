@@ -60,7 +60,7 @@ function CreatePokemon() {
 
   function validateNumber(e) {
     if (!/^[0-9]*$/.test(e.target.value)) {
-      setError(`${e.target.name} must contain only numbers`)
+      setError(`${e.target.name} must contain only numbers`);
     } else {
       setError('');
       setState({
@@ -106,7 +106,6 @@ function CreatePokemon() {
     if (findPkm[0]?.id) {
       return alert('That Pokemon name already exist');
     }
-
     dispatch(createPokemon(state));
     dispatch(getPokemons());
     alert('🎉 Pokemon successfully created! 🥳');
@@ -146,6 +145,7 @@ function CreatePokemon() {
         <input
           autoComplete='off'
           className='createInputs'
+          value={hp}
           name='hp'
           placeholder='hp'
           onChange={(e) => validateNumber(e)}

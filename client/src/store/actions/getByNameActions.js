@@ -15,3 +15,4 @@ export function getByName(name) {
       }).catch((error) => console.log("Error on getByName Action", error))
   };
 }
+
