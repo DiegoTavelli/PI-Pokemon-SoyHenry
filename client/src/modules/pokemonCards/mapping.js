@@ -32,7 +32,7 @@ const Mapping = ({ pokemons, paginate, refresh }) => {
           <Link key={pokemon.id} to={`/pokemons/${pokemon.name}`}  >
             <div className='Card' >
               <br></br>
-              <p className='cardName' >{pokemon.name.toUpperCase()}</p>
+              <p className='cardName' >{pokemon.name[0].toUpperCase() + pokemon.name.slice(1)}</p>
               <img src={pokemon.img ? pokemon.img : pokemon.image ? pokemon.image : pokeBall}
                 alt='Pokemon'
                 className='imagePokemon'
