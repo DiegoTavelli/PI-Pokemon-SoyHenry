@@ -52,7 +52,7 @@ function DetailCard({ byName, getByName, details, getDetails }) {
         <div className='card'>
           <br></br>
           <p className='detailName' >{byName.name}</p>
-          <p className='parrafId' ># {byName.id}</p>
+          <p className='parrafId' ># {typeof byName.id === 'number' ? byName.id : byName.id.slice(0, 7) + '...'}</p>
           <img
             src={byName.img ? byName.img : byName.image ? byName.image : pokeBall}
             alt='pokemon'
