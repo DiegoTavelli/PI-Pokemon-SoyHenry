@@ -290,13 +290,16 @@ max-height: 10px;
   }
   
   .selectOption1 {
-  margin-left: -80px;
-  padding: -0.9rem -1.59em;
+    max-width: 9%;
+    margin-left: -80px;
+    padding: -0.9rem -1.59em;
   } 
   .selectOption2 {
+    max-width: 9%;
     padding: -1rem 1rem;
-    } 
-    .selectOption3 {
+  } 
+  .selectOption3 {
+      max-width: 9%;
     padding: -1rem 1rem;
     }
   .homeButton {
@@ -325,15 +328,15 @@ max-height: 10px;
   .selectOption1 {
   margin-left: -230px;
   padding: -1rem 1rem;
-  max-width: 20%;
+  max-width: 9%;
 } 
 .selectOption2 {
   padding: -1rem 1rem;
-  max-width: 20%;
+  max-width: 9%;
 } 
 .selectOption3 {
   padding: -1rem 1rem;
-  max-width: 20%;
+  max-width: 9%;
   } 
   
   .createButton {
