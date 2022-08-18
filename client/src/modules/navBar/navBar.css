@@ -410,3 +410,38 @@ max-height: 10px;
     margin-bottom: 5px; 
   }
 }
+
+@media only screen and (max-width: 322px) {
+  .searchInput {
+    max-width: 30%;
+    padding: 10px -5rem;
+    margin-left: -360px;
+  }
+  .searchButton {
+    padding: .1rem .2rem; 
+    
+  }
+  .homeButton {
+    padding: .1rem .2rem;
+    margin-left: 80px; 
+    margin-bottom: 5px;
+  }
+  .selectOption1 {
+  margin-left: -370px;
+  padding: -1rem 1rem;
+  max-width: 7%;
+} 
+.selectOption2 {
+  padding: -1rem 1rem;
+  max-width: 7%;
+} 
+.selectOption3 {
+  padding: -1rem 1rem;
+  max-width: 7%;
+  } 
+  
+  .createButton {
+    padding: .1rem .2rem;
+    margin-bottom: 5px; 
+  }
+}

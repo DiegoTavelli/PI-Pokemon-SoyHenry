@@ -12,7 +12,7 @@ margin-bottom: -240px;
   margin-top: 180px;
   margin-right: 30px;
   border-radius: 1000px;
-  max-width: 300px;
+  max-width: 250px;
   box-shadow: 1px 1px 20px 1px rgb(9, 5, 75);
 }
 
@@ -144,10 +144,38 @@ margin-top: 0px;
   }
 }
 
-/* 
-@media only screen and (max-width: 590px) {
-  .Card {
-  
-    max-width: 10%;
+@media only screen and (max-width: 322px) {
+  .fullCard {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: -240px;
     }
-} */
+  .Card {
+    margin-left: -10px;
+    max-width: 70%;
+    height: 20px;
+  }
+  .cardName {
+    margin-left: -10px;
+  }
+  
+  .detailPic {
+    max-width: 60%;
+  }
+  .cardTypeIcon {
+    box-shadow: .1rem -.5rem .1rem  rgba(11, 123, 188, 0);
+    margin-left: 80px;
+  }
+  .contTypId {
+    margin-top: -50px;
+margin-left: -80px;
+  }
+
+  .waitingBall {
+    max-width: 40%;
+  }
+
+}
+
