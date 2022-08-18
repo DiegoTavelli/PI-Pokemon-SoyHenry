@@ -341,11 +341,11 @@ max-height: 10px;
   }
 }
 
-@media only screen and (max-width: 348px) {
+@media only screen and (max-width: 390px) {
   .searchInput {
-    max-width: 30%;
+    max-width: 40%;
     padding: 10px -5rem;
-    margin-left: -370px;
+    margin-left: -240px;
   }
   .searchButton {
     padding: .1rem .2rem; 
@@ -353,10 +353,11 @@ max-height: 10px;
   }
   .homeButton {
     padding: .1rem .2rem;
-    margin-left: 75px; 
+    margin-left: 130px; 
+    margin-bottom: 5px;
   }
   .selectOption1 {
-  margin-left: -385px;
+  margin-left: -285px;
   padding: -1rem 1rem;
   max-width: 10%;
 } 
@@ -371,5 +372,41 @@ max-height: 10px;
   
   .createButton {
     padding: .1rem .2rem; 
+    margin-bottom: 5px;
+  }
+}
+
+@media only screen and (max-width: 376px) {
+  .searchInput {
+    max-width: 30%;
+    padding: 10px -5rem;
+    margin-left: -280px;
+  }
+  .searchButton {
+    padding: .1rem .2rem; 
+    
+  }
+  .homeButton {
+    padding: .1rem .2rem;
+    margin-left: 110px; 
+    margin-bottom: 5px;
+  }
+  .selectOption1 {
+  margin-left: -285px;
+  padding: -1rem 1rem;
+  max-width: 7%;
+} 
+.selectOption2 {
+  padding: -1rem 1rem;
+  max-width: 7%;
+} 
+.selectOption3 {
+  padding: -1rem 1rem;
+  max-width: 7%;
+  } 
+  
+  .createButton {
+    padding: .1rem .2rem;
+    margin-bottom: 5px; 
   }
 }

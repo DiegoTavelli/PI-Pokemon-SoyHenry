@@ -6,6 +6,7 @@
 }
 
 .createForm {
+  margin-top: 40px;
   display:flex;
   border-radius: 40px;
   min-width: 300px;
@@ -152,27 +153,34 @@ input::placeholder {
   /* margin-left: -390px; */
   margin-right: 100px;
   max-height: 300px;
-  max-width: 500px;
+  max-width: 350px;
   border-radius: 50px;
 }
 
 .createYourOwn {
+  margin-left: 20px;
   margin-top: 40px;
   max-height: 100px;
-  max-width: 500px;
+  max-width: 300px;
 
 }
 
 .pokemonBanner {
   margin-top: -60px;
   max-height: 150px;
-  max-width: 600px;
+  max-width: 300px;
+  margin-left: 20px;
 }
 
 @media only screen and (max-width: 815px) {
 .container {
   display: flex;
   flex-wrap: wrap;
+}
+
+.contImages {
+/* max-width: 200px; */
+  margin-left: 98px;
 }
 .createYourOwn {
   margin-bottom: 100px;
@@ -185,3 +193,45 @@ input::placeholder {
 }
 
 }
+
+@media only screen and (max-width: 350px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .createInputs {
+    max-width: 60%;
+    margin-left: 60px;
+  }
+  .createButtonPkm {
+    max-width: 60%;
+    margin-left: 60px;
+  }
+  .selectOptionCreate {
+    max-width: 60%;
+    margin-left: 60px;
+  }
+
+  .contImages {
+  /* max-width: 200px; */
+    margin-left: 98px;
+  }
+  .createYourOwn {
+    margin-left: 60px;
+    max-width: 230px;
+    margin-bottom: 100px;
+  
+  }
+  
+  .pokemonBanner {
+    max-width: 250px;
+    margin-left: 50px;
+    margin-top: 10px;
+    }
+
+    /* .gifCreate {
+      max-width: 250px;
+    } */
+  
+  }

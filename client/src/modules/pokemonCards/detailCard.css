@@ -96,16 +96,26 @@ box-shadow: .5px .5px 20px .5px rgb(9, 5, 75);
 }
 
 .parrafId {
-  display: fixed;
+  border-radius: 30px;
+  box-shadow: -.1rem .5rem .1rem  rgba(0, 0, 0, 0.467);
+  display: flex;
   background-size: 90px;
-  margin-top: 50px;
-  margin-right: 20px;
   font-weight:bold;
   color: rgb(210, 185, 84);
   font-size: 2rem;
-  padding: .1rem .1rem;
+  padding: 0;
   cursor: default;
+  margin-top: 50px;
+  margin-left: 3px;
+  margin-right: 290px;
+  margin-bottom: 12px;
+  padding-left: 18px;
+  
   }
+
+.idDb {
+  font-size: 1rem;
+}
 
   .homeBtnDetails {
     /* background-image: url('../../images/home2.png'); */
@@ -169,6 +179,8 @@ box-shadow: .5px .5px 20px .5px rgb(9, 5, 75);
 
 @media only screen and (max-width: 700px) {
   .allDetailCard {
+    margin-left: -10px;
+    align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
   }
@@ -178,6 +190,7 @@ box-shadow: .5px .5px 20px .5px rgb(9, 5, 75);
   z-index: 0;
   max-height: 450px;
   margin-top: 40px;
+  margin-bottom: -50px;
   max-width: 270px;
   min-width: 150px;
   background-image: url("../../images/backCard.png");
@@ -187,6 +200,7 @@ box-shadow: .5px .5px 20px .5px rgb(9, 5, 75);
   }
 
   .detailsData {
+    margin-left: 24px;
     margin-top: 150px;
     min-width: 200px;
     max-width: 350px;
@@ -195,7 +209,8 @@ box-shadow: .5px .5px 20px .5px rgb(9, 5, 75);
 
   .detailPic {
     padding: 30%;
-    margin-right: 100px;
+    margin-top: -70px;
+    margin-left: -50px;
     /* align-self: center; */
   }
 
