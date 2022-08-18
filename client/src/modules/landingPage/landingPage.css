@@ -14,7 +14,7 @@ overflow-x: hidden;
   position: absolute;
 display: flex;
 flex-direction: column;
-margin-top: -300px;
+margin-top: -400px;
 justify-content: center;
 align-items: center;
 padding: 0;
@@ -58,10 +58,21 @@ margin-left: -51px;
 }
 
 @media only screen and (max-width: 445px) {
-.welcome logo gif {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 10px;
+.allData {
+  max-height: 20px;
 }
+
+ .gif {
+max-width: 70%;
+margin-left: 5px;
+}
+.welcome {
+  margin-top: 100px;
+  max-width: 40%;
+  margin-left: 5px;
+}
+.logo {
+  max-width: 70%;
+  margin-left: 5px;
+ }
 }
