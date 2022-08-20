@@ -1,450 +1,481 @@
 * {
-  box-sizing: border-box;
- }
+	box-sizing: border-box;
+}
 
- .selectForm {
-  margin-right: 20px;
- }
+.selectForm {
+	margin-right: 20px;
+}
 
- .onlyForm {
-margin: 0;
- }
+.onlyForm {
+	margin: 0;
+}
 
 .formNav {
-  min-height: 136px;
-  flex-direction: row;
-  justify-content: center;
-  z-index: 1;
-  justify-content: space-between;
-  width: 100%;
-  position:fixed;
-  background-image:radial-gradient(rgba(193, 35, 35, 0.286),rgba(8, 8, 122, 0.218));
-  }
+	min-height: 136px;
+	flex-direction: row;
+	justify-content: center;
+	z-index: 1;
+	justify-content: space-between;
+	width: 100%;
+	position: fixed;
+	background-image: radial-gradient(
+		rgba(193, 35, 35, 0.286),
+		rgba(8, 8, 122, 0.218)
+	);
+}
 
 .formNavDetails {
-  min-height: 70px;
-  flex-direction: row;
-  justify-content: center;
-  z-index: 1;
-  justify-content: space-between;
-  width: 100%;
-  position:fixed;
-  background-image:radial-gradient(rgba(193, 35, 35, 0.286),rgba(8, 8, 122, 0.218));
+	min-height: 70px;
+	flex-direction: row;
+	justify-content: center;
+	z-index: 1;
+	justify-content: space-between;
+	width: 100%;
+	position: fixed;
+	background-image: radial-gradient(
+		rgba(193, 35, 35, 0.286),
+		rgba(8, 8, 122, 0.218)
+	);
 }
 
 .formNavDetailsCreate {
-  min-height: 70px;
-  flex-direction: row;
-  justify-content: center;
-  z-index: 1;
-  justify-content: space-between;
-  width: 100%;
-  position:fixed;
-  background-image:radial-gradient(rgba(193, 35, 35, 0.286),rgba(8, 8, 122, 0.218));
-  
+	min-height: 70px;
+	flex-direction: row;
+	justify-content: center;
+	z-index: 1;
+	justify-content: space-between;
+	width: 100%;
+	position: fixed;
+	background-image: radial-gradient(
+		rgba(193, 35, 35, 0.286),
+		rgba(8, 8, 122, 0.218)
+	);
 }
 
 .searchInput {
-  margin-top: 5px;
-  max-height: 20px;
-  margin-bottom: 8px;
-  margin-left: 20px;
-  background: rgb(255, 255, 255);
-  font-weight:bold;
-  color: rgb(10, 73, 107);
-  font-size: 1.3rem;
-  padding: 16px 4rem;
-  border: 1.2px solid rgb(20, 136, 199);
-  cursor:text;
-  transition: all .3s ease;
-  /* border-top: rgb(193, 35, 35);
+	margin-top: 5px;
+	max-height: 20px;
+	margin-bottom: 8px;
+	margin-left: 20px;
+	background: rgb(255, 255, 255);
+	font-weight: bold;
+	color: rgb(10, 73, 107);
+	font-size: 1.3rem;
+	padding: 16px 4rem;
+	border: 1.2px solid rgb(20, 136, 199);
+	cursor: text;
+	transition: all 0.3s ease;
+	/* border-top: rgb(193, 35, 35);
   border-bottom: rgb(8, 8, 122); */
-  border-radius: 13px;
-  box-shadow: .04rem .04rem 1rem rgb(193, 35, 35),
-  -.04rem -.04rem 1rem rgb(8, 8, 122)
+	border-radius: 13px;
+	box-shadow: 0.04rem 0.04rem 1rem rgb(193, 35, 35),
+		-0.04rem -0.04rem 1rem rgb(8, 8, 122);
 }
 
 input {
-  text-align: center;
+	text-align: center;
 }
 
 .searchInput:hover {
-  box-shadow: 2px 2px 1rem rgb(187, 3, 77),
-  -2rem -2rem -1rem rgb(31, 7, 149);
+	box-shadow: 2px 2px 1rem rgb(187, 3, 77), -2rem -2rem -1rem rgb(31, 7, 149);
 }
 
 .searchInput:active {
-  /* border-style: none; */
-  box-shadow: .15rem .15rem .5rem rgb(8, 8, 122),
-  -.1rem -.1rem .5rem rgb(187, 3, 35);
+	/* border-style: none; */
+	box-shadow: 0.15rem 0.15rem 0.5rem rgb(8, 8, 122),
+		-0.1rem -0.1rem 0.5rem rgb(187, 3, 35);
 }
 
 .searchInput:focus {
-  outline: none;
+	outline: none;
 }
 
 .searchInput::placeholder {
-  font: 22px/3 sans-serif;
+	font: 22px/3 sans-serif;
 }
 
 /* search button */
 .searchButton {
-  margin-left: 10px;
-  background-color: rgba(20, 136, 199, 0.8);
-  font-weight:bold;
-  color: rgb(210, 185, 84);
-  font-size: 1rem;
-  padding: .5rem 1.5rem;
-  border: 2px solid rgb(20, 136, 199);
-  cursor: pointer;
-  transition: all .2s ease;
-  border-radius: 50px;
+	margin-left: 10px;
+	background-color: rgba(20, 136, 199, 0.8);
+	font-weight: bold;
+	color: rgb(210, 185, 84);
+	font-size: 1rem;
+	padding: 0.5rem 1.5rem;
+	border: 2px solid rgb(20, 136, 199);
+	cursor: pointer;
+	transition: all 0.2s ease;
+	border-radius: 50px;
 }
 
 .searchButton:hover {
-  background-color: rgba(20, 136, 199);
-  border: 2px solid rgba(20, 136, 199);
+	background-color: rgba(20, 136, 199);
+	border: 2px solid rgba(20, 136, 199);
 }
 
 .searchButton:active {
-  box-shadow: .1rem .1rem 10rem rgb(8, 8, 122),
-  -.3rem -.3rem 1rem rgb(187, 3, 35)
+	box-shadow: 0.1rem 0.1rem 10rem rgb(8, 8, 122),
+		-0.3rem -0.3rem 1rem rgb(187, 3, 35);
 }
 
 .homeAndCreate {
-display: flex;
+	display: flex;
+	flex-direction: row;
 }
 
 .onlyHome {
-  display: flex;
+	display: flex;
 }
 
+.bannerNavBar {
+	position: sticky;
+	padding: 0;
+	align-self: center;
+	margin-left: 12.8rem;
+	margin-right: auto;
+	min-width: 8%;
+	min-height: 100%;
+	width: 8%;
+	height: 100%;
+}
 
 /* home button */
 .homeButton {
-  background-color: rgba(20, 136, 199, 0.835);
-  background-size: 90px;
-  margin-bottom: 3px;
-  margin-top: 10px;
-  margin-right: 10px;
-  font-weight:bold;
-  color: rgb(210, 185, 84);
-  font-size: 1rem;
-  padding: .5rem 1.5rem;
-  border: 2px solid rgba(20, 136, 199, 0.569);
-  cursor: pointer;
-  transition: all .3s ease;
-  border-radius: 13px;
+	background-color: rgba(20, 136, 199, 0.835);
+	background-size: 90px;
+	margin-bottom: 3px;
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-left: 1.7rem;
+	font-weight: bold;
+	color: rgb(210, 185, 84);
+	font-size: 1rem;
+	padding: 0.5rem 1.5rem;
+	border: 2px solid rgba(20, 136, 199, 0.569);
+	cursor: pointer;
+	transition: all 0.3s ease;
+	border-radius: 13px;
 }
 
 .homeButton:hover {
-  background-color: rgba(20, 136, 199, 0.432);
-  box-shadow: 2px 2px 1rem rgb(187, 3, 77),
-  -.3rem -.3rem 1rem rgb(31, 7, 149);
-  border: 2px solid rgba(20, 136, 199, 0.227);
+	background-color: rgba(20, 136, 199, 0.432);
+	box-shadow: 2px 2px 1rem rgb(187, 3, 77), -0.3rem -0.3rem 1rem rgb(31, 7, 149);
+	border: 2px solid rgba(20, 136, 199, 0.227);
 }
 
 .homeButton:active {
-  box-shadow: .3rem .3rem 1rem rgb(8, 8, 122),
-  -.3rem -.3rem 1rem rgb(187, 3, 35)
+	box-shadow: 0.3rem 0.3rem 1rem rgb(8, 8, 122),
+		-0.3rem -0.3rem 1rem rgb(187, 3, 35);
 }
 
 .homeButtonDetails {
-margin-left: 400px;
+	margin-left: 400px;
 }
 
 .homeButtonHome {
-  margin-left: 500px;
-  }
+	margin-left: 500px;
+}
 
 .createButton {
-  margin-right: 10px;
-  display: flexbox;
-  background-color: rgba(20, 136, 199, 0.835);
-  background-size: 90px;
-  margin-top: 10px;
-  font-weight:bold;
-  color: rgb(210, 185, 84);
-  font-size: 1rem;
-  padding: .5rem 1.5rem;
-  border: 2px solid rgba(20, 136, 199, 0.569);
-  cursor: pointer;
-  transition: all .3s ease;
-  border-radius: 13px;
+	margin-bottom: 3px;
+	margin-top: 10px;
+	margin-right: 150px;
+	margin-left: 0.7rem;
+	display: flex;
+	background-color: rgb(210, 185, 84);
+	background-size: 90px;
+	font-weight: bold;
+	color: rgba(20, 136, 199, 0.835);
+	font-size: 1rem;
+	padding: 0.5rem 1.5rem;
+	border: 2px solid rgba(210, 185, 84, 0.33);
+	cursor: pointer;
+	transition: all 0.3s ease;
+	border-radius: 13px;
 }
 
 .createButton:hover {
-  background-color: rgba(20, 136, 199, 0.432);
-  box-shadow: 2px 2px 1rem rgb(187, 3, 77),
-  -.3rem -.3rem 1rem rgb(31, 7, 149);
-  border: 2px solid rgba(20, 136, 199, 0.227);
+	background-color: rgba(20, 136, 199, 0.432);
+	box-shadow: 2px 2px 1rem rgb(187, 3, 77), -0.3rem -0.3rem 1rem rgb(31, 7, 149);
+	border: 2px solid rgba(20, 136, 199, 0.227);
 }
 
 .createButton:active {
-  box-shadow: .3rem .3rem 1rem rgb(8, 8, 122),
-  -.3rem -.3rem 1rem rgb(187, 3, 35)
+	box-shadow: 0.3rem 0.3rem 1rem rgb(8, 8, 122),
+		-0.3rem -0.3rem 1rem rgb(187, 3, 35);
 }
 
 .filters {
-max-height: 10px;
+	max-height: 10px;
 }
 
 .selectOption1 {
-  display:table-row;
-  background-color: rgba(20, 136, 199, 0.835);
-  background-size: 90px;
-  margin-left: -85px;
-  font-weight:bold;
-  color: rgb(210, 185, 84);
-  font-size: 1rem;
-  border: 2px solid rgba(20, 136, 199, 0.569);
-  cursor: pointer;
-  transition: all .3s ease;
-  border-radius: 13px;
+	display: table-row;
+	background-color: rgba(20, 136, 199, 0.835);
+	background-size: 90px;
+	margin-left: -85px;
+	font-weight: bold;
+	color: rgb(210, 185, 84);
+	font-size: 1rem;
+	border: 2px solid rgba(20, 136, 199, 0.569);
+	cursor: pointer;
+	transition: all 0.3s ease;
+	border-radius: 13px;
 }
 
 .selectOption1:active {
-  box-shadow: .3rem .3rem 1rem rgb(8, 8, 122),
-  -.3rem -.3rem 1rem rgb(187, 3, 35)
+	box-shadow: 0.3rem 0.3rem 1rem rgb(8, 8, 122),
+		-0.3rem -0.3rem 1rem rgb(187, 3, 35);
 }
 .selectOption1:focus {
-  outline: none;
+	outline: none;
 }
 
 .selectOption1:after {
-  border-radius: 50px;
-
+	border-radius: 50px;
 }
 
 .selectOption2 {
-  display:table-row;
-  background-color: rgba(20, 136, 199, 0.835);
-  background-size: 90px;
-  margin-left: 10px;
-  font-weight:bold;
-  color: rgb(210, 185, 84);
-  font-size: 1rem;
-  border: 2px solid rgba(20, 136, 199, 0.569);
-  cursor: pointer;
-  transition: all .3s ease;
-  border-radius: 13px;
+	display: table-row;
+	background-color: rgba(20, 136, 199, 0.835);
+	background-size: 90px;
+	margin-left: 10px;
+	font-weight: bold;
+	color: rgb(210, 185, 84);
+	font-size: 1rem;
+	border: 2px solid rgba(20, 136, 199, 0.569);
+	cursor: pointer;
+	transition: all 0.3s ease;
+	border-radius: 13px;
 }
 
 .selectOption2:active {
-  box-shadow: .3rem .3rem 1rem rgb(8, 8, 122),
-  -.3rem -.3rem 1rem rgb(187, 3, 35)
+	box-shadow: 0.3rem 0.3rem 1rem rgb(8, 8, 122),
+		-0.3rem -0.3rem 1rem rgb(187, 3, 35);
 }
 .selectOption2:focus {
-  outline: none;
+	outline: none;
 }
 
 .selectOption2:after {
-  border-radius: 50px;
+	border-radius: 50px;
 }
 
 .selectOption3 {
-  display:table-row;
-  background-color: rgba(20, 136, 199, 0.835);
-  background-size: 90px;
-  margin-left: 10px;
-  font-weight:bold;
-  color: rgb(210, 185, 84);
-  font-size: 1rem;
-  border: 2px solid rgba(20, 136, 199, 0.569);
-  cursor: pointer;
-  transition: all .3s ease;
-  border-radius: 13px;
+	display: table-row;
+	background-color: rgba(20, 136, 199, 0.835);
+	background-size: 90px;
+	margin-left: 10px;
+	font-weight: bold;
+	color: rgb(210, 185, 84);
+	font-size: 1rem;
+	border: 2px solid rgba(20, 136, 199, 0.569);
+	cursor: pointer;
+	transition: all 0.3s ease;
+	border-radius: 13px;
 }
 
 .selectOption3:active {
-  box-shadow: .3rem .3rem 1rem rgb(8, 8, 122),
-  -.3rem -.3rem 1rem rgb(187, 3, 35)
+	box-shadow: 0.3rem 0.3rem 1rem rgb(8, 8, 122),
+		-0.3rem -0.3rem 1rem rgb(187, 3, 35);
 }
 .selectOption3:focus {
-  outline: none;
+	outline: none;
 }
 
 .selectOption3:after {
-  border-radius: 50px;
+	border-radius: 50px;
 }
 
-
 @media only screen and (max-width: 650px) {
-  .formNav {
-  min-height: 150px;
-  min-width: 650px;
-  align-items: center;
-  }
-  .searchInput {
-  align-items: left;
-  }
+	.createButton {
+		padding: 0.4rem 0.8rem;
+		margin-bottom: 0.2rem;
+		margin-left: 0;
+	}
+	.homeButton {
+		padding: 0.4rem 0.8rem;
+	}
+	.formNav {
+		min-height: 150px;
+		min-width: 650px;
+		align-items: center;
+	}
+	.searchInput {
+		align-items: left;
+	}
+	.selectOption1 {
+		max-width: 20%;
+	}
+	.selectOption2 {
+		max-width: 10%;
+	}
+	.selectOption3 {
+		max-width: 100%;
+	}
 }
 
 @media only screen and (max-width: 600px) {
-  .searchInput {
-    padding: 10px .004rem;
-    margin-left: -80px;
-  }
-  .searchButton {
-    padding: .2rem .5rem;
-  }
-  
-  .selectOption1 {
-    max-width: 9%;
-    margin-left: -80px;
-    padding: -0.9rem -1.59em;
-  } 
-  .selectOption2 {
-    max-width: 9%;
-    padding: -1rem 1rem;
-  } 
-  .selectOption3 {
-      max-width: 9%;
-    padding: -1rem 1rem;
-    }
-  .homeButton {
-    margin-left: 220px;
-    padding: .2rem .5rem;
-  }
-  .createButton {
-    padding: .2rem .5rem;
-  }
+	.searchInput {
+		padding: 10px 0.004rem;
+		margin-left: -80px;
+	}
+	.searchButton {
+		padding: 0.2rem 0.5rem;
+	}
+
+	.selectOption1 {
+		max-width: 9%;
+		margin-left: -80px;
+		padding: -0.9rem -1.59em;
+	}
+	.selectOption2 {
+		max-width: 9%;
+		padding: -1rem 1rem;
+	}
+	.selectOption3 {
+		max-width: 9%;
+		padding: -1rem 1rem;
+	}
+	.homeButton {
+		margin-left: 220px;
+		padding: 0.2rem 0.5rem;
+	}
+	.createButton {
+		padding: 0.2rem 0.5rem;
+	}
 }
 
-@media only screen and (max-width: 470px) {
-  .searchInput {
-    max-width: 30%;
-    padding: 10px -5rem;
-    margin-left: -250px;
-  }
-  .searchButton {
-    padding: .1rem .2rem; 
-    
-  }
-  .homeButton {
-    padding: .1rem .2rem;
-    margin-left: 130px; 
-  }
-  .selectOption1 {
-  margin-left: -230px;
-  padding: -1rem 1rem;
-  max-width: 9%;
-} 
-.selectOption2 {
-  padding: -1rem 1rem;
-  max-width: 9%;
-} 
-.selectOption3 {
-  padding: -1rem 1rem;
-  max-width: 9%;
-  } 
-  
-  .createButton {
-    padding: .1rem .2rem; 
-  }
+@media only screen and (max-width: 473px) {
+	.searchInput {
+		max-width: 30%;
+		padding: 10px -5rem;
+		margin-left: -250px;
+	}
+	.searchButton {
+		padding: 0.1rem 0.2rem;
+	}
+	.homeButton {
+		padding: 0.1rem 0.2rem;
+		margin-left: 130px;
+	}
+	.selectOption1 {
+		margin-left: -230px;
+		padding: -1rem 1rem;
+		max-width: 9%;
+	}
+	.selectOption2 {
+		padding: -1rem 1rem;
+		max-width: 9%;
+	}
+	.selectOption3 {
+		padding: -1rem 1rem;
+		max-width: 9%;
+	}
+
+	.createButton {
+		padding: 0.1rem 0.2rem;
+	}
 }
 
 @media only screen and (max-width: 390px) {
-  .searchInput {
-    max-width: 40%;
-    padding: 10px -5rem;
-    margin-left: -240px;
-  }
-  .searchButton {
-    padding: .1rem .2rem; 
-    
-  }
-  .homeButton {
-    padding: .1rem .2rem;
-    margin-left: 130px; 
-    margin-bottom: 5px;
-  }
-  .selectOption1 {
-  margin-left: -285px;
-  padding: -1rem 1rem;
-  max-width: 10%;
-} 
-.selectOption2 {
-  padding: -1rem 1rem;
-  max-width: 10%;
-} 
-.selectOption3 {
-  padding: -1rem 1rem;
-  max-width: 10%;
-  } 
-  
-  .createButton {
-    padding: .1rem .2rem; 
-    margin-bottom: 5px;
-  }
+	.searchInput {
+		max-width: 40%;
+		padding: 10px -5rem;
+		margin-left: -240px;
+	}
+	.searchButton {
+		padding: 0.1rem 0.2rem;
+	}
+	.homeButton {
+		padding: 0.1rem 0.2rem;
+		margin-left: 130px;
+		margin-bottom: 5px;
+	}
+	.selectOption1 {
+		margin-left: -285px;
+		padding: -1rem 1rem;
+		max-width: 10%;
+	}
+	.selectOption2 {
+		padding: -1rem 1rem;
+		max-width: 10%;
+	}
+	.selectOption3 {
+		padding: -1rem 1rem;
+		max-width: 10%;
+	}
+
+	.createButton {
+		padding: 0.1rem 0.2rem;
+		margin-bottom: 5px;
+	}
 }
 
 @media only screen and (max-width: 376px) {
-  .searchInput {
-    max-width: 30%;
-    padding: 10px -5rem;
-    margin-left: -280px;
-  }
-  .searchButton {
-    padding: .1rem .2rem; 
-    
-  }
-  .homeButton {
-    padding: .1rem .2rem;
-    margin-left: 110px; 
-    margin-bottom: 5px;
-  }
-  .selectOption1 {
-  margin-left: -285px;
-  padding: -1rem 1rem;
-  max-width: 7%;
-} 
-.selectOption2 {
-  padding: -1rem 1rem;
-  max-width: 7%;
-} 
-.selectOption3 {
-  padding: -1rem 1rem;
-  max-width: 7%;
-  } 
-  
-  .createButton {
-    padding: .1rem .2rem;
-    margin-bottom: 5px; 
-  }
+	.searchInput {
+		max-width: 30%;
+		padding: 10px -5rem;
+		margin-left: -280px;
+	}
+	.searchButton {
+		padding: 0.1rem 0.2rem;
+	}
+	.homeButton {
+		padding: 0.1rem 0.2rem;
+		margin-left: 110px;
+		margin-bottom: 5px;
+	}
+	.selectOption1 {
+		margin-left: -285px;
+		padding: -1rem 1rem;
+		max-width: 7%;
+	}
+	.selectOption2 {
+		padding: -1rem 1rem;
+		max-width: 7%;
+	}
+	.selectOption3 {
+		padding: -1rem 1rem;
+		max-width: 7%;
+	}
+
+	.createButton {
+		padding: 0.1rem 0.2rem;
+		margin-bottom: 5px;
+	}
 }
 
 @media only screen and (max-width: 322px) {
-  .searchInput {
-    max-width: 30%;
-    padding: 10px -5rem;
-    margin-left: -360px;
-  }
-  .searchButton {
-    padding: .1rem .2rem; 
-    
-  }
-  .homeButton {
-    padding: .1rem .2rem;
-    margin-left: 80px; 
-    margin-bottom: 5px;
-  }
-  .selectOption1 {
-  margin-left: -370px;
-  padding: -1rem 1rem;
-  max-width: 7%;
-} 
-.selectOption2 {
-  padding: -1rem 1rem;
-  max-width: 7%;
-} 
-.selectOption3 {
-  padding: -1rem 1rem;
-  max-width: 7%;
-  } 
-  
-  .createButton {
-    padding: .1rem .2rem;
-    margin-bottom: 5px; 
-  }
+	.searchInput {
+		max-width: 30%;
+		padding: 10px -5rem;
+		margin-left: -360px;
+	}
+	.searchButton {
+		padding: 0.1rem 0.2rem;
+	}
+	.homeButton {
+		padding: 0.1rem 0.2rem;
+		margin-left: 80px;
+		margin-bottom: 5px;
+	}
+	.selectOption1 {
+		margin-left: -370px;
+		padding: -1rem 1rem;
+		max-width: 7%;
+	}
+	.selectOption2 {
+		padding: -1rem 1rem;
+		max-width: 7%;
+	}
+	.selectOption3 {
+		padding: -1rem 1rem;
+		max-width: 7%;
+	}
+
+	.createButton {
+		padding: 0.1rem 0.2rem;
+		margin-bottom: 5px;
+	}
 }

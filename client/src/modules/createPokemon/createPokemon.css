@@ -1,242 +1,232 @@
 .container {
-  background-image: url('../../images/background.jpg');
-  background-attachment:fixed;
-  margin-bottom: -190px;
-  
+	background-image: url('../../images/background.jpg');
+	background-attachment: fixed;
+	margin-bottom: -420px;
 }
 
 .createForm {
-  margin-top: 40px;
-  display:flex;
-  border-radius: 40px;
-  min-width: 300px;
-  width: 25%;
-  flex-direction: column;
-  justify-content: center;
+	margin-top: 40px;
+	display: flex;
+	border-radius: 40px;
+	min-width: 300px;
+	width: 25%;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .danger {
-  border: red 1px solid;
+	border: red 1px solid;
 }
 .error {
-  color: red;
-  text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black,
-    1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+	color: red;
+	text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black,
+		1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
 }
 
 .container {
-  margin-top: 100px;
-  display: flex;
-  justify-content: center;
+	margin-top: 100px;
+	display: flex;
+	justify-content: center;
 }
 
 .createInputs {
-  margin-top: 5px;
-  max-height: 20px;
-  max-width: 80%;
-  align-self: center;
-  margin-bottom: 8px;
-  /* margin-left: 20px; */
-  background: rgba(255, 255, 255, 0.227);
-  font-weight:bold;
-  color: rgb(210, 185, 84);
-  font-size: 1.23rem;
-  padding: 13px 4rem;
-  border: 1.2px solid rgb(20, 136, 199);
-  cursor:text;
-  transition: all .3s ease;
-  /* border-top: rgb(193, 35, 35);
+	margin-top: 5px;
+	max-height: 20px;
+	max-width: 80%;
+	align-self: center;
+	margin-bottom: 8px;
+	/* margin-left: 20px; */
+	background: rgba(255, 255, 255, 0.227);
+	font-weight: bold;
+	color: rgb(210, 185, 84);
+	font-size: 1.23rem;
+	padding: 13px 4rem;
+	border: 1.2px solid rgb(20, 136, 199);
+	cursor: text;
+	transition: all 0.3s ease;
+	/* border-top: rgb(193, 35, 35);
   border-bottom: rgb(8, 8, 122); */
-  border-radius: 13px;
+	border-radius: 13px;
 }
 
 input {
-  text-align: center;
+	text-align: center;
 }
 
 input::placeholder {
-  color: rgba(0, 0, 0, 0.661);
+	color: rgba(0, 0, 0, 0.661);
 }
 
 .createInputs:hover {
-  box-shadow: 2px 2px 1rem rgb(187, 3, 77),
-  -2rem -2rem -1rem rgb(31, 7, 149);
+	box-shadow: 2px 2px 1rem rgb(187, 3, 77), -2rem -2rem -1rem rgb(31, 7, 149);
 }
 
 .createInputs:active {
-  /* border-style: none; */
-  box-shadow: .15rem .15rem .5rem rgb(8, 8, 122),
-  -.1rem -.1rem .5rem rgb(187, 3, 35);
+	/* border-style: none; */
+	box-shadow: 0.15rem 0.15rem 0.5rem rgb(8, 8, 122),
+		-0.1rem -0.1rem 0.5rem rgb(187, 3, 35);
 }
 
 .createInputs:focus {
-  box-shadow: .04rem .04rem 1rem rgb(193, 35, 35),
-  -.04rem -.04rem 1rem rgb(8, 8, 122);
-  outline: none;
+	box-shadow: 0.04rem 0.04rem 1rem rgb(193, 35, 35),
+		-0.04rem -0.04rem 1rem rgb(8, 8, 122);
+	outline: none;
 }
 
 .createInputs::placeholder {
-  font: 22px/3 sans-serif;
+	font: 22px/3 sans-serif;
 }
 
 .selectOptionCreate {
-  text-align-last: center;
-  margin-left: 10px;
-  background-color: rgba(20, 136, 199, 0.29);
-  font-weight:bold;
-  color: rgb(60, 117, 232);
-  font-size: 1rem;
-  padding: .5rem .5rem;
-  border: 2px solid rgb(20, 136, 199);
-  cursor: pointer;
-  transition: all .2s ease;
-  border-radius: 50px;
-  max-width: 100%;
-  align-self: center;
+	text-align-last: center;
+	margin-left: 10px;
+	background-color: rgba(20, 136, 199, 0.29);
+	font-weight: bold;
+	color: rgb(60, 117, 232);
+	font-size: 1rem;
+	padding: 0.5rem 0.5rem;
+	border: 2px solid rgb(20, 136, 199);
+	cursor: pointer;
+	transition: all 0.2s ease;
+	border-radius: 50px;
+	max-width: 100%;
+	align-self: center;
 }
 
 .selectOptionCreate:hover {
-  background-color: rgba(20, 136, 199, 0.442);
-  border: 2px solid rgba(20, 136, 199);
+	background-color: rgba(20, 136, 199, 0.442);
+	border: 2px solid rgba(20, 136, 199);
 }
 
 .selectOptionCreate:active {
-  background-color: rgba(20, 136, 199, 0.442);
-  box-shadow: .1rem .1rem 10rem rgb(8, 8, 122),
-  -.3rem -.3rem 1rem rgb(187, 3, 35)
+	background-color: rgba(20, 136, 199, 0.442);
+	box-shadow: 0.1rem 0.1rem 10rem rgb(8, 8, 122),
+		-0.3rem -0.3rem 1rem rgb(187, 3, 35);
 }
 
 .createButtonPkm {
-  max-width: 60%;
-  align-self: center;
-  background-color: rgba(20, 136, 199, 0.835);
-  background-size: 90px;
-  margin-bottom: 30px;
-  margin-top: 20px;
-  /* margin-left: 20px; */
-  font-weight:bold;
-  color: rgb(210, 185, 84);
-  font-size: 1rem;
-  padding: .5rem 1rem;
-  border: 2px solid rgba(20, 136, 199, 0.569);
-  cursor: pointer;
-  transition: all .3s ease;
-  border-radius: 13px;
+	max-width: 60%;
+	align-self: center;
+	background-color: rgba(20, 136, 199, 0.835);
+	background-size: 90px;
+	margin-bottom: 30px;
+	margin-top: 20px;
+	/* margin-left: 20px; */
+	font-weight: bold;
+	color: rgb(210, 185, 84);
+	font-size: 1rem;
+	padding: 0.5rem 1rem;
+	border: 2px solid rgba(20, 136, 199, 0.569);
+	cursor: pointer;
+	transition: all 0.3s ease;
+	border-radius: 13px;
 }
 
 .createButtonPkm:hover {
-  background-color: rgba(20, 136, 199, 0.432);
-  box-shadow: 2px 2px 1rem rgb(187, 3, 77),
-  -.3rem -.3rem 1rem rgb(31, 7, 149);
-  border: 2px solid rgba(20, 136, 199, 0.227);
+	background-color: rgba(20, 136, 199, 0.432);
+	box-shadow: 2px 2px 1rem rgb(187, 3, 77), -0.3rem -0.3rem 1rem rgb(31, 7, 149);
+	border: 2px solid rgba(20, 136, 199, 0.227);
 }
 
 .createButtonPkm:active {
-  box-shadow: .3rem .3rem 1rem rgb(8, 8, 122),
-  -.3rem -.3rem 1rem rgb(187, 3, 35)
+	box-shadow: 0.3rem 0.3rem 1rem rgb(8, 8, 122),
+		-0.3rem -0.3rem 1rem rgb(187, 3, 35);
 }
 .createButtonPkm:disabled {
-  background-color: red;
+	background-color: red;
 }
 
 .labelNames {
-  text-shadow: .5px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black,
-    1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
-  color: rgba(210, 185, 84, 0.998);
-  font-style:italic;
-  font-size: 1.16rem;
-  font-weight: bold;
+	text-shadow: 0.5px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black,
+		1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+	color: rgba(210, 185, 84, 0.998);
+	font-style: italic;
+	font-size: 1.16rem;
+	font-weight: bold;
 }
 
 .contImages {
-  display: grid;
-  
+	display: grid;
 }
 
 .gifCreate {
-  margin-top: -60px;
-  /* margin-left: -390px; */
-  margin-right: 100px;
-  max-height: 300px;
-  max-width: 350px;
-  border-radius: 50px;
+	margin-top: -60px;
+	/* margin-left: -390px; */
+	margin-right: 100px;
+	max-height: 300px;
+	max-width: 350px;
+	border-radius: 50px;
 }
 
 .createYourOwn {
-  margin-left: 20px;
-  margin-top: 40px;
-  max-height: 100px;
-  max-width: 300px;
-
+	margin-left: 20px;
+	margin-top: 40px;
+	max-height: 100px;
+	max-width: 300px;
 }
 
 .pokemonBanner {
-  margin-top: -60px;
-  max-height: 150px;
-  max-width: 300px;
-  margin-left: 20px;
+	margin-top: -60px;
+	max-height: 150px;
+	max-width: 300px;
+	margin-left: 20px;
 }
 
 @media only screen and (max-width: 815px) {
-.container {
-  display: flex;
-  flex-wrap: wrap;
-}
+	.container {
+		display: flex;
+		flex-wrap: wrap;
+	}
 
-.contImages {
-/* max-width: 200px; */
-  margin-left: 98px;
-}
-.createYourOwn {
-  margin-bottom: 100px;
+	.contImages {
+		/* max-width: 200px; */
+		margin-left: 98px;
+	}
+	.createYourOwn {
+		margin-bottom: 100px;
+	}
 
-}
-
-.pokemonBanner {
-  margin-top: 10px;
-
-}
-
+	.pokemonBanner {
+		margin-top: 10px;
+	}
 }
 
 @media only screen and (max-width: 350px) {
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-  }
+	.container {
+		display: flex;
+		flex-wrap: wrap;
+	}
 
-  .createInputs {
-    max-width: 60%;
-    margin-left: 10px;
-  }
-  .createButtonPkm {
-    max-width: 60%;
-    margin-left: 10px;
-  }
-  .selectOptionCreate {
-    max-width: 60%;
-    margin-left: 10px;
-  }
+	.createInputs {
+		max-width: 60%;
+		margin-left: 10px;
+	}
+	.createButtonPkm {
+		max-width: 60%;
+		margin-left: 10px;
+	}
+	.selectOptionCreate {
+		max-width: 60%;
+		margin-left: 10px;
+	}
 
-  .contImages {
-  /* max-width: 200px; */
-    margin-left: 98px;
-  }
-  .createYourOwn {
-    margin-left: 60px;
-    max-width: 230px;
-    margin-bottom: 100px;
-  
-  }
-  
-  .pokemonBanner {
-    max-width: 250px;
-    margin-left: 50px;
-    margin-top: 10px;
-    }
+	.contImages {
+		/* max-width: 200px; */
+		margin-left: 98px;
+	}
+	.createYourOwn {
+		margin-left: 60px;
+		max-width: 230px;
+		margin-bottom: 100px;
+	}
 
-    /* .gifCreate {
+	.pokemonBanner {
+		max-width: 250px;
+		margin-left: 50px;
+		margin-top: 10px;
+	}
+
+	/* .gifCreate {
       max-width: 250px;
     } */
-  
-  }
+}

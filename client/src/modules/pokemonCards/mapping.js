@@ -44,6 +44,7 @@ const Mapping = ({ pokemons, paginate, refresh }) => {
                 <p className='cardTypeIcon' >
                   {typeof pokemon.id === 'number' ? '# ' + pokemon.id : '#' + pokemon.id.slice(0, 3) + '..'}
                 </p>
+                <p className='attackData' >🥊 {pokemon.attack}</p>
                 <p className='cardTypes'>{setIcon(pokemon) + ' ' + typesTo} </p>
               </div>
             </div>

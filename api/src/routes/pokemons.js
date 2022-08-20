@@ -35,7 +35,7 @@ router.post('/', async (req, res, next) => {
 
   try {
 
-    if (!name || !hp || !attack || !defense || !speed || !height || !weight || !typeOne) {
+    if (!name || !attack || !defense || !speed || !height || !weight || !typeOne) {
       return res.status(400).json({ info: "Some of the arguments are not valid" });
     }
 
@@ -44,8 +44,7 @@ router.post('/', async (req, res, next) => {
     }
 
     if (
-      typeof Number(hp) !== 'number' || typeof Number(attack) !== 'number'
-      || typeof Number(defense) !== 'number' || typeof Number(speed) !== 'number'
+      typeof Number(attack) !== 'number' || typeof Number(defense) !== 'number' || typeof Number(speed) !== 'number'
       || typeof Number(height) !== 'number' || typeof Number(weight) !== 'number') {
       return res.status(400).json({ info: "hp, attack defense speed height and weight must be Number" })
     }
@@ -55,7 +54,7 @@ router.post('/', async (req, res, next) => {
 
     const pokemon = await Pokemon.create({
       name: name.toLowerCase(),
-      hp: Number(hp),
+      hp: hp,
       attack: Number(attack),
       defense: Number(defense),
       speed: Number(speed),

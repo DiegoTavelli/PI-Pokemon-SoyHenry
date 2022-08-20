@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-import './navBar.css';
-import { getByName } from 'store/actions/getByNameActions';
-import { filterAZ, filterPokemons, filterType, filterAttack } from 'store/actions/filterPokemonsActions'
+import { filterAZ, filterPokemons, filterType } from 'store/actions/filterPokemonsActions'
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { getPokemons } from 'store/actions/pokemonActions';
+import { getByName } from 'store/actions/getByNameActions';
+import './navBar.css';
+// import PokemonBanner from '../../images/pokemon.png'
+
 
 
 function NavBar({ refresh }) {
@@ -35,10 +37,10 @@ function NavBar({ refresh }) {
     refresh(e.target.value);
   }
 
-  const submitAttack = (e) => {
-    dispatch(filterAttack(e.target.value))
-    refresh(e.target.value);
-  }
+  // const submitAttack = (e) => {
+  //   dispatch(filterAttack(e.target.value))
+  //   refresh(e.target.value);
+  // }
 
   const submitAZ = (e) => {
     dispatch(filterAZ(e.target.value));
@@ -49,7 +51,6 @@ function NavBar({ refresh }) {
     // console.log(e.target.value)
     dispatch(filterType(e.target.value));
     refresh(e.target.value);
-
   }
 
   const handleGoHome = (e) => {
@@ -82,6 +83,7 @@ function NavBar({ refresh }) {
         <div className='homeAndCreate'>
           <button onClick={handleGoHome} className='homeButton'>Home</button>
           <button onClick={handleCreate} className='createButton'>Create</button>
+          {/* <img className='bannerNavBar' src={PokemonBanner} alt='banner' /> */}
         </div>
         <form onSubmit={submit} className='onlyForm' >
           <div>
@@ -105,16 +107,13 @@ function NavBar({ refresh }) {
             <option value='sort' >Sort</option>
             <option value='asc' >A-Z</option>
             <option value='desc' >Z-A</option>
+            <option value='up'>⬆Atack</option>
+            <option value='down'>⬇Atack</option>
           </select>
           <select onChange={(e) => submitFilter(e)} className='selectOption3' >
             <option value='all'>all origins</option>
             <option value='official'>Officials</option>
             <option value='created'>Created</option>
-          </select>
-          <select onChange={(e) => submitAttack(e)} className='selectOption3' >
-            <option value='none'>attack</option>
-            <option value='up'>atack ⬆</option>
-            <option value='down'>atack ⬇</option>
           </select>
         </div>
       </nav>

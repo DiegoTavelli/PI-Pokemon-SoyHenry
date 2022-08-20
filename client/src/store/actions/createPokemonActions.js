@@ -12,6 +12,6 @@ export function createPokemon(pokemon) {
           type: CREATE_POKEMON,
           payload: response.data
         });
-      }).catch((error) => console.log("Error on createPokemon Action", error))
+      }).catch((error) => console.log(error))
   };
 }

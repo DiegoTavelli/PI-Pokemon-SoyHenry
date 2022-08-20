@@ -1,181 +1,193 @@
 .fullCard {
-display: flex;
-flex-direction: column;
-flex-wrap: wrap;
-/* max-width: 1400px; */
-align-items: center;
-margin-top: 100px;
-margin-bottom: -240px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	/* max-width: 1400px; */
+	align-items: center;
+	margin-top: 100px;
+	margin-bottom: -240px;
 }
 
 .waitingBall {
-  margin-top: 180px;
-  margin-right: 30px;
-  border-radius: 1000px;
-  max-width: 250px;
-  box-shadow: 1px 1px 20px 1px rgb(9, 5, 75);
+	margin-top: 180px;
+	margin-right: 30px;
+	border-radius: 1000px;
+	max-width: 250px;
+	box-shadow: 1px 1px 20px 1px rgb(9, 5, 75);
 }
 
 .Card {
-  display:inline-block;
-  background-image: url("../../images/backCard.png");
-  border-radius: 50px;
-  box-shadow: 1px 1px 20px 1px rgb(9, 5, 75);
-  margin-top: 40px;
-  margin-bottom: 12px;
-  margin-left: 12px;
-  margin-right: 12px;
-  min-height: 415px;
-  max-width: 400px;
-  min-width: 200px;
-  width: 300px;
-  }
-  
-  .Card:hover {
-    box-shadow: 3px 3px 15px 2px rgb(156, 126, 198);
-    transform: scale(1.02) rotate(.1deg);
-  }
-  
-  .Card:hover > .imagePokemon {
-    transform: scale(1.02) rotate(2deg);
-  }
+	display: inline-block;
+	background-image: url('../../images/backCard.png');
+	border-radius: 50px;
+	box-shadow: 1px 1px 20px 1px rgb(9, 5, 75);
+	margin-top: 40px;
+	margin-bottom: 12px;
+	margin-left: 12px;
+	margin-right: 12px;
+	min-height: 415px;
+	max-width: 400px;
+	min-width: 200px;
+	width: 300px;
+}
+
+.Card:hover {
+	box-shadow: 3px 3px 15px 2px rgb(156, 126, 198);
+	transform: scale(1.02) rotate(0.1deg);
+}
+
+.Card:hover > .imagePokemon {
+	transform: scale(1.02) rotate(2deg);
+}
 
 .imagePokemon {
-  margin-top: 10px;
-  margin-bottom: 0px;
-  min-width: 200px;
-  max-width: 200px;
-  min-height: 200px;
-  max-height: 200px;
-  }
+	margin-top: 10px;
+	margin-bottom: 0px;
+	min-width: 200px;
+	max-width: 200px;
+	min-height: 200px;
+	max-height: 200px;
+}
 /* 
  .imagePokemon:hover {
   transform:rotate(3deg) scale(1.06);
   }  */
 
- img {
-  transition: transform .7s ease-in-out;
+img {
+	transition: transform 0.7s ease-in-out;
 }
 
 .loading {
-  margin-top: 5px;
-  margin-right: 10px;
-  display: inline-block;
-  max-width: 160px;
+	margin-top: 5px;
+	/* margin-bottom: -300px; */
+	margin-right: 10px;
+	display: inline-block;
+	max-width: 160px;
 }
 
 .cardName {
-  font-size: 1.2rem;
-  margin-top: 40px;
-  margin-left: 0px;
-  text-decoration: none;
-  color: rgb(212, 233, 24);
-  box-sizing: content-box;
-  width: 100%;
-  transform: rotate(30deg);
+	font-size: 1.2rem;
+	margin-top: 40px;
+	margin-left: 0px;
+	text-decoration: none;
+	color: rgb(212, 233, 24);
+	box-sizing: content-box;
+	width: 100%;
+	transform: rotate(30deg);
 }
 
 .contTypId {
-  /* display: flex; */
-  flex-direction: row;
+	/* display: flex; */
+	flex-direction: row;
 }
 
 .idCard {
-/* display: flex; */
-margin-right: 20px;
-margin-top: 0px;
+	/* display: flex; */
+	margin-right: 20px;
+	margin-top: 0px;
 }
 
 .cardTypeIcon {
-  border-radius: 30px;
-  box-shadow: .1rem -.5rem .1rem  rgba(11, 123, 188, 0.467);
-  color: rgba(159, 205, 22, 0.722);
-  font-size: 1.4rem;
-  font-style:oblique;
- display: flex;
-  margin-left: 3px;
-  margin-right: 215px;
-  margin-top: -15px;
-  margin-bottom: 12px;
-  padding-left: 18px;
-  }
- 
+	border-radius: 30px;
+	box-shadow: 0.1rem -0.5rem 0.1rem rgba(11, 123, 188, 0.467);
+	color: rgba(159, 205, 22, 0.722);
+	font-size: 1.4rem;
+	font-style: oblique;
+	display: flex;
+	margin-left: 3px;
+	margin-right: 215px;
+	margin-top: -15px;
+	margin-bottom: 12px;
+	padding-left: 18px;
+}
 
 .cardTypes {
-  z-index: 1;
-  display: flex;
-  text-transform: capitalize;
-  font-size: 1rem;
-  margin-top: -30px;
-  margin-left: 210px;
-  text-decoration: none;
-  color: rgb(212, 233, 24);
+	z-index: 1;
+	display: flex;
+	text-transform: capitalize;
+	font-size: 1rem;
+	margin-top: -60px;
+	margin-left: 210px;
+	text-decoration: none;
+	color: rgb(212, 233, 24);
 }
 
 .Card:hover > .cardTypeIcon {
-  transform: scale(1.02) rotate(2deg);
+	transform: scale(1.02) rotate(2deg);
+}
+
+.attackData {
+	margin-top: -20px;
+	color: rgb(212, 233, 24);
 }
 
 .buttonPagination {
- justify-content: center; 
- margin-top: -500px;
+	justify-content: center;
+	margin-top: -500px;
 }
 
 @media only screen and (max-width: 657px) {
-  .fullCard {
-    display: flex;
-    flex-direction: row;
-    /* flex-wrap: wrap; */
-    /* max-width: 1400px; */
-    align-items: center;
-    margin-top: 100px;
-    margin-bottom: -240px;
-    }
-  
-  .cardName {
-    margin-left: -10px;
-  }
-  
-  .detailPic {
-    max-width: 60%;
-  }
-  .cardTypes {
-    margin-right: 10px;
-  }
+	.fullCard {
+		display: flex;
+		flex-direction: row;
+		/* flex-wrap: wrap; */
+		/* max-width: 1400px; */
+		align-items: center;
+		margin-top: 100px;
+		margin-bottom: -240px;
+	}
+
+	.cardName {
+		margin-left: -10px;
+	}
+
+	.detailPic {
+		max-width: 60%;
+	}
+	.cardTypes {
+		margin-right: 10px;
+	}
 }
 
 @media only screen and (max-width: 322px) {
-  .fullCard {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 100px;
-    margin-bottom: -240px;
-    }
-  .Card {
-    margin-left: -10px;
-    max-width: 70%;
-    height: 20px;
-  }
-  .cardName {
-    margin-left: -10px;
-  }
-  
-  .detailPic {
-    max-width: 60%;
-  }
-  .cardTypeIcon {
-    box-shadow: .1rem -.5rem .1rem  rgba(11, 123, 188, 0);
-    margin-left: 80px;
-  }
-  .contTypId {
-    margin-top: -50px;
-margin-left: -80px;
-  }
+	.fullCard {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		margin-top: 100px;
+		margin-bottom: -240px;
+	}
+	.Card {
+		margin-left: -10px;
+		max-width: 70%;
+		height: 20px;
+	}
+	.cardName {
+		margin-left: -10px;
+	}
 
-  .waitingBall {
-    max-width: 40%;
-  }
+	.detailPic {
+		max-width: 60%;
+	}
+	.cardTypeIcon {
+		box-shadow: 0.1rem -0.5rem 0.1rem rgba(11, 123, 188, 0);
+		margin-left: 80px;
+	}
+	.contTypId {
+		margin-top: -50px;
+		margin-left: -80px;
+	}
+	.cardTypes {
+		margin-top: -70px;
+		margin-left: 230px;
+	}
+	.attackData {
+		margin-left: 4rem;
+		margin-top: 0px;
+		color: rgb(212, 233, 24);
+	}
 
+	.waitingBall {
+		max-width: 40%;
+	}
 }
-

@@ -21,7 +21,7 @@ function CreatePokemon() {
   const [errorSubmit, setErrorSubmit] = useState(' ');
   const [state, setState] = useState({
     name: "",
-    hp: "",
+    // hp: "",
     attack: "",
     defense: "",
     speed: "",
@@ -92,7 +92,7 @@ function CreatePokemon() {
   }
 
   const finalValidation = () => {
-    if (name === "" || hp === "" || attack === "" || defense === "" || speed === "" || height === "" || weight === "") {
+    if (name === "" || attack === "" || defense === "" || speed === "" || height === "" || weight === "") {
       setErrorSubmit('You have to complete mandatory fields');
     } else {
       setErrorSubmit('');

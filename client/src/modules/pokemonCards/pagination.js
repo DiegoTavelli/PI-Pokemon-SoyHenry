@@ -10,10 +10,9 @@ const Pagination = ({ pkmnPerPage, totalPkmn, paginate }) => {
     pageNumbers.push(i);
   }
 
-
   const clickHandler = (number) => {
     // setIsActive(current => !current)
-    paginate(number)
+    paginate(number);
     window.scrollTo({
       top: 0,
       behavior: 'smooth'

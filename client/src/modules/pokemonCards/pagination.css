@@ -1,39 +1,39 @@
 .pagination {
-margin-bottom: 0;
+	margin-bottom: -10rem;
 }
 
 .pageLink {
-  scroll-behavior: smooth;
-  margin-left: 10px;
-  /* display:flexbox; */
-  /* background-image: url('../../images/search.png'); */
-  background-color: rgba(20, 136, 199, 0.606);
-  font-weight:bold;
-  color: rgb(210, 185, 84);
-  font-size: 1rem;
-  padding: .5rem 1.5rem;
-  border: 2.4px solid rgb(20, 136, 199);
-  cursor: pointer;
-  transition: all .2s ease;
-  border-radius: 50px;
-  /* border-top: rgb(193, 35, 35);
+	scroll-behavior: smooth;
+	margin-left: 10px;
+	/* display:flexbox; */
+	/* background-image: url('../../images/search.png'); */
+	background-color: rgba(20, 136, 199, 0.606);
+	font-weight: bold;
+	color: rgb(210, 185, 84);
+	font-size: 1rem;
+	padding: 0.5rem 1.5rem;
+	border: 2.4px solid rgb(20, 136, 199);
+	cursor: pointer;
+	transition: all 0.2s ease;
+	border-radius: 50px;
+	/* border-top: rgb(193, 35, 35);
   border-bottom: rgb(8, 8, 122); */
-  /* box-shadow: .5rem .5rem 1rem rgb(193, 35, 35),
+	/* box-shadow: .5rem .5rem 1rem rgb(193, 35, 35),
   -.5rem -.5rem 1rem rgb(8, 8, 122) */
 }
 
 .pageLink:hover {
-  background-color: rgba(20, 136, 199);
-  border: 2px solid rgba(20, 136, 199);
-  /* box-shadow: 2px 2px 1rem rgb(187, 3, 77),
+	background-color: rgba(20, 136, 199);
+	border: 2px solid rgba(20, 136, 199);
+	/* box-shadow: 2px 2px 1rem rgb(187, 3, 77),
   -.3rem -.3rem 1rem rgb(31, 7, 149) */
 }
 
 .pageLink:active {
-  box-shadow: .1rem .1rem 10rem rgb(8, 8, 122),
-  -.3rem -.3rem 1rem rgb(187, 3, 35);
- }
+	box-shadow: 0.1rem 0.1rem 10rem rgb(8, 8, 122),
+		-0.3rem -0.3rem 1rem rgb(187, 3, 35);
+}
 
 .pageSelected {
-  background-color: black;
+	background-color: black;
 }

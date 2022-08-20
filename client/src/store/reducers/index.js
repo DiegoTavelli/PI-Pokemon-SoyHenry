@@ -78,38 +78,57 @@ const reducer = (state = initialState, action) => {
               }
               return 0;
             })
-            : state.pokemons ? state.pokemons : null;
+            : action.payload === 'down'
+              ? state.pokemons?.sort((a, b) => {
+                if (a.attack > b.attack) {
+                  return 1;
+                }
+                if (b.attack > a.attack) {
+                  return -1;
+                }
+                return 0;
+              }) : action.payload === 'up' ?
+                state.pokemons?.sort((a, b) => {
+                  if (a.attack > b.attack) {
+                    return -1;
+                  }
+                  if (b.attack > a.attack) {
+                    return 1;
+                  }
+                  return 0;
+                }) :
+                state.pokemons ? state.pokemons : null;
       return {
         ...state,
         pokemons: sort
       };
-    case FILTER_ATTACK:
-      let sortAttack =
-        action.payload === 'down'
-          ? state.pokemons?.sort((a, b) => {
-            if (a.attack > b.attack) {
-              return 1;
-            }
-            if (b.attack > a.attack) {
-              return -1;
-            }
-            return 0;
-          })
-          : action.payload === 'up' ?
-            state.pokemons?.sort((a, b) => {
-              if (a.attack > b.attack) {
-                return -1;
-              }
-              if (b.attack > a.attack) {
-                return 1;
-              }
-              return 0;
-            })
-            : state.pokemons ? state.pokemons : null;
-      return {
-        ...state,
-        pokemons: sortAttack
-      };
+    // case FILTER_ATTACK:
+    //   let sortAttack =
+    //     action.payload === 'down'
+    //       ? state.pokemons?.sort((a, b) => {
+    //         if (a.attack > b.attack) {
+    //           return 1;
+    //         }
+    //         if (b.attack > a.attack) {
+    //           return -1;
+    //         }
+    //         return 0;
+    //       })
+    //       : action.payload === 'up' ?
+    //         state.pokemons?.sort((a, b) => {
+    //           if (a.attack > b.attack) {
+    //             return -1;
+    //           }
+    //           if (b.attack > a.attack) {
+    //             return 1;
+    //           }
+    //           return 0;
+    //         })
+    //         : state.pokemons ? state.pokemons : null;
+    //   return {
+    //     ...state,
+    //     pokemons: sortAttack
+    //   };
     case FILTER_TYPE:
       const pokemons = state?.copyPokemon;
       const filtApi = pokemons?.filter((p) => p.type);
