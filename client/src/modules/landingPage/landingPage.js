@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './landingPage.css';
 import { useState } from 'react'
 import { useHistory } from "react-router-dom";
@@ -11,6 +11,7 @@ import welcomeLogo from 'images/welcomeLogo.png'
 
 export default function LandingPage() {
   const [selectedGif, setSelectedGif] = useState(gifIntro);
+  const [isLoading, setIsLoading] = useState(false)
   const history = useHistory();
   const delay = (e) => {
     e.preventDefault()
@@ -19,9 +20,22 @@ export default function LandingPage() {
     }, 1500)
   }
 
+  useEffect(() => {
+    setIsLoading(true);
+  })
+
+
+
   return (
     <div className="backG">
-      <video src={videoLanding} autoPlay loop muted className="video" />
+      <video
+        src={videoLanding}
+        autoPlay
+        loop
+        muted
+        className="video"
+        onLoadEnd={() => setIsLoading(true)}
+      />
       <div className="allData" ><img src={welcomeLogo} alt='' className="welcome" />
         <div onClick={delay}>
           <img src={selectedGif} alt='loading...' className="gif"
