@@ -1,5 +1,6 @@
 .backgroundIndex {
-	background-color: red;
+	max-width: 1500px;
+	min-height: 690px;
 }
 
 .fullCard {
@@ -10,6 +11,7 @@
 	align-items: center;
 	margin-top: 100px;
 	margin-bottom: -240px;
+	/* width: 20%; */
 }
 
 .waitingBall {

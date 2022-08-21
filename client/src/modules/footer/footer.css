@@ -1,11 +1,13 @@
 .footer {
+	/* position: absolute; */
+	bottom: 0;
+	margin-top: 460px;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: right;
 	background-image: linear-gradient(rgba(0, 0, 0, 0.423), rgb(53, 6, 75));
 	min-height: 50px;
-	margin-top: 460px;
 	padding-bottom: 10px;
 }
 

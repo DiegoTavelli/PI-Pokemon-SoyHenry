@@ -1,5 +1,6 @@
 .pagination {
 	margin-bottom: -10rem;
+	margin-right: 40px;
 }
 
 .pageLink {
@@ -38,4 +39,10 @@
 
 .pageSelected {
 	background-color: black;
+}
+
+@media only screen and (max-width: 649px) {
+	.pageLink {
+		padding: 6px 10px;
+	}
 }
