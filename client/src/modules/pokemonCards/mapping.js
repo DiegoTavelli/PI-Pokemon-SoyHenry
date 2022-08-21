@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from 'react-router-dom';
 import setIcon from "./setIcon";
 import pokeBall from 'images/pokeball.png'
+import giphy from 'images/giphy.webp'
 import './index.css'
 
 const Mapping = ({ pokemons, paginate, refresh }) => {
@@ -17,7 +18,17 @@ const Mapping = ({ pokemons, paginate, refresh }) => {
   if (!pokemons[0]?.name) {
     paginate(1);
   }
-  return (
+
+  return refresh && !pokemons ?
+    <div>
+      <div className='cardNotFound'>
+        <br></br>
+        <p className='detailName' >{ }</p>
+        <img className='detailPicNotFound' src={giphy} alt='notFoundLogo' />
+        <p className='parrafId' >We couldn't find Pokemon with that name</p>
+      </div>
+    </div>
+    :
     <div className='backgroundIndex' >
       {pokemons?.map((pokemon) => {
         let typesTo = [];
@@ -52,7 +63,7 @@ const Mapping = ({ pokemons, paginate, refresh }) => {
         );
       })}
     </div>
-  )
+
 }
 
 export default Mapping;
