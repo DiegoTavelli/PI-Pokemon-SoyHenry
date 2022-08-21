@@ -287,14 +287,15 @@ input {
 	border-radius: 50px;
 }
 
+/* MEDIA QUERIES */
+
 @media only screen and (max-width: 650px) {
 	.createButton {
-		padding: 0.4rem 0.8rem;
 		margin-bottom: 0.2rem;
 		margin-left: 0;
 	}
 	.homeButton {
-		padding: 0.4rem 0.8rem;
+		padding: 0rem 0rem;
 	}
 	.formNav {
 		min-height: 150px;
