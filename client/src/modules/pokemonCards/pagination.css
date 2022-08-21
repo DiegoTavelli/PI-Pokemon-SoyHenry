@@ -27,11 +27,13 @@
 	border: 2px solid rgba(20, 136, 199);
 	/* box-shadow: 2px 2px 1rem rgb(187, 3, 77),
   -.3rem -.3rem 1rem rgb(31, 7, 149) */
+	color: black;
 }
 
-.pageLink:active {
+.pageLink:focus {
 	box-shadow: 0.1rem 0.1rem 10rem rgb(8, 8, 122),
 		-0.3rem -0.3rem 1rem rgb(187, 3, 35);
+	/* background-color: rgba(0, 0, 0, 0.221); */
 }
 
 .pageSelected {

@@ -8,8 +8,6 @@ import ballWaiting from 'images/ballWaiting.gif'
 import loading from 'images/loading.png'
 import './index.css'
 
-import video from 'images/MiVideoFinal.mp4'
-
 function PokemonCards({ pokemons, refresh }) {
   const [isRefreshed, setIsRefreshed] = useState('');
   useEffect(() => {
@@ -25,7 +23,11 @@ function PokemonCards({ pokemons, refresh }) {
   const indexOfFistPkmn = indexOfLastPkmn - pkmnPerPage;
   const currentPkmns = pokemons?.slice(indexOfFistPkmn, indexOfLastPkmn);
 
-  let paginate = (pageNumber) => setCurrentPage(pageNumber);
+  let paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+    let currVal = pageNumber;
+    console.log(currVal)
+  }
 
 
   return !pokemons ?

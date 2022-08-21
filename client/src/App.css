@@ -1,5 +1,5 @@
 .App {
-	background-image: radial-gradient(rgb(193, 35, 35), rgb(8, 8, 122));
+	background-image: radial-gradient(rgb(193, 35, 35), rgba(8, 8, 122, 0.95));
 	overflow-x: hidden;
 	scroll-behavior: calc(1);
 	/* width: 100vw; */

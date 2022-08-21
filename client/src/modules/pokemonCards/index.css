@@ -1,3 +1,7 @@
+.backgroundIndex {
+	background-color: red;
+}
+
 .fullCard {
 	display: flex;
 	flex-direction: column;

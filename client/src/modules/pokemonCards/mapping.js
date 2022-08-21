@@ -18,7 +18,8 @@ const Mapping = ({ pokemons, paginate, refresh }) => {
     paginate(1);
   }
   return (
-    <div className='backgroundIndex' >
+    <div>
+      <img className='backgroundIndex' alt='' />
       {pokemons?.map((pokemon) => {
         let typesTo = [];
         if (pokemon.types) {
