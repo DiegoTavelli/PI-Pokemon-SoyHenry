@@ -55,7 +55,7 @@ function CreatePokemon() {
   }
 
   function validateString(e) {
-    if (!/^[a-záéíóú]*$/i.test(e.target.value)) {
+    if (!/^[a-záéíóú\s]*$/i.test(e.target.value)) {
       setError('Name must contains only letters');
     } else {
       setError('');
