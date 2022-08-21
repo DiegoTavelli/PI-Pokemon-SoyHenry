@@ -11,6 +11,7 @@
 
 .footerName {
 	margin-top: 11px;
+
 	justify-self: center;
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	color: rgba(97, 111, 15, 0.789);
@@ -21,11 +22,21 @@
 	color: rgba(192, 220, 36, 0.778);
 }
 .footerLink {
-	margin: 0px 10px 0px 10px;
+	margin: 0px 12px 0px 12px;
 	flex-direction: column;
+}
+.footerLink:hover {
+	cursor: pointer;
+	transform: rotate(360deg);
+	size: 100px;
 }
 
 .footerGit {
 	flex-direction: column;
 	margin-right: 40px;
+}
+.footerGit:hover {
+	cursor: pointer;
+	transform: rotate(360deg);
+	size: 100px;
 }
