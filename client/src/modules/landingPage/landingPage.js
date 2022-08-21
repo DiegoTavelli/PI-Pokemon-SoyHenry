@@ -11,7 +11,6 @@ import welcomeLogo from 'images/welcomeLogo.png'
 
 export default function LandingPage() {
   const [selectedGif, setSelectedGif] = useState(gifIntro);
-  const [isLoading, setIsLoading] = useState(false)
   const history = useHistory();
   const delay = (e) => {
     e.preventDefault()
@@ -19,12 +18,6 @@ export default function LandingPage() {
       history.push('/pokemons');
     }, 1500)
   }
-
-  useEffect(() => {
-    setIsLoading(true);
-  })
-
-
 
   return (
     <div className="backG">
@@ -34,7 +27,6 @@ export default function LandingPage() {
         loop
         muted
         className="video"
-        onLoadEnd={() => setIsLoading(true)}
       />
       <div className="allData" ><img src={welcomeLogo} alt='' className="welcome" />
         <div onClick={delay}>

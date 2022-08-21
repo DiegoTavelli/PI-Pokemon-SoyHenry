@@ -60,7 +60,6 @@ function DetailCard({ byName, getByName, details, getDetails }) {
             alt='pokemon'
             className='detailPic'
           />
-          <p> </p>
         </div>
         <div className='detailsData' >
           <p className='parraf' >Hp: {byName.hp}</p>

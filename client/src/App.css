@@ -1,11 +1,11 @@
 .App {
 	background-image: radial-gradient(rgb(193, 35, 35), rgba(8, 8, 122, 0.95));
 	overflow-x: hidden;
-	scroll-behavior: calc(1);
 	/* width: 100vw; */
 	text-align: center;
 	background-size: cover;
 	/* max-height: 100vh; */
+	/* min-height: 1100px; */
 }
 
 .App-logo {

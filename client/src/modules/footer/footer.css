@@ -1,6 +1,31 @@
 .footer {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.423), rgb(53, 6, 75));
-  min-height: 50px;
-  margin-top: 460px;
-  
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: right;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.423), rgb(53, 6, 75));
+	min-height: 50px;
+	margin-top: 460px;
+	padding-bottom: 10px;
+}
+
+.footerName {
+	margin-top: 11px;
+	justify-self: center;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	color: rgba(97, 111, 15, 0.789);
+}
+
+.footerFindMe {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	color: rgba(192, 220, 36, 0.778);
+}
+.footerLink {
+	margin: 0px 10px 0px 10px;
+	flex-direction: column;
+}
+
+.footerGit {
+	flex-direction: column;
+	margin-right: 40px;
 }
