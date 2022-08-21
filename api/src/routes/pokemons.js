@@ -55,11 +55,11 @@ router.post('/', async (req, res, next) => {
     const pokemon = await Pokemon.create({
       name: name.toLowerCase(),
       hp: hp,
-      attack: Number(attack),
-      defense: Number(defense),
-      speed: Number(speed),
-      height: Number(height),
-      weight: Number(weight),
+      attack: attack,
+      defense: defense,
+      speed: speed,
+      height: height,
+      weight: weight,
       image: image,
     });
 
@@ -71,7 +71,7 @@ router.post('/', async (req, res, next) => {
       });
       await pokemon.addTypes(eachType);
     }
-    return res.status(200).send({ info: "Pokemon successfully created" }) // { info: "Pokemon successfully created" }
+    return res.status(200).send({ info: "Pokemon successfully created" })
   } catch (error) {
     next("Error on post '/' route");
   }

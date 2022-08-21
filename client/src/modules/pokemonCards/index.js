@@ -8,6 +8,7 @@ import ballWaiting from 'images/ballWaiting.gif'
 import loading from 'images/loading.png'
 import './index.css'
 
+import video from 'images/MiVideoFinal.mp4'
 
 function PokemonCards({ pokemons, refresh }) {
   const [isRefreshed, setIsRefreshed] = useState('');

@@ -18,7 +18,7 @@ const Mapping = ({ pokemons, paginate, refresh }) => {
     paginate(1);
   }
   return (
-    <div>
+    <div className='backgroundIndex' >
       {pokemons?.map((pokemon) => {
         let typesTo = [];
         if (pokemon.types) {
@@ -44,7 +44,7 @@ const Mapping = ({ pokemons, paginate, refresh }) => {
                 <p className='cardTypeIcon' >
                   {typeof pokemon.id === 'number' ? '# ' + pokemon.id : '#' + pokemon.id.slice(0, 3) + '..'}
                 </p>
-                <p className='attackData' >🥊 {pokemon.attack}</p>
+                <p className='attackData' >🥊{pokemon.attack}💙{pokemon.hp}</p>
                 <p className='cardTypes'>{setIcon(pokemon) + ' ' + typesTo} </p>
               </div>
             </div>

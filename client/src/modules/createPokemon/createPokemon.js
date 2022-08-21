@@ -18,10 +18,11 @@ function CreatePokemon() {
   const types = useSelector((store) => store.types);
   const pokemons = useSelector((store) => store.pokemons);
   const [error, setError] = useState('');
+  const [handleError, setHandleError] = useState('');
   const [errorSubmit, setErrorSubmit] = useState(' ');
   const [state, setState] = useState({
     name: "",
-    // hp: "",
+    hp: "",
     attack: "",
     defense: "",
     speed: "",
@@ -44,6 +45,14 @@ function CreatePokemon() {
     typeTwo
   } = state;
 
+  const onKeyUpInputs = (e) => {
+    if (e.target.value > 999) {
+      setHandleError(`${e.target.name} value has to be between 1 and 999`)
+    } if (e.target.value < 999) {
+      setHandleError('')
+    }
+    finalValidation();
+  }
 
   function validateString(e) {
     if (!/^[a-záéíóú]*$/i.test(e.target.value)) {
@@ -92,7 +101,7 @@ function CreatePokemon() {
   }
 
   const finalValidation = () => {
-    if (name === "" || attack === "" || defense === "" || speed === "" || height === "" || weight === "") {
+    if (name === "" || hp === "" || attack === "" || defense === "" || speed === "" || height === "" || weight === "" || handleError) {
       setErrorSubmit('You have to complete mandatory fields');
     } else {
       setErrorSubmit('');
@@ -101,7 +110,9 @@ function CreatePokemon() {
 
   const pushIfReady = async () => {
     let findPkm = await pokemons?.filter((p) => p.name.toLowerCase() === name.toLowerCase());
-    // console.log(findPkm)
+    if (hp > 999 || attack > 999 || defense > 999 || speed > 999 || height > 999 || weight > 999) {
+      return alert('hp, attack, defense, speed, height & weight Must be a number between 1 and 999')
+    }
     if (typeOne === "") return alert('Primary Type is mandatory');
     if (findPkm[0]?.id) {
       return alert('That Pokemon name already exist');
@@ -132,6 +143,7 @@ function CreatePokemon() {
       </div>
       <form type='submit' className='createForm'>
         {!error ? null : <span className='error'>{error}</span>}
+        {!handleError ? null : <span className='error'>{handleError}</span>}
         <label className='labelNames' >Name *</label>
         <input
           autoComplete='off'
@@ -149,6 +161,7 @@ function CreatePokemon() {
           name='hp'
           placeholder='hp'
           onChange={(e) => validateNumber(e)}
+          onKeyUp={(e) => onKeyUpInputs(e)}
         ></input>
         <label className='labelNames' >Attack *</label>
         <input
@@ -158,6 +171,7 @@ function CreatePokemon() {
           placeholder='attack'
           value={attack}
           onChange={(e) => validateNumber(e)}
+          onKeyUp={(e) => onKeyUpInputs(e)}
         ></input>
         <label className='labelNames' >Defense *</label>
         <input
@@ -167,6 +181,7 @@ function CreatePokemon() {
           placeholder='defense'
           value={defense}
           onChange={(e) => validateNumber(e)}
+          onKeyUp={(e) => onKeyUpInputs(e)}
         ></input>
         <label className='labelNames' >Speed *</label>
         <input
@@ -176,6 +191,7 @@ function CreatePokemon() {
           placeholder='speed'
           value={speed}
           onChange={(e) => validateNumber(e)}
+          onKeyUp={(e) => onKeyUpInputs(e)}
         ></input>
         <label className='labelNames' >Height *</label>
         <input
@@ -185,6 +201,7 @@ function CreatePokemon() {
           placeholder='height'
           value={height}
           onChange={(e) => validateNumber(e)}
+          onKeyUp={(e) => onKeyUpInputs(e)}
         ></input>
         <label className='labelNames' >Weight *</label>
         <input
@@ -194,6 +211,7 @@ function CreatePokemon() {
           placeholder='weight'
           value={weight}
           onChange={(e) => validateNumber(e)}
+          onKeyUp={(e) => onKeyUpInputs(e)}
         ></input>
         <label className='labelNames' >Image</label>
         <input
