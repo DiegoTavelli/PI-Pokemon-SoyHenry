@@ -1,0 +1,57 @@
+@media only screen and (max-width: 1363px) {
+	.allDetailCard {
+		position: fixed;
+		display: flex;
+		z-index: 90;
+		flex-direction: row;
+		/* justify-content: center; */
+		background-image: url('../../images/background.jpg');
+		background-attachment: fixed;
+		box-shadow: 0.5px 0.5px 20px 10px rgb(9, 5, 75);
+		filter: blur(0px);
+		margin-top: 35px;
+		margin-bottom: -200px;
+		border-radius: 5%;
+		width: 70vw;
+		height: 100vh;
+		left: 13vw;
+
+		/* margin: 0 auto; */
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	.allDetailCard {
+		margin-left: -10px;
+		align-items: center;
+		flex-direction: column;
+		flex-wrap: wrap;
+		margin-bottom: -400px;
+	}
+
+	.card {
+		/* flex-direction: column; */
+		z-index: 0;
+		max-height: 450px;
+		margin-top: 40px;
+		margin-bottom: -50px;
+		max-width: 270px;
+		min-width: 150px;
+		background-image: url('../../images/backCard.png');
+		border-radius: 50px;
+		box-shadow: 0.5px 0.5px 20px 0.5px rgb(9, 5, 75);
+		align-self: center;
+	}
+
+	.detailPic {
+		padding: 30%;
+		margin-top: -70px;
+		margin-left: -50px;
+		/* align-self: center; */
+	}
+
+	.parrafId {
+		padding: 0;
+		margin-bottom: -80px;
+	}
+}

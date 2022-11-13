@@ -1,3 +1,5 @@
+@import './mediaQuerys.css';
+
 * {
 	box-sizing: border-box;
 }
@@ -17,7 +19,7 @@
 	z-index: 1;
 	justify-content: space-between;
 	width: 100%;
-	position: fixed;
+	position: absolute;
 	background-image: radial-gradient(
 		rgba(193, 35, 35, 0.286),
 		rgba(8, 8, 122, 0.218)
@@ -52,24 +54,86 @@
 	);
 }
 
-.searchInput {
-	margin-top: 5px;
+.inputContainer {
+	justify-content: center;
+	flex: 1;
+}
+
+.inputContainer input {
+	flex: 1;
 	max-height: 20px;
-	margin-bottom: 8px;
-	margin-left: 20px;
+	width: 400px;
+	margin-right: 0;
+	cursor: text;
+	padding: 16px 4rem;
 	background: rgb(255, 255, 255);
 	font-weight: bold;
 	color: rgb(10, 73, 107);
 	font-size: 1.3rem;
-	padding: 16px 4rem;
 	border: 1.2px solid rgb(20, 136, 199);
-	cursor: text;
 	transition: all 0.3s ease;
-	/* border-top: rgb(193, 35, 35);
-  border-bottom: rgb(8, 8, 122); */
 	border-radius: 13px;
 	box-shadow: 0.04rem 0.04rem 1rem rgb(193, 35, 35),
 		-0.04rem -0.04rem 1rem rgb(8, 8, 122);
+}
+
+.gifLoading {
+	width: 40px;
+}
+
+.dropdown {
+	z-index: 10;
+	/* width: 100%; */
+	position: static;
+	flex-direction: column;
+	display: flex;
+	align-items: center;
+}
+
+.contInter {
+	position: absolute;
+	z-index: 100;
+	width: 390px;
+	margin-top: 86px;
+	margin-right: 114px;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	border-bottom-left-radius: 18px;
+	border-bottom-right-radius: 18px;
+	background-color: rgb(255, 255, 255);
+	border: 4px linear;
+}
+
+.divInput {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	cursor: pointer;
+	text-align: center;
+	padding: 0;
+	margin-left: 2px;
+	width: 385px;
+	border-top: 1px groove rgba(35, 114, 225, 0.168);
+}
+
+.spanInput {
+	display: flex;
+	flex: 1 1 16px;
+	padding: 8px;
+	font-weight: bold;
+	font-size: 16px;
+	margin-bottom: 0px;
+	margin-left: 140px;
+}
+
+.spanType {
+	display: flex;
+	align-self: center;
+	flex: 1 1 16px;
+	font-size: 13px;
+	color: rgba(32, 111, 207, 0.624);
+	padding-left: 5px;
+	margin-right: 0;
 }
 
 input {
@@ -96,6 +160,7 @@ input {
 
 /* search button */
 .searchButton {
+	z-index: 130;
 	margin-left: 10px;
 	background-color: rgba(20, 136, 199, 0.8);
 	font-weight: bold;
@@ -207,6 +272,7 @@ input {
 
 .filters {
 	max-height: 10px;
+	padding-top: 2px;
 }
 
 .selectOption1 {
@@ -285,198 +351,4 @@ input {
 
 .selectOption3:after {
 	border-radius: 50px;
-}
-
-/* MEDIA QUERIES */
-
-@media only screen and (max-width: 650px) {
-	.createButton {
-		margin-bottom: 0.2rem;
-		margin-left: 0;
-	}
-	.homeButton {
-		padding: 0rem 0rem;
-	}
-	.formNav {
-		min-height: 150px;
-		min-width: 650px;
-		align-items: center;
-	}
-	.searchInput {
-		align-items: left;
-	}
-	.selectOption1 {
-		max-width: 20%;
-	}
-	.selectOption2 {
-		max-width: 10%;
-	}
-	.selectOption3 {
-		max-width: 100%;
-	}
-}
-
-@media only screen and (max-width: 600px) {
-	.searchInput {
-		padding: 10px 0.004rem;
-		margin-left: -80px;
-	}
-	.searchButton {
-		padding: 0.2rem 0.5rem;
-	}
-
-	.selectOption1 {
-		max-width: 9%;
-		margin-left: -80px;
-		padding: -0.9rem -1.59em;
-	}
-	.selectOption2 {
-		max-width: 9%;
-		padding: -1rem 1rem;
-	}
-	.selectOption3 {
-		max-width: 9%;
-		padding: -1rem 1rem;
-	}
-	.homeButton {
-		margin-left: 220px;
-		padding: 0.2rem 0.5rem;
-	}
-	.createButton {
-		padding: 0.2rem 0.5rem;
-	}
-}
-
-@media only screen and (max-width: 473px) {
-	.searchInput {
-		max-width: 30%;
-		padding: 10px -5rem;
-		margin-left: -250px;
-	}
-	.searchButton {
-		padding: 0.1rem 0.2rem;
-	}
-	.homeButton {
-		padding: 0.1rem 0.2rem;
-		margin-left: 130px;
-	}
-	.selectOption1 {
-		margin-left: -230px;
-		padding: -1rem 1rem;
-		max-width: 9%;
-	}
-	.selectOption2 {
-		padding: -1rem 1rem;
-		max-width: 9%;
-	}
-	.selectOption3 {
-		padding: -1rem 1rem;
-		max-width: 9%;
-	}
-
-	.createButton {
-		padding: 0.1rem 0.2rem;
-	}
-}
-
-@media only screen and (max-width: 390px) {
-	.searchInput {
-		max-width: 40%;
-		padding: 10px -5rem;
-		margin-left: -240px;
-	}
-	.searchButton {
-		padding: 0.1rem 0.2rem;
-	}
-	.homeButton {
-		padding: 0.1rem 0.2rem;
-		margin-left: 130px;
-		margin-bottom: 5px;
-	}
-	.selectOption1 {
-		margin-left: -285px;
-		padding: -1rem 1rem;
-		max-width: 10%;
-	}
-	.selectOption2 {
-		padding: -1rem 1rem;
-		max-width: 10%;
-	}
-	.selectOption3 {
-		padding: -1rem 1rem;
-		max-width: 10%;
-	}
-
-	.createButton {
-		padding: 0.1rem 0.2rem;
-		margin-bottom: 5px;
-	}
-}
-
-@media only screen and (max-width: 376px) {
-	.searchInput {
-		max-width: 30%;
-		padding: 10px -5rem;
-		margin-left: -280px;
-	}
-	.searchButton {
-		padding: 0.1rem 0.2rem;
-	}
-	.homeButton {
-		padding: 0.1rem 0.2rem;
-		margin-left: 110px;
-		margin-bottom: 5px;
-	}
-	.selectOption1 {
-		margin-left: -285px;
-		padding: -1rem 1rem;
-		max-width: 7%;
-	}
-	.selectOption2 {
-		padding: -1rem 1rem;
-		max-width: 7%;
-	}
-	.selectOption3 {
-		padding: -1rem 1rem;
-		max-width: 7%;
-	}
-
-	.createButton {
-		padding: 0.1rem 0.2rem;
-		margin-bottom: 5px;
-	}
-}
-
-@media only screen and (max-width: 322px) {
-	.searchInput {
-		max-width: 30%;
-		padding: 10px -5rem;
-		margin-left: -360px;
-	}
-	.searchButton {
-		padding: 0.1rem 0.2rem;
-	}
-	.homeButton {
-		padding: 0.1rem 0.2rem;
-		margin-left: 80px;
-		margin-bottom: 5px;
-	}
-	.selectOption1 {
-		margin-left: -370px;
-		padding: -1rem 1rem;
-		max-width: 7%;
-	}
-	.selectOption2 {
-		padding: -1rem 1rem;
-		max-width: 7%;
-	}
-	.selectOption3 {
-		padding: -1rem 1rem;
-		max-width: 7%;
-	}
-
-	.createButton {
-		padding: 0.1rem 0.2rem;
-		margin-bottom: 5px;
-	}
 }

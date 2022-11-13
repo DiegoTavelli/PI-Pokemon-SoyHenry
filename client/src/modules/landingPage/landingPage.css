@@ -1,5 +1,5 @@
 .backG {
-	background-color: white;
+	background-image: radial-gradient(rgb(193, 35, 35), rgba(8, 8, 122, 0.95));
 	position: absolute;
 	display: flex;
 	flex-direction: column;

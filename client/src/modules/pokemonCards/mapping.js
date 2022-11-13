@@ -1,11 +1,16 @@
-import React, { useEffect } from "react";
-import { Link } from 'react-router-dom';
-import setIcon from "./setIcon";
+import React, { useEffect } from 'react';
+// import { Link } from 'react-router-dom';
+import setIcon from './setIcon';
+import { useDispatch, useSelector } from 'react-redux';
+import { getByName } from 'store/actions/getByNameActions';
+import { clearPokemon } from 'store/actions/clearPokemonActions';
 import pokeBall from 'images/pokeball.png'
 import giphy from 'images/giphy.webp'
 import './index.css'
 
-const Mapping = ({ pokemons, paginate, refresh }) => {
+const Mapping = ({ showDetail, pokemons, paginate, refresh, setShowDetail }) => {
+
+  const dispatch = useDispatch();
 
   useEffect(() => {
     window.scrollTo({
@@ -15,55 +20,60 @@ const Mapping = ({ pokemons, paginate, refresh }) => {
     return () => refresh
   }, [])
 
-  if (!pokemons[0]?.name) {
+  if (!pokemons || !pokemons[0]?.name) {
     paginate(1);
   }
 
-  return refresh && !pokemons ?
+  const submitInfo = (e, value) => {
+    if (!showDetail) {
+      dispatch(getByName(value));
+      setShowDetail(true);
+    }
+  }
+
+  return refresh && !pokemons?.length ?
     <div>
       <div className='cardNotFound'>
         <br></br>
-        <p className='detailName' >{ }</p>
         <img className='detailPicNotFound' src={giphy} alt='notFoundLogo' />
         <p className='parrafId' >We couldn't find Pokemon with that name</p>
       </div>
     </div>
     :
     <div className='backgroundIndex' >
-      {pokemons?.map((pokemon) => {
-        let typesTo = [];
-        if (pokemon.types) {
-          typesTo = [`${pokemon.types[0]?.name}${pokemon.types[1]?.name ? ', ' + pokemon.types[1].name : ' '}`];
-        } else if (pokemon.type) {
-          typesTo = [`${pokemon.type[0]}${pokemon.type[1] ? ', ' + pokemon.type[1] : ' '}`]
-        } else {
-          typesTo = ['undefined'];
-        }
-        return (
-          <Link key={pokemon.id} to={`/pokemons/${pokemon.name}`}  >
-            <div className='Card' >
-              <br></br>
-              {/* <p className='idCard' >{typeof pokemon.id === 'number' ? '#' + pokemon.id : '  '}</p> */}
-              <p className='cardName' >{pokemon.name[0].toUpperCase() + pokemon.name.slice(1)}</p>
-              <img src={pokemon.img ? pokemon.img : pokemon.image ? pokemon.image : pokeBall}
-                alt='Pokemon'
-                className='imagePokemon'
-              />
-              <br></br>
-              <br></br>
-              <div className='contTypId' >
-                <p className='cardTypeIcon' >
-                  {typeof pokemon.id === 'number' ? '# ' + pokemon.id : '#' + pokemon.id.slice(0, 3) + '..'}
-                </p>
-                <p className='attackData' >🥊{pokemon.attack} 💙{pokemon.hp}</p>
-                <p className='cardTypes'>{setIcon(pokemon) + ' ' + typesTo} </p>
+      {
+        pokemons && pokemons?.map((pokemon) => {
+          let typesTo = [];
+          if (pokemon.types) {
+            typesTo = [`${pokemon.types[0]?.name}${pokemon.types[1]?.name ? ', ' + pokemon.types[1].name : ' '}`];
+          } else if (pokemon.type) {
+            typesTo = [`${pokemon.type[0]}${pokemon.type[1] ? ', ' + pokemon.type[1] : ' '}`]
+          } else {
+            typesTo = ['undefined'];
+          }
+          return (
+            <div key={pokemon.id}>
+              <div className={showDetail ? 'Card' : 'Card CardHover'} onClick={(e) => submitInfo(e, pokemon.name)} >
+                <br></br>
+                <p className='cardName' >{pokemon?.name[0]?.toUpperCase() + pokemon.name.slice(1)}</p>
+                <img src={pokemon.img ? pokemon.img : pokemon.image ? pokemon.image : pokeBall}
+                  alt='Pokemon'
+                  className='imagePokemon'
+                />
+                <br></br>
+                <br></br>
+                <div className='contTypId' >
+                  <p className='cardTypeIcon' >
+                    {typeof pokemon.id === 'number' ? '# ' + pokemon.id : '#' + pokemon.id.slice(0, 3) + '..'}
+                  </p>
+                  <p className='attackData' >🥊{pokemon.attack} 💙{pokemon.hp}</p>
+                  <p className='cardTypes'>{setIcon(pokemon) + ' ' + typesTo} </p>
+                </div>
               </div>
             </div>
-          </Link>
-        );
-      })}
+          );
+        })}
     </div>
-
 }
 
 export default Mapping;

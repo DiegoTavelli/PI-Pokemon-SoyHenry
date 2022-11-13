@@ -17,16 +17,18 @@ export function Footer() {
 
 
   return (
-    <div className="footer" >
-      <a
-        href="mailto:diegotavelli@gmail.com?body=Contact Diego Tavelli"
-        className='footerName' >@Diegotavelli</a >
-      <p onClick={handleClickLinkedIn} className='footerLink' >
-        <FontAwesomeIcon icon={faLinkedin} size='2x' />
-      </p>
-      <p onClick={handleClickGitHub} className='footerGit' >
-        <FontAwesomeIcon icon={faGithub} size='2x' />
-      </p>
+    <div className='footerContainer'>
+      <div className="footer" >
+        <a
+          href="mailto:diegotavelli@gmail.com?body=Contact Diego Tavelli"
+          className='footerName' >@Diegotavelli</a >
+        <p onClick={handleClickLinkedIn} className='footerLink' >
+          <FontAwesomeIcon icon={faLinkedin} size='2x' />
+        </p>
+        <p onClick={handleClickGitHub} className='footerGit' >
+          <FontAwesomeIcon icon={faGithub} size='2x' />
+        </p>
+      </div>
     </div>
   )
 }

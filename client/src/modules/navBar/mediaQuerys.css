@@ -1,0 +1,193 @@
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 650px) {
+	.createButton {
+		margin-bottom: 0.2rem;
+		margin-left: 0;
+	}
+	.homeButton {
+		padding: 0rem 0rem;
+	}
+	.formNav {
+		min-height: 150px;
+		min-width: 650px;
+		align-items: center;
+	}
+	.searchInput {
+		align-items: left;
+	}
+	.selectOption1 {
+		max-width: 20%;
+	}
+	.selectOption2 {
+		max-width: 10%;
+	}
+	.selectOption3 {
+		max-width: 100%;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.searchInput {
+		padding: 10px 0.004rem;
+		margin-left: -80px;
+	}
+	.searchButton {
+		padding: 0.2rem 0.5rem;
+	}
+
+	.selectOption1 {
+		max-width: 9%;
+		margin-left: -80px;
+		padding: -0.9rem -1.59em;
+	}
+	.selectOption2 {
+		max-width: 9%;
+		padding: -1rem 1rem;
+	}
+	.selectOption3 {
+		max-width: 9%;
+		padding: -1rem 1rem;
+	}
+	.homeButton {
+		margin-left: 220px;
+		padding: 0.2rem 0.5rem;
+	}
+	.createButton {
+		padding: 0.2rem 0.5rem;
+	}
+}
+
+@media only screen and (max-width: 473px) {
+	.searchInput {
+		max-width: 30%;
+		padding: 10px -5rem;
+		margin-left: -250px;
+	}
+	.searchButton {
+		padding: 0.1rem 0.2rem;
+	}
+	.homeButton {
+		padding: 0.1rem 0.2rem;
+		margin-left: 130px;
+	}
+	.selectOption1 {
+		margin-left: -230px;
+		padding: -1rem 1rem;
+		max-width: 9%;
+	}
+	.selectOption2 {
+		padding: -1rem 1rem;
+		max-width: 9%;
+	}
+	.selectOption3 {
+		padding: -1rem 1rem;
+		max-width: 9%;
+	}
+
+	.createButton {
+		padding: 0.1rem 0.2rem;
+	}
+}
+
+@media only screen and (max-width: 390px) {
+	.searchInput {
+		max-width: 40%;
+		padding: 10px -5rem;
+		margin-left: -240px;
+	}
+	.searchButton {
+		padding: 0.1rem 0.2rem;
+	}
+	.homeButton {
+		padding: 0.1rem 0.2rem;
+		margin-left: 130px;
+		margin-bottom: 5px;
+	}
+	.selectOption1 {
+		margin-left: -285px;
+		padding: -1rem 1rem;
+		max-width: 10%;
+	}
+	.selectOption2 {
+		padding: -1rem 1rem;
+		max-width: 10%;
+	}
+	.selectOption3 {
+		padding: -1rem 1rem;
+		max-width: 10%;
+	}
+
+	.createButton {
+		padding: 0.1rem 0.2rem;
+		margin-bottom: 5px;
+	}
+}
+
+@media only screen and (max-width: 376px) {
+	.searchInput {
+		max-width: 30%;
+		padding: 10px -5rem;
+		margin-left: -280px;
+	}
+	.searchButton {
+		padding: 0.1rem 0.2rem;
+	}
+	.homeButton {
+		padding: 0.1rem 0.2rem;
+		margin-left: 110px;
+		margin-bottom: 5px;
+	}
+	.selectOption1 {
+		margin-left: -285px;
+		padding: -1rem 1rem;
+		max-width: 7%;
+	}
+	.selectOption2 {
+		padding: -1rem 1rem;
+		max-width: 7%;
+	}
+	.selectOption3 {
+		padding: -1rem 1rem;
+		max-width: 7%;
+	}
+
+	.createButton {
+		padding: 0.1rem 0.2rem;
+		margin-bottom: 5px;
+	}
+}
+
+@media only screen and (max-width: 322px) {
+	.searchInput {
+		max-width: 30%;
+		padding: 10px -5rem;
+		margin-left: -360px;
+	}
+	.searchButton {
+		padding: 0.1rem 0.2rem;
+	}
+	.homeButton {
+		padding: 0.1rem 0.2rem;
+		margin-left: 80px;
+		margin-bottom: 5px;
+	}
+	.selectOption1 {
+		margin-left: -370px;
+		padding: -1rem 1rem;
+		max-width: 7%;
+	}
+	.selectOption2 {
+		padding: -1rem 1rem;
+		max-width: 7%;
+	}
+	.selectOption3 {
+		padding: -1rem 1rem;
+		max-width: 7%;
+	}
+
+	.createButton {
+		padding: 0.1rem 0.2rem;
+		margin-bottom: 5px;
+	}
+}

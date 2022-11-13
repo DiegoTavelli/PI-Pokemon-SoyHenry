@@ -6,18 +6,15 @@ const getAll = async () => {
   let dbApi = [];
   try {
     const response = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=150');
-
     // save the API response to the Array to map.
     dbApi = [...response.data.results];
-
     let pokemonApi = [];
-
     // Promise.all to call each url and push info to pokemonApi.
     await Promise.all(
       dbApi?.map(async (el) => {
         if (el.url) {
           const response = await axios.get(el.url);
-          const r = response.data;
+          const r = await response.data;
           pokemonApi.push({
             id: r.id,
             name: r.name,

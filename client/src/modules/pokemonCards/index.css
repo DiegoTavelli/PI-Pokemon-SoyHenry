@@ -1,17 +1,23 @@
-.backgroundIndex {
-	max-width: 1500px;
-	min-height: 690px;
-}
-
 .fullCard {
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
+	--size-divisor: 1;
+	flex-direction: row;
 	/* max-width: 1400px; */
 	align-items: center;
 	margin-top: 100px;
-	margin-bottom: -240px;
-	/* width: 20%; */
+	margin-bottom: -400px;
+	/* width: 120%; */
+}
+
+.backgroundIndex {
+	display: flex;
+	flex-wrap: wrap;
+	/* background-color: red; */
+	justify-content: center;
+	align-items: center;
+	/* max-width: 1500px; */
+	/* min-height: 690px; */
+	/* margin-left: 100px; */
+	/* width: 80%; */
 }
 
 .waitingBall {
@@ -23,27 +29,30 @@
 }
 
 .Card {
-	display: inline-block;
+	z-index: 30;
+	/* display: inline-block; */
 	background-image: url('../../images/backCard.png');
 	border-radius: 50px;
 	box-shadow: 1px 1px 20px 1px rgb(9, 5, 75);
 	margin-top: 40px;
 	margin-bottom: 12px;
-	margin-left: 12px;
-	margin-right: 12px;
+	margin-left: 14px;
+	margin-right: 14px;
 	min-height: 415px;
 	max-width: 400px;
 	min-width: 200px;
 	width: 300px;
+	/* width: calc(300px / var(--size-divisor)); */
 }
 
-.Card:hover {
+.CardHover:hover {
+	cursor: pointer;
 	box-shadow: 3px 3px 15px 2px rgb(156, 126, 198);
 	transform: scale(1.02) rotate(0.1deg);
 }
 
 .Card:hover > .imagePokemon {
-	transform: scale(1.02) rotate(2deg);
+	transform: scale(1.005) rotate(1deg);
 }
 
 .imagePokemon {
@@ -72,6 +81,7 @@ img {
 }
 
 .cardName {
+	z-index: 20;
 	font-size: 1.2rem;
 	margin-top: 40px;
 	margin-left: 0px;
@@ -150,6 +160,7 @@ img {
 
 @media only screen and (max-width: 657px) {
 	.fullCard {
+		--size-divisor: 45;
 		display: flex;
 		flex-direction: row;
 		/* flex-wrap: wrap; */

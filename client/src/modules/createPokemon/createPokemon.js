@@ -268,19 +268,3 @@ function CreatePokemon() {
 
 export default CreatePokemon;
 
-
-
-
-// let ready = false;
-// const finalValidation = () => {
-//   return name === '' ? alert('You must enter the name') :
-//     hp === '' ? alert('You must enter Hp value') :
-//       attack === '' ? alert('You must enter Attack value') :
-//         defense === '' ? alert('You must enter Defense value') :
-//           speed === '' ? alert('You must enter Speed value') :
-//             height === '' ? alert('You must enter Height value') :
-//               weight === '' ? alert('You must enter Weight value') :
-//                 attack === '' ? alert('You must enter Attack value') :
-//                   typeOne === '' ? alert('You must enter Primary Type at least') :
-//                     ready = true;
-// }

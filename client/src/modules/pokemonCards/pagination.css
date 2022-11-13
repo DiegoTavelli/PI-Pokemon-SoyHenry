@@ -1,44 +1,85 @@
+.paginationContainer {
+}
+
 .pagination {
-	margin-bottom: -10rem;
-	margin-right: 40px;
+	display: flex;
+	flex-direction: row;
+	/* background-color: rgba(0, 0, 0, 0.028); */
+	border-radius: 10px;
+	justify-content: center;
+	max-width: 620px;
+	min-width: 220px;
+	margin: auto;
+	margin-top: 40px;
+	padding: 15px 30px 15px 19px;
 }
 
 .pageLink {
-	scroll-behavior: smooth;
+	flex: 1;
+	align-self: center;
 	margin-left: 10px;
-	/* display:flexbox; */
-	/* background-image: url('../../images/search.png'); */
-	background-color: rgba(20, 136, 199, 0.606);
+	max-height: 40px;
+	min-height: 40px;
+	max-width: 60px;
+	min-width: 60px;
+	background-color: rgba(20, 136, 199, 0.035);
 	font-weight: bold;
 	color: rgb(210, 185, 84);
-	font-size: 1rem;
-	padding: 0.5rem 1.5rem;
-	border: 2.4px solid rgb(20, 136, 199);
+	font-size: 1.2rem;
+	/* padding: 0.5rem 1.5rem; */
+	border: 2.4px solid rgba(20, 136, 199, 0.088);
 	cursor: pointer;
 	transition: all 0.2s ease;
-	border-radius: 50px;
-	/* border-top: rgb(193, 35, 35);
-  border-bottom: rgb(8, 8, 122); */
-	/* box-shadow: .5rem .5rem 1rem rgb(193, 35, 35),
-  -.5rem -.5rem 1rem rgb(8, 8, 122) */
+	border-radius: 10px;
 }
 
+.pageLinkArrow {
+	flex: 1;
+	color: rgb(2, 118, 242);
+	margin-left: 10px;
+	max-height: 50px;
+	min-height: 50px;
+	max-width: 60px;
+	min-width: 60px;
+	font-weight: bold;
+	background-color: rgba(10, 57, 12, 0.166);
+	/* background-color: transparent; */
+	font-size: 1.5rem;
+	padding: 0rem 0rem;
+	border: 0px solid rgba(20, 116, 167, 0.795);
+	cursor: pointer;
+	transition: all 0.2s ease;
+	/* border-radius: 10px; */
+	border-radius: 7px 2px 2px 7px;
+}
+
+/* 
 .pageLink:hover {
 	background-color: rgba(20, 136, 199);
 	border: 2px solid rgba(20, 136, 199);
-	/* box-shadow: 2px 2px 1rem rgb(187, 3, 77),
-  -.3rem -.3rem 1rem rgb(31, 7, 149) */
 	color: black;
-}
-
+} */
+/* 
 .pageLink:focus {
 	box-shadow: 0.1rem 0.1rem 10rem rgb(8, 8, 122),
-		-0.3rem -0.3rem 1rem rgb(187, 3, 35);
-	/* background-color: rgba(0, 0, 0, 0.221); */
+	-0.3rem -0.3rem 1rem rgba(187, 3, 34, 0.492);
+} */
+
+.pageLinkActive {
+	background-color: rgba(20, 136, 199, 0.265);
+	/* color: rgba(20, 136, 199); */
 }
 
 .pageSelected {
 	background-color: black;
+}
+
+.tresPuntosPaginate {
+	cursor: pointer;
+	margin-left: 10px;
+	color: transparent;
+	left: 5px;
+	min-width: 20px;
 }
 
 @media only screen and (max-width: 649px) {

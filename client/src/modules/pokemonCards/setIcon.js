@@ -5,9 +5,10 @@ const setIcon = (p) => {
   let con;
   if (p.types) {
     con = p.types;
-  } else {
+  } else if (p.type) {
     con = p.type
   }
+  else return null;
 
   if (con[0] === "normal" && con[1]) {
     index = 1;
