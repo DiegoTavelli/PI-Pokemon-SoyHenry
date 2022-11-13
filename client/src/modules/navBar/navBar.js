@@ -20,21 +20,22 @@ function NavBar({ refresh, setShowDetail }) {
   // const data = allPokemons ? (JSON.parse(localStorage.getItem('POKEMONS_DATA'))) : null;
   // console.log(allPokemons)
 
-
   let filterSend = allPokemons && allPokemons?.filter((p) => p.name === pokemon);
-
 
   const submit = (e) => {
     e.preventDefault();
     dispatch(clearPokemon())
     if (filterSend?.length ? true : pokemon >= 1 && pokemon <= 900 ? true : false) {
       let toLowerName = pokemon.toLowerCase()
+      if (pokemon && pokemon[0] === '0') {
+        toLowerName = Number(pokemon).toString();
+      }
       dispatch(getByName(toLowerName));
       setShowDetail(true)
       setPokemons('')
-    } else return alert('No Pokemon found with that NAME or ID 😢');
+    }
+    else return alert('No Pokemon found with that NAME or ID 😢');
   }
-
   const submitOnClick = (ev, value) => {
     dispatch(clearPokemon())
     let toLowerName = value.toLowerCase()

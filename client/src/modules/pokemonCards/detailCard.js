@@ -17,13 +17,15 @@ import rightArrow from '../../images/rightArrow.png'
 
 
 function DetailCard({ byName, setShowDetail }) {
+
   const dispatch = useDispatch();
+  let idCheck = 0;
 
   const closeModal = (e) => {
     dispatch(clearPokemon())
     setShowDetail(false);
   }
-  let idCheck = 0;
+
   const leftArrowSubmit = (e, id) => {
     dispatch(clearPokemon())
     idCheck = id === 1 ? 900 : id - 1;
@@ -31,6 +33,7 @@ function DetailCard({ byName, setShowDetail }) {
       dispatch(getByName(idCheck));
     }
   }
+
   const rightArrowSubmit = (e, id) => {
     dispatch(clearPokemon())
     const idCheck = id === 900 ? 1 : id + 1;
@@ -38,6 +41,7 @@ function DetailCard({ byName, setShowDetail }) {
       dispatch(getByName(idCheck));
     }
   }
+
 
   return !byName ?
     <div>

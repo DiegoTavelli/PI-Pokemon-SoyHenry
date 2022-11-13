@@ -9,6 +9,13 @@
 	overflow-x: hidden;
 	/* overflow-y: hidden; */
 	max-height: fit-content;
+	animation: backAnim 1s ease-in-out;
+}
+
+@keyframes backAnim {
+	0% {
+		opacity: 0;
+	}
 }
 
 .allData {

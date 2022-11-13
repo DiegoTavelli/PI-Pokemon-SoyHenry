@@ -39,6 +39,7 @@
 	border-radius: 50%;
 	max-width: 300px;
 	max-height: 300px;
+	margin-top: 0px;
 	box-shadow: 1px 1px 20px 1px rgb(9, 5, 75);
 }
 
@@ -89,7 +90,7 @@
 
 .allDetailCard {
 	position: fixed;
-	display: flex;
+	display: grid;
 	z-index: 90;
 	flex-direction: column;
 	/* justify-content: center; */
@@ -113,7 +114,7 @@
 	margin-bottom: 2.2rem;
 	left: 90px;
 	max-width: 400px;
-	min-width: 400px;
+	/* min-width: 400px; */
 	/* max-height: 500px; */
 	background-image: url('../../images/backCard.png');
 	border-radius: 50px;
@@ -187,7 +188,7 @@
 	transition: all 0.3s ease;
 	border-radius: 13px;
 	max-width: 220px;
-	min-width: 220px;
+	/* min-width: 220px; */
 }
 
 .parrafId {
@@ -268,7 +269,8 @@
 @media only screen and (max-width: 1363px) {
 	.allDetailCard {
 		position: absolute;
-		display: flex;
+		display: grid;
+		grid-template-columns: 50% 50%;
 		flex-direction: column;
 		/*flex-wrap: wrap; */
 		z-index: 90;
@@ -280,10 +282,15 @@
 		margin-top: 35px;
 		border-radius: 5%;
 		width: 70vw;
-		height: 100vh;
+		height: 95vh;
 		left: 13vw;
 	}
 
+	.loadingPageModal {
+		position: absolute;
+		width: 70vw;
+		height: 95vh;
+	}
 	.cardArrowContainer {
 		flex: 1;
 		justify-content: center;
@@ -292,30 +299,45 @@
 
 	.leftArrowModal {
 		align-items: center;
+		left: 200px;
+		top: 250px;
 	}
 
 	.rightArrowModal {
 		align-items: center;
+		left: 640px;
+		top: 250px;
 	}
 
 	.card {
 		align-items: center;
 		/* flex: 1; */
 		z-index: 0;
-		margin-top: 40px;
-		margin-bottom: 2.2rem;
-		/* right: auto; */
-		max-width: 350px;
-		min-width: 350px;
-		/* max-height: 500px; */
+		/* margin-top: 40px; */
+		/* margin-bottom: 2.2rem; */
+		width: 300px;
+		height: 450px;
+		left: 300px;
 		border-radius: 50px;
 		box-shadow: 0.5px 0.5px 20px 0.5px rgb(9, 5, 75);
 	}
 
 	.detailsData {
 		/* flex: 1; */
-		top: 640px;
-		margin-left: auto;
-		margin-right: auto;
+		top: 540px;
+		left: 340px;
+		/* margin-right: auto; */
+		height: 200px;
+	}
+
+	.parraf {
+		height: 50px;
+		font-size: medium;
+	}
+
+	.detailPic {
+		scale: 0.7;
+		margin-left: -40px;
+		margin-top: -100px;
 	}
 }

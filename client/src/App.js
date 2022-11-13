@@ -74,7 +74,12 @@ function App() {
                 setShowDetail={setShowDetail}
               />}
           />
-          <Footer />
+          <Route exact path='/pokemons'
+            render={() => <Footer />}
+          />
+          <Route exact path='/create'
+            render={() => <Footer />}
+          />
         </StrictMode>
       </Switch>
     </div>
