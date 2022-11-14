@@ -112,7 +112,7 @@ function DetailCard({ byName, setShowDetail }) {
           />
         </div>
       </div>
-      : null
+      : null;
 }
 
 const mapStateToProps = (state) => {
