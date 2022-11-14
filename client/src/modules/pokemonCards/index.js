@@ -56,7 +56,7 @@ function PokemonCards({ refresh, pokemons, showDetail, setShowDetail }) {
   }
 
 
-  return !pokemons || !allData ?
+  return !pokemons && !allData ?
     <div>
       <img src={ballWaiting} alt='Loading...' className='waitingBall' />
       <br></br>
