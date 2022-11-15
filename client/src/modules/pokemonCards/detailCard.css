@@ -557,9 +557,8 @@
 
 @media only screen and (max-width: 410px) {
 	.allDetailCard {
-		scale: 0.98;
-		width: 97%;
-		left: 1%;
+		width: 95%;
+		left: 0.5%;
 		background-size: 160%;
 	}
 	.cardArrowContainer {
@@ -575,9 +574,17 @@
 
 @media only screen and (max-width: 350px) {
 	.cardArrowContainer {
-		left: -9%;
+		left: -14%;
 	}
 	.detailsData {
 		left: 13%;
+	}
+}
+@media only screen and (max-width: 350px) {
+	.cardArrowContainer {
+		left: -17%;
+	}
+	.detailsData {
+		left: 10%;
 	}
 }
