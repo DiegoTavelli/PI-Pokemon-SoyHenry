@@ -9,7 +9,7 @@
 	.homeButton {
 	}
 }
-@media only screen and (max-width: 648px) {
+@media only screen and (max-width: 720px) {
 	.allContainer {
 		margin-left: -25px;
 	}
@@ -29,48 +29,85 @@
 	.spanInput {
 		margin-left: -20px;
 	}
+	.homeButton {
+		position: relative;
+		left: 23%;
+		/* width: 13%; */
+	}
+	.createButton {
+		position: relative;
+		left: 23%;
+		/* width: 14.3%; */
+	}
+	.filters > select {
+		width: 70px;
+	}
 }
-@media only screen and (max-width: 520px) {
+@media only screen and (max-width: 613px) {
 	.allContainer {
 		margin-left: -24px;
 	}
 	.contInter {
 		margin-left: -95px;
-		max-width: 260px;
+		max-width: 280px;
 	}
 	.searchInput {
 		margin-left: -70px;
-		max-width: 270px;
+		max-width: 290px;
 	}
 }
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 422px) {
 	.allContainer {
 		margin-left: -24px;
 	}
 	.searchInput {
-		margin-left: -40px;
-		max-width: 280px;
+		margin-left: -60px;
+		max-width: 250px;
 	}
 	.contInter {
-		margin-left: -20px;
-		max-width: 270px;
+		margin-left: -83px;
+		max-width: 240px;
+	}
+	.divInput {
+		position: relative;
+		left: -60px;
 	}
 	.searchButton {
-		left: 310px;
+		left: 73%;
 		top: 56px;
+		height: 35px;
+	}
+	.createButton {
+		height: 36px;
+	}
+	.homeButton {
+		height: 36px;
 	}
 }
 @media only screen and (max-width: 392px) {
 	.searchInput {
-		margin-left: -10px;
-		max-width: 290px;
+		margin-left: -60px;
+		max-width: 230px;
 	}
 	.contInter {
-		max-width: 280px;
-		margin-left: -32px;
+		margin-left: -83px;
+		max-width: 220px;
+	}
+	.divInput {
+		position: relative;
+		left: -70px;
 	}
 	.searchButton {
-		left: 320px;
+		left: 75%;
+		top: 49px;
+	}
+	.createButton {
+		height: 30px;
+		width: 80px;
+	}
+	.homeButton {
+		height: 30px;
+		width: 80px;
 	}
 }
 @media only screen and (max-width: 368px) {
@@ -78,28 +115,67 @@
 		margin-left: -24px;
 	}
 	.searchInput {
-		margin-left: -20px;
-		max-width: 250px;
+		margin-left: -50px;
+		max-width: 210px;
 	}
 	.contInter {
-		margin-left: -44px;
-		max-width: 240px;
+		margin-left: -73px;
+		max-width: 200px;
+	}
+	.divInput {
+		position: relative;
+		left: -80px;
 	}
 	.searchButton {
-		left: 286px;
+		/* position: relative; */
+		max-width: 90px;
+		left: 260px;
 	}
 }
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 342px) {
 	.allContainer {
-		margin-left: -60px;
+		margin-left: -20px;
 	}
 	.searchInput {
-		margin-left: -30px;
-		max-width: 240px;
+		margin-left: -30%;
+		max-width: 200px;
+	}
+	.searchButton {
+		/* scale: 0.9; */
+		left: 240px;
+		width: 100px;
+	}
+	.contInter {
+		margin-left: -80px;
+		max-width: 190px;
+	}
+	.divInput {
+		position: relative;
+		left: -90px;
+	}
+}
+
+@media only screen and (max-width: 321px) {
+	.searchInput {
+		margin-left: -40%;
+		max-width: 160px;
 	}
 	.searchButton {
 		scale: 0.9;
-		left: 280px;
+		left: 65%;
 		/* width: 20px; */
+	}
+	.filters > select {
+		width: 50px;
+	}
+	.contInter {
+		margin-left: -53px;
+		max-width: 150px;
+	}
+	.createButton {
+		left: 10px;
+	}
+	.homeButton {
+		left: 10px;
 	}
 }

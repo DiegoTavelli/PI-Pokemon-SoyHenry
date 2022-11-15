@@ -31,15 +31,8 @@ const Mapping = ({ showDetail, pokemons, paginate, refresh, setShowDetail }) => 
     }
   }
 
-  return refresh && !pokemons?.length ?
-    <div>
-      <div className='cardNotFound'>
-        <br></br>
-        <img className='detailPicNotFound' src={giphy} alt='notFoundLogo' />
-        <p className='parrafId' >We couldn't find Pokemon with that name</p>
-      </div>
-    </div>
-    :
+  return (
+
     <div className='backgroundIndex' >
       {
         pokemons && pokemons?.map((pokemon) => {
@@ -74,6 +67,7 @@ const Mapping = ({ showDetail, pokemons, paginate, refresh, setShowDetail }) => 
           );
         })}
     </div>
+  )
 }
 
 export default Mapping;
