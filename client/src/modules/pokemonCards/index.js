@@ -71,23 +71,32 @@ function PokemonCards({ refresh, pokemons, showDetail, setShowDetail }) {
             />
             : null
         }
-        <div>
-          <Mapping
-            showDetail={showDetail}
-            setShowDetail={setShowDetail}
-            pokemons={currentPkmns}
-            paginate={paginate}
-            refresh={refresh}
-          />
-          <div>
-            <Pagination
-              currentPage={currentPage}
-              pkmnPerPage={pkmnPerPage}
-              totalPkmn={pokemons?.length}
-              paginate={paginate}
-            />
-          </div>
-        </div>
+        {
+          pokemons ?
+            <div>
+              <Mapping
+                showDetail={showDetail}
+                setShowDetail={setShowDetail}
+                pokemons={currentPkmns}
+                paginate={paginate}
+                refresh={refresh}
+              />
+              <div>
+                <Pagination
+                  currentPage={currentPage}
+                  pkmnPerPage={pkmnPerPage}
+                  totalPkmn={pokemons?.length}
+                  paginate={paginate}
+                />
+              </div>
+            </div>
+            :
+            <div>
+              <img src={ballWaiting} style={{ marginTop: '150px' }} alt='Loading...' className='waitingBall' />
+              <br></br>
+              <img src={loading} style={{ marginTop: '150px' }} alt='Loading...' className='loading' />
+            </div>
+        }
       </div>
     </div>
 };

@@ -1,5 +1,5 @@
 body {
-	background-image: radial-gradient(rgb(193, 35, 35), rgba(8, 8, 122, 0.95));
+	background-image: radial-gradient(#c31e24, rgba(8, 8, 122, 0.95));
 	overflow-y: auto;
 	background-color: #f2f2f2;
 	position: relative;

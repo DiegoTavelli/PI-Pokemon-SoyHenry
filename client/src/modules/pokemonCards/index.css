@@ -31,13 +31,13 @@
 .Card {
 	z-index: 30;
 	/* display: inline-block; */
-	background-image: url('../../images/backCard.png');
-	border-radius: 50px;
+	/* background-image: url('../../images/backCard.png'); */
+	border-radius: 30px;
 	box-shadow: 1px 1px 20px 1px rgb(9, 5, 75);
-	margin-top: 40px;
-	margin-bottom: 12px;
-	margin-left: 14px;
-	margin-right: 14px;
+	margin-top: 12px;
+	margin-bottom: 20px;
+	margin-left: 12px;
+	margin-right: 12px;
 	min-height: 415px;
 	max-width: 400px;
 	/* min-width: 200px; */
@@ -48,11 +48,34 @@
 .CardHover:hover {
 	cursor: pointer;
 	box-shadow: 3px 3px 15px 2px rgb(156, 126, 198);
-	transform: scale(1.02) rotate(0.1deg);
+	/* transform: scale(1.02) rotate(0.1deg); */
 }
 
 .Card:hover > .imagePokemon {
 	transform: scale(1.005) rotate(1deg);
+}
+
+.backImageBlue {
+	position: absolute;
+	z-index: -10;
+	height: 369px;
+	/* width: 320px; */
+	margin-top: 24px;
+	margin-left: -147px;
+	border-radius: 2px 10px 30px 0px;
+	animation: backImgAnim 25s ease-in-out infinite;
+}
+
+@keyframes backImgAnim {
+	0% {
+		filter: hue-rotate(-10deg);
+	}
+	50% {
+		filter: hue-rotate(30deg);
+	}
+	100% {
+		filter: hue-rotate(-10deg);
+	}
 }
 
 .imagePokemon {

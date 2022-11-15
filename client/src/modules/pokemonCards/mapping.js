@@ -7,7 +7,7 @@ import { clearPokemon } from 'store/actions/clearPokemonActions';
 import pokeBall from 'images/pokeball.png'
 import giphy from 'images/giphy.webp'
 import './index.css'
-
+import backImage from '../../images/backCard2.png'
 const Mapping = ({ showDetail, pokemons, paginate, refresh, setShowDetail }) => {
 
   const dispatch = useDispatch();
@@ -31,9 +31,10 @@ const Mapping = ({ showDetail, pokemons, paginate, refresh, setShowDetail }) => 
     }
   }
 
+
   return (
 
-    <div className='backgroundIndex' >
+    <div className='backgroundIndex' style={{ marginTop: '130px' }}  >
       {
         pokemons && pokemons?.map((pokemon) => {
           let typesTo = [];
@@ -45,8 +46,9 @@ const Mapping = ({ showDetail, pokemons, paginate, refresh, setShowDetail }) => 
             typesTo = ['undefined'];
           }
           return (
-            <div key={pokemon.id}>
+            <div key={pokemon.id} >
               <div className={showDetail ? 'Card' : 'Card CardHover'} onClick={(e) => submitInfo(e, pokemon.name)} >
+                <img src={backImage} className='backImageBlue' alt='' />
                 <br></br>
                 <p className='cardName' >{pokemon?.name[0]?.toUpperCase() + pokemon.name.slice(1)}</p>
                 <img src={pokemon.img ? pokemon.img : pokemon.image ? pokemon.image : pokeBall}

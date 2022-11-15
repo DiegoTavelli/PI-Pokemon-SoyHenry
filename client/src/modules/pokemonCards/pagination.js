@@ -88,7 +88,7 @@ const Pagination = ({ pkmnPerPage, totalPkmn, paginate, currentPage }) => {
           onClick={() => paginate(pageNumbers.length)}
           className='tresPuntosPaginate'
           style={
-            currentPage < pageNumbers.length ?
+            currentPage < pageNumbers.length - 2 ?
               { color: 'aliceblue' } : null}
         > ... </p>
         {pageNumbers.length > 1 ?
