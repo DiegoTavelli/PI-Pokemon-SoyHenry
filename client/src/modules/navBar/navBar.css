@@ -161,7 +161,8 @@ input {
 /* search button */
 .searchButton {
 	z-index: 130;
-	margin-left: 10px;
+	margin-left: 5px;
+	/* margin-bottom: -10px; */
 	background-color: rgba(20, 136, 199, 0.8);
 	font-weight: bold;
 	color: rgb(210, 185, 84);
@@ -169,7 +170,7 @@ input {
 	padding: 0.5rem 1.5rem;
 	border: 2px solid rgb(20, 136, 199);
 	cursor: pointer;
-	transition: all 0.2s ease;
+	/* transition: all 0.2s ease; */
 	border-radius: 50px;
 }
 

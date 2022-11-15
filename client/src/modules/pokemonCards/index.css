@@ -40,7 +40,7 @@
 	margin-right: 14px;
 	min-height: 415px;
 	max-width: 400px;
-	min-width: 200px;
+	/* min-width: 200px; */
 	width: 300px;
 	/* width: calc(300px / var(--size-divisor)); */
 }
@@ -156,86 +156,4 @@ img {
 .buttonPagination {
 	justify-content: center;
 	margin-top: -500px;
-}
-
-@media only screen and (max-width: 657px) {
-	.fullCard {
-		--size-divisor: 45;
-		display: flex;
-		flex-direction: row;
-		/* flex-wrap: wrap; */
-		/* max-width: 1400px; */
-		align-items: center;
-		margin-top: 100px;
-		margin-bottom: -240px;
-	}
-
-	.cardName {
-		margin-left: -10px;
-	}
-
-	.detailPic {
-		max-width: 60%;
-	}
-	.cardTypes {
-		margin-right: 10px;
-	}
-}
-
-@media only screen and (max-width: 343px) {
-	.fullCard {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		margin-top: 100px;
-		margin-bottom: -240px;
-	}
-
-	.Card {
-		margin-left: -10px;
-		max-width: 70%;
-		height: 20px;
-	}
-	.cardName {
-		margin-left: -10px;
-	}
-
-	.detailPic {
-		max-width: 60%;
-	}
-	.cardTypeIcon {
-		box-shadow: 0.1rem -0.5rem 0.1rem rgba(11, 123, 188, 0);
-		margin-left: 80px;
-	}
-	.contTypId {
-		margin-top: -50px;
-		margin-left: -80px;
-	}
-	.cardTypes {
-		margin-top: -100px;
-		margin-left: 230px;
-	}
-	.attackData {
-		margin-left: 4rem;
-		margin-top: 0px;
-		color: rgb(212, 233, 24);
-
-		display: flex;
-		margin-top: -70px;
-		margin-left: 150px;
-		margin-right: 90px;
-		padding-left: 13px;
-		/* border-radius: 30px; */
-		border: transparent;
-		box-shadow: transparent;
-		color: rgba(159, 205, 22, 0.722);
-		/* border-left: 0.1rem; */
-		/* border-right: 0.1rem; */
-		font-size: 1.07rem;
-		font-style: oblique;
-	}
-
-	.waitingBall {
-		max-width: 40%;
-	}
 }

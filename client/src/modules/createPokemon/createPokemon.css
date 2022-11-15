@@ -211,7 +211,6 @@ input::placeholder {
 	}
 
 	.contImages {
-		/* max-width: 200px; */
 		margin-left: 98px;
 	}
 	.createYourOwn {
@@ -225,8 +224,4 @@ input::placeholder {
 		margin-left: 50px;
 		margin-top: 10px;
 	}
-
-	/* .gifCreate {
-      max-width: 250px;
-    } */
 }

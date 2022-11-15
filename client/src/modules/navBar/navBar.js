@@ -95,7 +95,6 @@ function NavBar({ refresh, setShowDetail }) {
   if (window.location.pathname === '/pokemons') {
     return (
       <div>
-
         <nav className='formNav'>
           <div className='homeAndCreate'>
             <button onClick={handleGoHome} className='homeButton'>Home</button>
@@ -170,7 +169,6 @@ function NavBar({ refresh, setShowDetail }) {
           <button onClick={handleCreate} className='createButton'>Create</button>
         </div>
       </nav>
-
     )
   }
 };

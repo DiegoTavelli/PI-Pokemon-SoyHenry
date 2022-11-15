@@ -10,7 +10,7 @@ import { clearPokemon } from 'store/actions/clearPokemonActions';
 
 //images
 import pokeBall from 'images/pokeball.png'
-import ballWaiting from 'images/ballWaiting.gif'
+import ballWaiting from 'images/ballWaiting3.gif'
 import closeIcon from '../../images/X.png'
 import leftArrow from '../../images/leftArrow.png'
 import rightArrow from '../../images/rightArrow.png'
@@ -42,77 +42,78 @@ function DetailCard({ byName, setShowDetail }) {
     }
   }
 
+  return (
+    <div style={{ position: 'relative' }} >
+      <div className='allDetailCard' >
+        <div className='cardArrowContainer' >
+          <div>
+            <img
+              src={leftArrow}
+              onClick={byName ? (e) => leftArrowSubmit(e, byName.id) : null}
+              className={byName && typeof byName.id === 'number' ? 'leftArrowModal' : 'leftArrowModal noShow'}
+              alt=''
+            />
+          </div>
+          <div className='card'>
+            <br></br>
+            <p className='detailName' >{byName ? byName.name : ''}</p>
+            <p className={byName?.id ? typeof byName.id === 'number' ? 'parrafId' : 'parrafId idDb' : null}
+            ># {byName ? byName.id : null}
+            </p>
+            {
+              byName &&
+              <img
+                src={byName.img ? byName.img : byName.image ? byName.image : pokeBall}
+                alt=''
+                className={byName.image ? 'detailPic' : 'detailPic picDataBase'}
+              />
+            }
+            {
+              !byName &&
+              <div>
+                <img
+                  src={ballWaiting}
+                  alt=''
+                  className='waitingBallPic'
+                />
+              </div>
+            }
+          </div>
+          {byName && typeof byName.id === 'number' &&
+            <div>
+              <img
+                src={rightArrow}
+                onClick={byName ? (e) => rightArrowSubmit(e, byName.id) : null}
+                className='rightArrowModal'
+                alt=''
+              />
+            </div>
+          }
+        </div>
 
-  return !byName ?
-    <div>
-      <div className='loadingPageModal' >
-        <img src={ballWaiting} alt='Loading...' className='waitingBallModal' />
+        <div className='detailsData' >
+          <p className='parraf' >Hp: {byName?.hp ? byName.hp.toString() : '...'}</p>
+          <p className='parraf' >Attack: {byName?.attack ? byName.attack.toString() : '...'}</p>
+          <p className='parraf' >Defense: {byName?.defense ? byName.defense.toString() : '...'}</p>
+          <p className='parraf' >Speed: {byName?.speed ? byName.speed.toString() : '...'}</p>
+          <p className='parraf' >Height: {byName?.height ? (byName.height / 10).toString() + 'm' : '...'}</p>
+          <p className='parraf' >Weight: {byName?.weight ? (byName.weight / 10).toString() + 'kg' : '...'}</p>
+          <p className='parraf' >Type: {
+            byName && byName?.types ? (byName?.types[0]?.name) :
+              byName && byName?.type[0]?.concat(byName?.types
+                ? ', ' + byName?.types[1]?.name : byName?.type[1]
+                  ? ', ' + byName?.type[1] : '')}{byName ? setIcon(byName) : null}</p>
+        </div>
+
         <img
           src={closeIcon}
           alt=''
           className='closeButtonModal'
           onClick={(e) => closeModal(e)}
         />
-        <br></br>
       </div>
     </div>
-    :
-    byName ?
-      <div>
-        <div className='allDetailCard' >
-          <div className='cardArrowContainer' >
-
-            {typeof byName.id === 'number' &&
-              <img
-                src={leftArrow}
-                onClick={(e) => leftArrowSubmit(e, byName.id)}
-                className='leftArrowModal'
-                alt=''
-              />
-            }
-            <div className='card'>
-              <br></br>
-              <p className='detailName' >{byName.name}</p>
-              <p className={typeof byName.id === 'number' ? 'parrafId' : 'parrafId idDb'}
-              ># {byName.id}
-              </p>
-              <img
-                src={byName.img ? byName.img : byName.image ? byName.image : pokeBall}
-                alt='pokemon'
-                className='detailPic'
-              />
-            </div>
-            {typeof byName.id === 'number' &&
-              <img
-                src={rightArrow}
-                onClick={(e) => rightArrowSubmit(e, byName.id)}
-                className='rightArrowModal'
-                alt=''
-              />
-            }
-          </div>
-          <div className='detailsData' >
-            <p className='parraf' >Hp: {byName.hp.toString()}</p>
-            <p className='parraf' >Attack: {byName.attack.toString()}</p>
-            <p className='parraf' >Defense: {byName.defense.toString()}</p>
-            <p className='parraf' >Speed: {byName.speed.toString()}</p>
-            <p className='parraf' >Height: {(byName.height / 10).toString() + 'm'}</p>
-            <p className='parraf' >Weight: {(byName.weight / 10).toString() + 'kg'}</p>
-            <p className='parraf' >Type: {
-              byName && byName.types ? (byName?.types[0]?.name) :
-                byName && byName.type[0]?.concat(byName?.types
-                  ? ', ' + byName.types[1]?.name : byName.type[1]
-                    ? ', ' + byName.type[1] : '')}{setIcon(byName)}</p>
-          </div>
-          <img
-            src={closeIcon}
-            alt=''
-            className='closeButtonModal'
-            onClick={(e) => closeModal(e)}
-          />
-        </div>
-      </div>
-      : null;
+  )
 }
 
 const mapStateToProps = (state) => {
