@@ -120,9 +120,12 @@ function NavBar({ refresh, setShowDetail }) {
           </form>
           <div className='filters' >
             <select onChange={(e) => findByType(e)} className='selectOption1' >
-              <option value='all'>all types</option>{allTypes?.map((t) => {
-                return <option key={t.id} value={t.name} >{t.name}</option>
-              })}</select>
+              <option value='all'>all types</option>
+              {
+                allTypes?.map((t) => {
+                  return <option key={t.id} value={t.name} >{t.name}</option>
+                })
+              }</select>
             <select onChange={(e) => submitAZ(e)} className='selectOption2' >
               <option value='sort' >Sort</option>
               <option value='asc' >A-Z</option>
@@ -130,11 +133,11 @@ function NavBar({ refresh, setShowDetail }) {
               <option value='up'>⬆Atack</option>
               <option value='down'>⬇Atack</option>
             </select>
-            <select onChange={(e) => submitFilter(e)} className='selectOption3' >
+            {/* <select onChange={(e) => submitFilter(e)} className='selectOption3' >
               <option value='all'>all origins</option>
               <option value='official'>Officials</option>
               <option value='created'>Created</option>
-            </select>
+            </select> */}
           </div>
         </nav>
         <div className='dropdown'>

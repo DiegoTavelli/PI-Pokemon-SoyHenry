@@ -65,7 +65,7 @@ const reducer = (state = initialState, action) => {
       const masterFilterAZ = state?.pokemons;
       let sort =
         action.payload === 'asc'
-          ? state.copyPokemon?.sort((a, b) => {
+          ? state.pokemons?.sort((a, b) => {
             if (a.name > b.name) {
               return 1;
             }
@@ -75,7 +75,7 @@ const reducer = (state = initialState, action) => {
             return 0;
           })
           : action.payload === 'desc' ?
-            state.copyPokemon?.sort((a, b) => {
+            state.pokemons?.sort((a, b) => {
               if (a.name > b.name) {
                 return -1;
               }
@@ -85,7 +85,7 @@ const reducer = (state = initialState, action) => {
               return 0;
             })
             : action.payload === 'down'
-              ? state.copyPokemon?.sort((a, b) => {
+              ? state.pokemons?.sort((a, b) => {
                 if (a.attack > b.attack) {
                   return 1;
                 }
@@ -94,7 +94,7 @@ const reducer = (state = initialState, action) => {
                 }
                 return 0;
               }) : action.payload === 'up' ?
-                state.copyPokemon?.sort((a, b) => {
+                state.pokemons?.sort((a, b) => {
                   if (a.attack > b.attack) {
                     return -1;
                   }
