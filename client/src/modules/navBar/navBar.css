@@ -55,12 +55,20 @@
 }
 
 .inputContainer {
+	margin-top: 5px;
+	display: flex;
 	justify-content: center;
-	flex: 1;
+
+	/* margin-left: -115px; */
+}
+
+.searchInputContainer {
+}
+
+.searchButtonContainer {
 }
 
 .inputContainer input {
-	flex: 1;
 	max-height: 20px;
 	width: 400px;
 	margin-right: 0;
@@ -82,7 +90,7 @@
 }
 
 .dropdown {
-	z-index: 10;
+	z-index: 100;
 	/* width: 100%; */
 	position: static;
 	flex-direction: column;
@@ -94,8 +102,8 @@
 	position: absolute;
 	z-index: 100;
 	width: 390px;
-	margin-top: 86px;
-	margin-right: 114px;
+	margin-top: 89px;
+	margin-right: 0px;
 	border-top-left-radius: 6px;
 	border-top-right-radius: 6px;
 	border-bottom-left-radius: 18px;
@@ -160,9 +168,10 @@ input {
 
 /* search button */
 .searchButton {
+	position: absolute;
 	z-index: 130;
 	margin-left: 5px;
-	/* margin-bottom: -10px; */
+	margin-top: -2px;
 	background-color: rgba(20, 136, 199, 0.8);
 	font-weight: bold;
 	color: rgb(210, 185, 84);
@@ -272,8 +281,11 @@ input {
 }
 
 .filters {
-	max-height: 10px;
-	padding-top: 2px;
+	display: flex;
+	justify-content: center;
+	max-height: 50px;
+	padding-top: 10px;
+	margin-left: 100px;
 }
 
 .selectOption1 {

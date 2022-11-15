@@ -94,7 +94,7 @@ function NavBar({ refresh, setShowDetail }) {
 
   if (window.location.pathname === '/pokemons') {
     return (
-      <div>
+      <div className='allContainer' >
         <nav className='formNav'>
           <div className='homeAndCreate'>
             <button onClick={handleGoHome} className='homeButton'>Home</button>
@@ -102,16 +102,20 @@ function NavBar({ refresh, setShowDetail }) {
           </div>
           <form onSubmit={(e) => submit(e)} className='onlyForm' >
             <div className='inputContainer'>
-              <input
-                autoComplete='off'
-                type="text"
-                id='searchpkm'
-                value={pokemon}
-                onChange={handleInputChange}
-                className='searchInput'
-                placeholder='Search by name or id'
-              />
-              <button type='submit' disabled={!pokemon} className='searchButton'>Search</button>
+              <div className='searchInputContainer' >
+                <input
+                  autoComplete='off'
+                  type="text"
+                  id='searchpkm'
+                  value={pokemon}
+                  onChange={handleInputChange}
+                  className='searchInput'
+                  placeholder='Search by name or id'
+                />
+              </div>
+              <div className='searchButtonContainer' >
+                <button type='submit' disabled={!pokemon} className='searchButton'>Search</button>
+              </div>
             </div>
           </form>
           <div className='filters' >

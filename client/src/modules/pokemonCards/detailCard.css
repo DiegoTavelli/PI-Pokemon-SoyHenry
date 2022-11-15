@@ -77,7 +77,8 @@
 	z-index: 90;
 	flex-direction: row;
 	background-image: url('../../images/background.jpg');
-	background-attachment: fixed;
+	/* background-attachment: fixed; */
+	background-size: 150%;
 	box-shadow: 0.5px 0.5px 20px 10px rgb(9, 5, 75);
 	filter: blur(0px);
 	/* margin-bottom: -200px; */
@@ -94,9 +95,11 @@
 	0% {
 		height: 10px;
 		top: 100%;
+		background-size: 0.1%;
 	}
 	100% {
 		height: 2000px;
+		background-size: 150%;
 	}
 }
 
@@ -310,7 +313,13 @@
 		left: 13%;
 	}
 	.cardArrowContainer {
-		left: 70px;
+		left: 10%;
+	}
+	.leftArrowModal {
+		left: 0%;
+	}
+	.rightArrowModal {
+		/* right: 0%; */
 	}
 }
 
@@ -496,7 +505,7 @@
 @media only screen and (max-width: 559px) {
 	.allDetailCard {
 		width: 90%;
-		left: 5%;
+		left: 3.5%;
 	}
 	.detailsData {
 		min-height: 281px;
@@ -523,8 +532,8 @@
 
 @media only screen and (max-width: 482px) {
 	.allDetailCard {
-		left: 2.4%;
-		width: 95%;
+		left: 3%;
+		width: 92%;
 	}
 
 	.cardArrowContainer {
@@ -549,16 +558,26 @@
 @media only screen and (max-width: 410px) {
 	.allDetailCard {
 		scale: 0.98;
-		width: 100%;
-		left: 0;
+		width: 97%;
+		left: 1%;
+		background-size: 160%;
 	}
 	.cardArrowContainer {
-		left: -4%;
+		left: -5%;
 	}
 	.detailsData {
 		left: 17%;
 	}
 	.leftArrowModal {
 		scale: 0.6;
+	}
+}
+
+@media only screen and (max-width: 350px) {
+	.cardArrowContainer {
+		left: -9%;
+	}
+	.detailsData {
+		left: 13%;
 	}
 }

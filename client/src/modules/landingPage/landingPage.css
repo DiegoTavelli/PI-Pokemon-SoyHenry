@@ -6,9 +6,8 @@
 	justify-content: center;
 	align-items: center;
 	padding: 0;
-	overflow-x: hidden;
-	/* overflow-y: hidden; */
-	max-height: fit-content;
+	overflow: hidden;
+	max-height: 100vh;
 	animation: backAnim 1s ease-in-out;
 }
 

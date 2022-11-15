@@ -1,26 +1,105 @@
 @media only screen and (max-width: 1024px) {
+	.allContainer {
+		/* scale: 1; */
+		margin-left: -20px;
+	}
+	.contInter {
+		margin-left: -23px;
+	}
 	.homeButton {
-		scale: 0.8;
 	}
-	.createButton {
-		scale: 0.8;
+}
+@media only screen and (max-width: 648px) {
+	.allContainer {
+		margin-left: -25px;
 	}
-
-	.inputContainer {
-		/* width: 700px; */
+	.contInter {
+		margin-left: -26px;
+		max-width: 310px;
 	}
-
 	.searchInput {
-		/* min-width: 100px; */
-		scale: 0.9;
+		max-width: 320px;
 	}
-	.searchInput::placeholder {
-		scale: 0.9;
+	.divInput {
+		position: relative;
+		left: -20px;
+		border-top: 0px solid transparent;
+		max-width: 270px;
 	}
-
+	.spanInput {
+		margin-left: -20px;
+	}
+}
+@media only screen and (max-width: 520px) {
+	.allContainer {
+		margin-left: -24px;
+	}
+	.contInter {
+		margin-left: -95px;
+		max-width: 260px;
+	}
+	.searchInput {
+		margin-left: -70px;
+		max-width: 270px;
+	}
+}
+@media only screen and (max-width: 420px) {
+	.allContainer {
+		margin-left: -24px;
+	}
+	.searchInput {
+		margin-left: -40px;
+		max-width: 280px;
+	}
+	.contInter {
+		margin-left: -20px;
+		max-width: 270px;
+	}
 	.searchButton {
-		top: -20px;
-		margin-left: -80px;
-		scale: 0.8;
+		left: 310px;
+		top: 56px;
+	}
+}
+@media only screen and (max-width: 392px) {
+	.searchInput {
+		margin-left: -10px;
+		max-width: 290px;
+	}
+	.contInter {
+		max-width: 280px;
+		margin-left: -32px;
+	}
+	.searchButton {
+		left: 320px;
+	}
+}
+@media only screen and (max-width: 368px) {
+	.allContainer {
+		margin-left: -24px;
+	}
+	.searchInput {
+		margin-left: -20px;
+		max-width: 250px;
+	}
+	.contInter {
+		margin-left: -44px;
+		max-width: 240px;
+	}
+	.searchButton {
+		left: 286px;
+	}
+}
+@media only screen and (max-width: 300px) {
+	.allContainer {
+		margin-left: -60px;
+	}
+	.searchInput {
+		margin-left: -30px;
+		max-width: 240px;
+	}
+	.searchButton {
+		scale: 0.9;
+		left: 280px;
+		/* width: 20px; */
 	}
 }
