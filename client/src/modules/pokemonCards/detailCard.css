@@ -208,7 +208,6 @@
 	box-sizing: content-box;
 	width: 100%;
 	transform: rotate(29deg);
-	cursor: default;
 }
 
 .parraf {
@@ -222,7 +221,6 @@
 	font-size: 1.3rem;
 	padding: 0.5rem 1.5rem;
 	border: 2px solid rgba(20, 136, 199, 0.569);
-	cursor: default;
 	transition: all 0.3s ease;
 	border-radius: 5px;
 	max-width: 220px;
@@ -237,7 +235,6 @@
 	color: rgb(210, 185, 84);
 	font-size: 2rem;
 	padding: 0;
-	cursor: default;
 	margin-top: 50px;
 	margin-right: 160px;
 	margin-bottom: 12px;

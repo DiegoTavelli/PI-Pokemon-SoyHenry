@@ -35,7 +35,6 @@
 	max-width: 400px;
 	/* min-width: 200px; */
 	width: 300px;
-	/* width: calc(300px / var(--size-divisor)); */
 }
 
 .CardHover:hover {
@@ -57,6 +56,10 @@
 	margin-left: -147px;
 	border-radius: 2px 10px 30px 0px;
 	animation: backImgAnim 25s ease-in-out infinite;
+}
+
+.Card:hover > .backImageBlue {
+	animation: backImgAnim 2s ease-in-out infinite;
 }
 
 @keyframes backImgAnim {

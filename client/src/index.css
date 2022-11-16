@@ -1,5 +1,5 @@
 :root {
-	--cursor-default: url('../src/sources/icons8-cursor-2.png'), pointer;
+	--cursor-default: url('../src/sources/icons8-cursor-1.png'), pointer;
 	--cursor-point: url('../src/sources/icons8-hand-cursor-hand.png'), pointer;
 }
 
@@ -13,7 +13,7 @@ body {
 		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	cursor: url('../src/sources/icons8-cursor-2.png'), pointer;
+	cursor: var(--cursor-default);
 }
 
 code {

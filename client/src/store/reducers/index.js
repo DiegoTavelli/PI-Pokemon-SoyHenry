@@ -118,7 +118,8 @@ const reducer = (state = initialState, action) => {
       const filtDb = state.copyPokemon?.filter((p) => p.types);
       const fromDb = filtDb?.filter((p) => p.types.find((el) => el.name.toString() === action.payload));
       const both = fromApi && fromDb ? [...fromApi, ...fromDb] : null;
-      const filtAll = action.payload === 'all' ? masterCopy : both;
+      const onlyDb = pokemons1?.filter((p) => typeof p.id !== 'number');
+      const filtAll = action.payload === 'all' ? masterCopy : action.payload === 'database' ? onlyDb : both;
       return {
         ...state,
         pokemons: filtAll ? filtAll : pokemons1
