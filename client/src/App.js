@@ -32,7 +32,9 @@ function App() {
   useEffect(() => {
     // window.addEventListener('resize', setWindowDimensions);
     if (!allTypes) dispatch(getTypes());
-    dispatch(getPokemons());
+    if (!allPokemons && !allPokemons?.length) {
+      dispatch(getPokemons());
+    }
     return () => {
       dispatch(getPokemons());
     }

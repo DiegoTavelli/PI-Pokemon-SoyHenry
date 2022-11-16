@@ -134,6 +134,7 @@ function NavBar({ refresh, setShowDetail }) {
           <div className='filters' >
             <select onChange={(e) => findByType(e)} className='selectOption1' >
               <option value='all'>all types</option>
+              <option value='database'>by users</option>
               {
                 allTypes?.map((t) => {
                   return <option key={t.id} value={t.name} >{t.name}</option>
