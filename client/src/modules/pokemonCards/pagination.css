@@ -1,3 +1,7 @@
+:root {
+	--cursor-point: url('../../sources/icons8-hand-cursor-hand.png'), pointer;
+}
+
 .paginationContainer {
 }
 
@@ -28,7 +32,7 @@
 	font-size: 1.2rem;
 	/* padding: 0.5rem 1.5rem; */
 	border: 2.4px solid rgba(20, 136, 199, 0.088);
-	cursor: pointer;
+	cursor: var(--cursor-point);
 	transition: all 0.2s ease;
 	border-radius: 10px;
 }
@@ -47,7 +51,7 @@
 	font-size: 1.5rem;
 	padding: 0rem 0rem;
 	border: 0px solid rgba(20, 116, 167, 0.795);
-	cursor: pointer;
+	cursor: var(--cursor-point);
 	transition: all 0.2s ease;
 	/* border-radius: 10px; */
 	border-radius: 7px 2px 2px 7px;
@@ -75,7 +79,7 @@
 }
 
 .tresPuntosPaginate {
-	cursor: pointer;
+	cursor: var(--cursor-point);
 	margin-left: 10px;
 	color: transparent;
 	left: 5px;

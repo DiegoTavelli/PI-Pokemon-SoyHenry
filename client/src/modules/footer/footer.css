@@ -29,7 +29,7 @@
 	flex-direction: column;
 }
 .footerLink:hover {
-	cursor: pointer;
+	cursor: var(--cursor-point);
 	transform: rotate(360deg);
 	size: 100px;
 }
@@ -39,7 +39,7 @@
 	margin-right: 40px;
 }
 .footerGit:hover {
-	cursor: pointer;
+	cursor: var(--cursor-point);
 	transform: rotate(360deg);
 	size: 100px;
 }

@@ -1,3 +1,9 @@
+@media only screen and (max-width: 1363px) {
+	.spanInput {
+		display: none;
+	}
+}
+
 @media only screen and (max-width: 1024px) {
 	.allContainer {
 		/* scale: 1; */
@@ -6,14 +12,13 @@
 	.contInter {
 		margin-left: -23px;
 	}
-	.homeButton {
-	}
 }
 @media only screen and (max-width: 720px) {
 	.allContainer {
 		margin-left: -25px;
 	}
 	.contInter {
+		top: -5px;
 		margin-left: -26px;
 		max-width: 310px;
 	}
@@ -103,7 +108,8 @@
 		max-width: 230px;
 	}
 	.contInter {
-		margin-left: -83px;
+		top: -7px;
+		margin-left: -84px;
 		max-width: 220px;
 	}
 	.divInput {
@@ -111,7 +117,7 @@
 		left: -70px;
 	}
 	.searchButton {
-		left: 75%;
+		left: 71.5%;
 		top: 49px;
 	}
 	.createButton {
@@ -167,7 +173,7 @@
 	}
 	.searchButton {
 		/* scale: 0.9; */
-		left: 240px;
+		left: 237px;
 		width: 100px;
 	}
 	.contInter {
@@ -195,6 +201,7 @@
 	}
 
 	.searchButton {
+		/* position: absolute; */
 		scale: 0.9;
 		left: 65%;
 		/* width: 20px; */
@@ -213,8 +220,12 @@
 		font-size: 10px;
 	}
 	.contInter {
-		margin-left: -53px;
+		margin-left: -87px;
 		max-width: 150px;
+	}
+	.divInput {
+		position: relative;
+		left: -120px;
 	}
 	.homeButton {
 		left: 30px;

@@ -9,6 +9,9 @@ import './navBar.css';
 // import PokemonBanner from '../../images/pokemon.png'
 import setIcon from 'modules/pokemonCards/setIcon';
 import gifLoading from '../../images/gifLoading.gif'
+import useOutsideClick from '../clickHandlerOut/useOutsideClick'
+
+
 
 function NavBar({ refresh, setShowDetail }) {
 
@@ -17,8 +20,16 @@ function NavBar({ refresh, setShowDetail }) {
   const allTypes = useSelector((store) => store.types);
   const allPokemons = useSelector((store) => store.copyPokemon);
   const [pokemon, setPokemons] = useState('');
-  // const data = allPokemons ? (JSON.parse(localStorage.getItem('POKEMONS_DATA'))) : null;
-  // console.log(allPokemons)
+  const [count, setCount] = useState(1);
+
+  const handleClickOutside = () => {
+    setCount(0);
+  }
+  const ref = useOutsideClick(handleClickOutside);
+
+  const handleClickIn = () => {
+    setCount((state) => state + 1);
+  }
 
   let filterSend = allPokemons && allPokemons?.filter((p) => p.name === pokemon);
 
@@ -49,15 +60,15 @@ function NavBar({ refresh, setShowDetail }) {
   }
 
   //official - created
-  const submitFilter = (e) => {
-    dispatch(filterPokemons(e.target.value))
-    // history.push('/pokemons')
-    refresh(e.target.value);
-    setPokemons('');
-    if (setShowDetail) {
-      setShowDetail(false);
-    }
-  }
+  // const submitFilter = (e) => {
+  //   dispatch(filterPokemons(e.target.value))
+  //   // history.push('/pokemons')
+  //   refresh(e.target.value);
+  //   setPokemons('');
+  //   if (setShowDetail) {
+  //     setShowDetail(false);
+  //   }
+  // }
 
   const submitAZ = (e) => {
     dispatch(filterAZ(e.target.value));
@@ -104,6 +115,8 @@ function NavBar({ refresh, setShowDetail }) {
             <div className='inputContainer'>
               <div className='searchInputContainer' >
                 <input
+                  ref={ref}
+                  onClick={handleClickIn}
                   autoComplete='off'
                   type="text"
                   id='searchpkm'
@@ -114,7 +127,7 @@ function NavBar({ refresh, setShowDetail }) {
                 />
               </div>
               <div className='searchButtonContainer' >
-                <button type='submit' disabled={!pokemon} className='searchButton'>Search</button>
+                <div type='submit' disabled={!pokemon} className='searchButton'>Search</div>
               </div>
             </div>
           </form>
@@ -141,28 +154,32 @@ function NavBar({ refresh, setShowDetail }) {
           </div>
         </nav>
         <div className='dropdown'>
-          <div className='contInter'>
-            {allPokemons ?
-              allPokemons?.filter((p) => {
-                return p.name.includes(pokemon.toLowerCase()) &&
-                  pokemon.length > 1 &&
-                  p.name !== pokemon
-              }).map((e, index) =>
-                index < 10 &&
-                <div key={e.id} className='divInput'>
-                  <div
-                    onClick={(ev) => submitOnClick(ev, e.name)}
-                    className='spanInput'
-                  >
-                    {e.name}
-                    <div className='spanType'>
-                      {`${setIcon(e)}`}
+          <div
+            className='contInter'
+            ref={ref}
+            onClick={handleClickIn}>
+            {
+              allPokemons && count ?
+                allPokemons?.filter((p) => {
+                  return p.name.includes(pokemon.toLowerCase()) &&
+                    pokemon.length > 1 &&
+                    p.name !== pokemon
+                }).map((e, index) =>
+                  index < 10 &&
+                  <div key={e.id} className='divInput'>
+                    <div
+                      onClick={(ev) => submitOnClick(ev, e.name)}
+                      className='spanInput'
+                    >
+                      {e.name}
+                      <div className='spanType'>
+                        {`${setIcon(e)}`}
+                      </div>
                     </div>
                   </div>
-                </div>
-              )
-              : !allPokemons && pokemon ?
-                <img src={gifLoading} className='gifLoading' alt='' /> : null
+                )
+                : !allPokemons && pokemon?.length > 1 ?
+                  <img src={gifLoading} className='gifLoading' alt='' /> : null
             }
           </div>
         </div>

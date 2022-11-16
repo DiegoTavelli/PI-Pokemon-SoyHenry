@@ -1,3 +1,8 @@
+:root {
+	--cursor-default: url('../src/sources/icons8-cursor-2.png'), pointer;
+	--cursor-point: url('../src/sources/icons8-hand-cursor-hand.png'), pointer;
+}
+
 body {
 	background-image: radial-gradient(#c31e24, rgba(8, 8, 122, 0.95));
 	overflow-y: auto;
@@ -8,6 +13,7 @@ body {
 		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	cursor: url('../src/sources/icons8-cursor-2.png'), pointer;
 }
 
 code {
