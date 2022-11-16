@@ -47,7 +47,7 @@ const Pagination = ({ pkmnPerPage, totalPkmn, paginate, currentPage }) => {
           onClick={() => paginate(1)}
           className='tresPuntosPaginate'
           style={
-            currentPage > 3 ? { color: 'aliceblue' } : null}
+            currentPage > 3 ? { color: 'aliceblue' } : { cursor: 'var(--cursor-default)' }}
         > ...</p>
         {
           pageNumbers && pageNumbers.map((number) => {
@@ -89,7 +89,7 @@ const Pagination = ({ pkmnPerPage, totalPkmn, paginate, currentPage }) => {
           className='tresPuntosPaginate'
           style={
             currentPage < pageNumbers.length - 2 ?
-              { color: 'aliceblue' } : null}
+              { color: 'aliceblue' } : { cursor: 'var(--cursor-default)' }}
         > ... </p>
         {pageNumbers.length > 1 ?
           <button
