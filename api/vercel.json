@@ -14,7 +14,7 @@
     }
   ],
   "env": {
-    "DB_HOST":"localhost",
+    "DB_HOST":"peanut.db.elephantsql.com",
     "DB_PASSWORD": "postgres",
    "DB_USER": "postgres"
   }
