@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "name": "pokemon-app-db",
   "builds": [
     {
       "src": "./index.js",
@@ -11,5 +12,10 @@
       "src": "/(.*)",
       "dest": "/"
     }
-  ]
+  ],
+  "env": {
+    "DB_HOST":"localhost",
+    "DB_PASSWORD": "postgres",
+   "DB_USER": "postgres"
+  }
 }
