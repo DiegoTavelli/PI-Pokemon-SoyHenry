@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "pokemon-app-db",
+  "name": "api",
   "builds": [
     {
       "src": "./index.js",
