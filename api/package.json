@@ -1,10 +1,10 @@
 {
-  "name": "api",
+  "name": "pokemon-app-db",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "nodemon -L",
     "test": "mocha -w ./tests/**/*.spec.js --timeout 10000"
   },
   "author": "Henry",
