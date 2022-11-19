@@ -8,8 +8,8 @@ const {
 } = process.env;
 
 const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/pokemon`, {
-  logging: false,
-  native: false,
+  // logging: false,
+  // native: false,
 });
 const basename = path.basename(__filename);
 
