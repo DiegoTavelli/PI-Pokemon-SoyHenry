@@ -77,18 +77,18 @@ router.post('/', async (req, res, next) => {
   }
 });
 
-//delete by ID
-// router.delete('/:id', async (req, res) => {
-//   const { id } = req.params;
-//   const findToDeleteByID = await Pokemon.findOne({
-//     where: {
-//       id: id
-//     }
-//   });
-//   return res.json(await findToDeleteByID.destroy({
-//     truncate: true
-//   }));
-// });
+// delete by ID
+router.delete('/:id', async (req, res) => {
+  const { id } = req.params;
+  const findToDeleteByID = await Pokemon.findOne({
+    where: {
+      id: id
+    }
+  });
+  return res.json(await findToDeleteByID.destroy({
+    truncate: true
+  }));
+});
 
 //delete by Name
 try {
