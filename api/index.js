@@ -21,7 +21,11 @@ const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
 const { getTypes } = require('./src/middlewares/middlewareType.js')
 
-getTypes();
+try {
+  getTypes();
+} catch (e) {
+  console.log('--Error on Index getType Function', e)
+}
 
 const PORT = process.env.PORT || 3001
 // Syncing all the models at once.
