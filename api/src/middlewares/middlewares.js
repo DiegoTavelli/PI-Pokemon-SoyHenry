@@ -33,7 +33,7 @@ const getAll = async () => {
     const db = await Pokemon.findAll({
       include: {
         model: Type,
-        as: 'types'
+        as: 'type'
       }
     });
     if (db.length) {
@@ -58,7 +58,7 @@ const getByName = async (name) => {
       },
       include: {
         model: Type,
-        as: 'types'
+        as: 'type'
       }
     });//
     if (fromDb) return fromDb;
@@ -94,7 +94,7 @@ const getById = async (id) => {
         id, {
         include: {
           model: Type,
-          as: 'types'
+          as: 'type'
         }
       });
       if (fromDb) return fromDb;
