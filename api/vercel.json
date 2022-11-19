@@ -14,8 +14,8 @@
     }
   ],
   "env": {
-    "DB_HOST":"host-db",
-    "DB_PASSWORD": "password-db",
-   "DB_USER": "user-db"
+    "DB_HOST":"peanut.db.elephantsql.com",
+    "DB_PASSWORD": "zNapAdDWMbTbHtyhuvPxiikZAgUG57WQ",
+   "DB_USER": "rwubqeca"
   }
 }
