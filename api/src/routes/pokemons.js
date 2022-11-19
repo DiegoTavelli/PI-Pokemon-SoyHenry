@@ -6,10 +6,9 @@ const { getAll, getById, getByName } = require('../middlewares/middlewares')
 
 
 router.get('/', async (req, res) => {
-  const name = req.query.name;
-  console.log(name)
   try {
-    if (name) {
+    if (req.query.name) {
+      const { name } = req.query;
       let byName = await getByName(name);
       return res.send(byName);
     }
