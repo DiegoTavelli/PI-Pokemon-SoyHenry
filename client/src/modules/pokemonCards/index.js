@@ -17,6 +17,7 @@ function PokemonCards({ refresh, pokemons, showDetail, setShowDetail }) {
   const [/*isRefreshed */, setIsRefreshed] = useState('');
   const [allData, setAllData] = useState([])
 
+
   const setLocalStorage = () => {
     if (pokemons && pokemons?.length > 2) {
       const verify = pokemons && pokemons.length > 2 ? pokemons : null;
@@ -72,7 +73,13 @@ function PokemonCards({ refresh, pokemons, showDetail, setShowDetail }) {
             : null
         }
         {
-          pokemons ?
+          !pokemons && !pokemons?.length ?
+            <div>
+              <img src={ballWaiting} style={{ marginTop: '150px' }} alt='Loading...' className='waitingBall' />
+              <br></br>
+              <img src={loading} style={{ marginTop: '150px' }} alt='Loading...' className='loading' />
+            </div>
+            :
             <div>
               <Mapping
                 showDetail={showDetail}
@@ -90,13 +97,8 @@ function PokemonCards({ refresh, pokemons, showDetail, setShowDetail }) {
                 />
               </div>
             </div>
-            :
-            <div>
-              <img src={ballWaiting} style={{ marginTop: '150px' }} alt='Loading...' className='waitingBall' />
-              <br></br>
-              <img src={loading} style={{ marginTop: '150px' }} alt='Loading...' className='loading' />
-            </div>
         }
+
       </div>
     </div>
 };

@@ -357,7 +357,7 @@
 	.rightArrowModal {
 		position: sticky;
 		/* align-items: center; */
-		margin-left: 406px;
+		margin-left: 370px;
 		margin-bottom: 200px;
 	}
 
@@ -481,7 +481,7 @@
 	.rightArrowModal {
 		/* position: absolute; */
 		scale: 0.7;
-		margin-left: 325px;
+		margin-left: 285px;
 		margin-top: 50%;
 	}
 

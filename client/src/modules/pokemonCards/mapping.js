@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
-// import { Link } from 'react-router-dom';
-import setIcon from './setIcon';
-import { useDispatch, useSelector } from 'react-redux';
-import { getByName } from 'store/actions/getByNameActions';
-import { clearPokemon } from 'store/actions/clearPokemonActions';
-import pokeBall from 'images/pokeball.png'
-import giphy from 'images/giphy.webp'
 import './index.css'
+import { useDispatch } from 'react-redux';
+import { getByName } from 'store/actions/getByNameActions';
+import setIcon from './setIcon';
+// import { clearPokemon } from 'store/actions/clearPokemonActions';
+import pokeBall from 'images/pokeball.png'
 import backImage from '../../images/backCard2.png'
+
+
 const Mapping = ({ showDetail, pokemons, paginate, refresh, setShowDetail }) => {
 
   const dispatch = useDispatch();
@@ -34,7 +34,7 @@ const Mapping = ({ showDetail, pokemons, paginate, refresh, setShowDetail }) => 
 
   return (
 
-    <div className='backgroundIndex' style={{ marginTop: '130px' }}  >
+    <div className='backgroundIndex' style={{ marginTop: '140px' }}  >
       {
         pokemons && pokemons?.map((pokemon) => {
           let typesTo = [];

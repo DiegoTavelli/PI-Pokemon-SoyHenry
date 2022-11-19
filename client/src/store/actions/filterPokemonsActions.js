@@ -1,17 +1,9 @@
 
-export const FILTER_POKEMONS = 'FILTER_POKEMONS';
+
 export const FILTER_AZ = 'FILTER_AZ';
 export const FILTER_TYPE = 'FILTER_TYPE';
 export const FILTER_ATTACK = 'FILTER_ATTACK';
 
-export function filterPokemons(payload) {
-  return (dispatch) => {
-    return dispatch({
-      type: FILTER_POKEMONS,
-      payload: payload,
-    });
-  }
-}
 
 export function filterAZ(payload) {
   return (dispatch) => {
