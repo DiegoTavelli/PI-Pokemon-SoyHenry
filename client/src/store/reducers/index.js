@@ -3,7 +3,7 @@ import { GET_DETAILS } from '../actions/detailCardActions'
 import { GET_BY_NAME } from '../actions/getByNameActions'
 import { GET_TYPES } from '../actions/getTypesActions'
 import { CLEAR_POKEMON } from '../actions/clearPokemonActions';
-import { FILTER_AZ, FILTER_POKEMONS, FILTER_TYPE } from '../actions/filterPokemonsActions'
+import { FILTER_AZ, FILTER_TYPE } from '../actions/filterPokemonsActions'
 import { CREATE_POKEMON } from 'store/actions/createPokemonActions';
 import { SET_POKEMONS } from '../actions/setPokemons'
 
@@ -50,16 +50,6 @@ const reducer = (state = initialState, action) => {
         ...state,
         byName: action.payload,
         details: action.payload,
-      };
-    case FILTER_POKEMONS:
-      const pkmState = state?.copyPokemon;
-      let pkmFilter =
-        action.payload === 'official' ?
-          pkmState?.filter((p) => typeof p.id === 'number') :
-          pkmState?.filter((p) => typeof p.id !== 'number')
-      return {
-        ...state,
-        pokemons: action.payload === 'all' ? pkmState : pkmFilter,
       };
     case FILTER_AZ:
       const masterFilterAZ = state?.pokemons;
@@ -110,16 +100,14 @@ const reducer = (state = initialState, action) => {
         pokemons: sort
       };
     case FILTER_TYPE:
-      const masterCopy = state?.copyPokemon;
       const pokemons1 = state?.copyPokemon;
       const filtApi = pokemons1?.filter((p) => p.type);
-      const fromApi = filtApi?.filter((p) => p.type.find((el) => el.toString() === action.payload));
-
-      const filtDb = state.copyPokemon?.filter((p) => p.types);
-      const fromDb = filtDb?.filter((p) => p.types.find((el) => el.name.toString() === action.payload));
-      const both = fromApi && fromDb ? [...fromApi, ...fromDb] : null;
+      const fromApi = filtApi?.filter((p) => p.type?.find((el) => el.toString() === action.payload));
+      // const filtDb = state.copyPokemon?.filter((p) => p.types);
+      // const fromDb = filtDb?.filter((p) => p.types.find((el) => el.name.toString() === action.payload));
+      // const both = fromApi && fromDb ? [...fromApi, ...fromDb] : null;
       const onlyDb = pokemons1?.filter((p) => typeof p.id !== 'number');
-      const filtAll = action.payload === 'all' ? masterCopy : action.payload === 'database' ? onlyDb : both;
+      const filtAll = action.payload === 'all' ? pokemons1 : action.payload === 'database' ? onlyDb : fromApi;
       return {
         ...state,
         pokemons: filtAll ? filtAll : pokemons1

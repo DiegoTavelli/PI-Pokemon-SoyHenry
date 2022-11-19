@@ -12,8 +12,8 @@ import { clearPokemon } from 'store/actions/clearPokemonActions';
 import pokeBall from 'images/pokeball.png'
 import ballWaiting from 'images/ballWaiting3.gif'
 import closeIcon from '../../images/X.png'
-import leftArrow from '../../images/leftArrow.png'
-import rightArrow from '../../images/rightArrow.png'
+import leftArrow from '../../images/leftArrow2.png'
+import rightArrow from '../../images/rightArrow2.png'
 
 
 function DetailCard({ byName, setShowDetail }) {

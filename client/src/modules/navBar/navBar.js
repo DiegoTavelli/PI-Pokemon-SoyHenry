@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { filterAZ, filterPokemons, filterType } from 'store/actions/filterPokemonsActions'
+import React, { useEffect, useState } from 'react';
+import { filterAZ, filterType } from 'store/actions/filterPokemonsActions'
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-// import { getPokemons } from 'store/actions/pokemonActions';
+import { getPokemons } from 'store/actions/pokemonActions';
 import { getByName } from 'store/actions/getByNameActions';
 import { clearPokemon } from 'store/actions/clearPokemonActions';
 import './navBar.css';
@@ -21,6 +21,12 @@ function NavBar({ refresh, setShowDetail }) {
   const allPokemons = useSelector((store) => store.copyPokemon);
   const [pokemon, setPokemons] = useState('');
   const [count, setCount] = useState(1);
+
+  useEffect(() => {
+    return () => {
+      dispatch(getPokemons());
+    }
+  }, [dispatch])
 
   const handleClickOutside = () => {
     setCount(0);
@@ -58,17 +64,6 @@ function NavBar({ refresh, setShowDetail }) {
   const handleInputChange = (e) => {
     setPokemons(e.target.value);
   }
-
-  //official - created
-  // const submitFilter = (e) => {
-  //   dispatch(filterPokemons(e.target.value))
-  //   // history.push('/pokemons')
-  //   refresh(e.target.value);
-  //   setPokemons('');
-  //   if (setShowDetail) {
-  //     setShowDetail(false);
-  //   }
-  // }
 
   const submitAZ = (e) => {
     dispatch(filterAZ(e.target.value));
@@ -147,11 +142,6 @@ function NavBar({ refresh, setShowDetail }) {
               <option value='up'>⬆Atack</option>
               <option value='down'>⬇Atack</option>
             </select>
-            {/* <select onChange={(e) => submitFilter(e)} className='selectOption3' >
-              <option value='all'>all origins</option>
-              <option value='official'>Officials</option>
-              <option value='created'>Created</option>
-            </select> */}
           </div>
         </nav>
         <div className='dropdown'>
@@ -179,7 +169,7 @@ function NavBar({ refresh, setShowDetail }) {
                     </div>
                   </div>
                 )
-                : !allPokemons && pokemon?.length > 1 ?
+                : !allPokemons && pokemon?.length > 1 && count !== 0 ?
                   <img src={gifLoading} className='gifLoading' alt='' /> : null
             }
           </div>

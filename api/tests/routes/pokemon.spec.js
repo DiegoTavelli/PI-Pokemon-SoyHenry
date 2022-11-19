@@ -28,12 +28,6 @@ describe('Route Tests', () => {
       describe('GET /anyBadRequest', () => {
         it('expect 404 response', () => agent.get('/anyBadRequest').expect(404));
       });
-
     });
   });
-
-
-
-
-
 })

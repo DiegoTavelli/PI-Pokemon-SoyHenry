@@ -77,17 +77,41 @@ router.post('/', async (req, res, next) => {
   }
 });
 
-router.delete('/:id', async (req, res) => {
-  const { id } = req.params;
-  const findToDelete = await Pokemon.findOne({
-    where: {
-      id: id
+//delete by ID
+// router.delete('/:id', async (req, res) => {
+//   const { id } = req.params;
+//   const findToDeleteByID = await Pokemon.findOne({
+//     where: {
+//       id: id
+//     }
+//   });
+//   return res.json(await findToDeleteByID.destroy({
+//     truncate: true
+//   }));
+// });
+
+//delete by Name
+try {
+  router.delete('/delete', async (req, res) => {
+    const { name } = req.body;
+    const findToDeleteByName = await Pokemon.findOne({
+      where: {
+        name: name
+      }
+    });
+    await findToDeleteByName.destroy({
+      truncate: true
+    });
+    if (findToDeleteByName) {
+      return res.status(200).send({ info: 'se borro' });
     }
+    return res.status(400).send({ info: 'NO se borro' });
   });
-  return res.json(await findToDelete.destroy({
-    truncate: true
-  }));
-});
+}
+catch (e) {
+  console.log('Error on deleteByID Route', e)
+}
+
 
 
 
