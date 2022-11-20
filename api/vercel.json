@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "name": "api",
+  "builds": [
+    {
+      "src": "./index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/"
+    }
+  ],
+  "env": {
+    "DB_HOST":"peanut.db.elephantsql.com",
+    "DB_PASSWORD": "zNapAdDWMbTbHtyhuvPxiikZAgUG57WQ",
+   "DB_USER": "rwubqeca"
+  }
+}
