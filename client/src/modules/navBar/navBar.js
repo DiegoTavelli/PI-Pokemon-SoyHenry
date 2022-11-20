@@ -179,10 +179,10 @@ function NavBar({ refresh, setShowDetail }) {
   } else if (window.location.pathname === '/create') {
     return (
       <nav className='formNavDetails'>
-        <div className='homeAndCreate'>
-          <button onClick={handleGoBack} className='homeButton homeButtonDetails'>Go Back</button>
-          <button onClick={handleCreate} className='createButton'>Create</button>
-        </div>
+        {/* <div className='homeAndCreate'> */}
+        <button onClick={handleGoBack} className='homeButtonCreate homeButtonDetails'>Go Back</button>
+        {/* <button onClick={handleCreate} className='createButton'>Create</button> */}
+        {/* </div> */}
       </nav>
     )
   }

@@ -176,3 +176,67 @@ img {
 	justify-content: center;
 	margin-top: -500px;
 }
+
+@media only screen and (max-width: 1024px) {
+	.Card {
+		scale: 0.9;
+		margin: -4px;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.backgroundIndex {
+		width: 102%;
+	}
+
+	.Card {
+		scale: 0.75;
+		margin: -32px;
+	}
+}
+
+@media only screen and (max-width: 734px) {
+	.backgroundIndex {
+		margin-left: -70px;
+		width: 110%;
+	}
+
+	.Card {
+		scale: 0.7;
+		margin: -42px -78px -70px 0px;
+	}
+}
+
+@media only screen and (max-width: 687px) {
+	.backgroundIndex {
+		margin-left: auto;
+		width: 90%;
+	}
+
+	.Card {
+		/* scale: 0.7; */
+		margin: -20px -20px -90px -60px;
+	}
+}
+
+@media only screen and (max-width: 490px) {
+	.backgroundIndex {
+		width: 100%;
+	}
+
+	.Card {
+		position: relative;
+		scale: 0.95;
+		margin-top: 0px;
+		margin-bottom: 0px;
+		margin-left: 12px;
+		margin-right: 12px;
+	}
+}
+
+@media only screen and (max-width: 297px) {
+	.Card {
+		scale: 0.8;
+		margin: -30px;
+	}
+}
