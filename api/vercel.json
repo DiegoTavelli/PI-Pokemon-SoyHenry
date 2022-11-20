@@ -1,7 +1,12 @@
 {
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/"
+    }
+  ],
   "headers": [
     {
-      "source": "/(.*)",
       "headers": [
         { "key": "Access-Control-Allow-Credentials", "value": "true" },
         { "key": "Access-Control-Allow-Origin", "value": "*" },
@@ -18,7 +23,7 @@
       "use": "@vercel/node"
     }
   ],
-    "env": {
+   "env": {
     "DB_HOST":"peanut.db.elephantsql.com",
     "DB_PASSWORD": "zNapAdDWMbTbHtyhuvPxiikZAgUG57WQ",
    "DB_USER": "rwubqeca"
