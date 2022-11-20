@@ -64,7 +64,7 @@ const getByName = async (name) => {
     if (fromDb) return fromDb;
     let pokeName = {};
     const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`);
-    const r = response.data;
+    const r = await response.data;
     pokeName = {
       id: r.id,
       name: r.name,
