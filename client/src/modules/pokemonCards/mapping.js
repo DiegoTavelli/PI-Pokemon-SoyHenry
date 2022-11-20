@@ -33,7 +33,6 @@ const Mapping = ({ showDetail, pokemons, paginate, refresh, setShowDetail }) => 
 
 
   return (
-
     <div className='backgroundIndex' style={{ marginTop: '140px' }}  >
       {
         pokemons && pokemons?.map((pokemon) => {

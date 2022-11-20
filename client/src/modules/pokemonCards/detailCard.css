@@ -80,7 +80,7 @@
 	/* background-attachment: fixed; */
 	background-size: 150%;
 	box-shadow: 0.5px 0.5px 20px 10px rgb(9, 5, 75);
-	filter: blur(0px);
+	filter: blur(0.4px);
 	/* margin-bottom: -200px; */
 	border-radius: 20px;
 	align-items: center;
@@ -147,9 +147,6 @@
 	bottom: 0%;
 	left: 20%;
 	animation: opacityFx 1.5s ease-in-out;
-}
-
-.firstFx {
 }
 
 .cardNotFound {

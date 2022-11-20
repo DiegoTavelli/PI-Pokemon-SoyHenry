@@ -31,9 +31,9 @@
 	}
 	.divInput {
 		position: relative;
-		left: -20px;
-		border-top: 0px solid transparent;
-		max-width: 270px;
+		left: -30px;
+		border: none;
+		max-width: 338px;
 	}
 	.spanInput {
 		margin-left: -20px;
@@ -79,6 +79,11 @@
 		font-size: 13px;
 		width: 80px;
 	}
+	.divInput {
+		position: relative;
+		left: -40px;
+		max-width: 320px;
+	}
 }
 @media only screen and (max-width: 422px) {
 	.allContainer {
@@ -94,7 +99,8 @@
 	}
 	.divInput {
 		position: relative;
-		left: -60px;
+		left: -65px;
+		max-width: 305px;
 	}
 	.searchButton {
 		left: 73%;
@@ -114,7 +120,8 @@
 	}
 	.divInput {
 		position: relative;
-		left: -70px;
+		left: -80px;
+		max-width: 297px;
 	}
 	.searchButton {
 		left: 71.5%;
@@ -149,7 +156,8 @@
 	}
 	.divInput {
 		position: relative;
-		left: -80px;
+		left: -90px;
+		max-width: 288px;
 	}
 	.searchButton {
 		/* position: relative; */
@@ -182,7 +190,8 @@
 	}
 	.divInput {
 		position: relative;
-		left: -90px;
+		left: -100px;
+		max-width: 290px;
 	}
 	.createButton {
 		scale: 0.8;
@@ -226,6 +235,7 @@
 	.divInput {
 		position: relative;
 		left: -120px;
+		max-width: 267px;
 	}
 	.homeButton {
 		left: 30px;

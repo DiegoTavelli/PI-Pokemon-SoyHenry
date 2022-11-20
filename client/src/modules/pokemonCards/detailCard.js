@@ -20,6 +20,7 @@ function DetailCard({ byName, setShowDetail }) {
 
   const dispatch = useDispatch();
   let idCheck = 0;
+  let random = Math.floor(Math.random() * -60 + Math.random() * 60);
 
   const closeModal = (e) => {
     dispatch(clearPokemon())
@@ -42,6 +43,9 @@ function DetailCard({ byName, setShowDetail }) {
     }
   }
 
+
+
+
   return (
     <div style={{ position: 'relative' }} >
       <div className='allDetailCard' >
@@ -54,7 +58,7 @@ function DetailCard({ byName, setShowDetail }) {
               alt=''
             />
           </div>
-          <div className='card'>
+          <div className='card' style={{ filter: `hue-rotate(${random}deg)` }} >
             <br></br>
             <p className='detailName' >{byName ? byName.name : ''}</p>
             <p className={byName?.id ? typeof byName.id === 'number' ? 'parrafId' : 'parrafId idDb' : null}
