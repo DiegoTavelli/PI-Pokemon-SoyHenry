@@ -31,6 +31,6 @@ const PORT = process.env.PORT || 8080
 // Syncing all the models at once.
 conn.sync({ force: false }).then(() => {
   server.listen(PORT, () => {
-    console.log('%s listening at 8080'); // eslint-disable-line no-console
+    console.log('%s listening at 8080'); // 8080 - 3001
   });
 });
