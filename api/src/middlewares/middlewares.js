@@ -58,7 +58,6 @@ const getByName = async (name) => {
       },
       include: {
         model: Type,
-        as: 'type'
       }
     });//
     if (fromDb) return fromDb;

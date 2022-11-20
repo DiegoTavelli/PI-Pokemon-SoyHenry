@@ -186,6 +186,16 @@
 	max-width: 220px;
 	box-shadow: 1px 1px 20px 1px rgb(9, 5, 75);
 	margin-bottom: 20px;
+	animation: waitingBallAnim 1s ease-in-out;
+}
+
+@keyframes waitingBallAnim {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 .detailPicNotFound {
