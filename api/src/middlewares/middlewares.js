@@ -33,7 +33,7 @@ const getAll = async () => {
     const db = await Pokemon.findAll({
       include: {
         model: Type,
-        as: 'type'
+        as: 'types'
       }
     });
     if (db.length) {
