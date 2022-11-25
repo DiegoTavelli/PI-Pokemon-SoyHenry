@@ -203,7 +203,7 @@
 	}
 }
 
-@media only screen and (max-width: 321px) {
+@media only screen and (max-width: 342px) {
 	.searchInput {
 		margin-left: -40%;
 		max-width: 160px;

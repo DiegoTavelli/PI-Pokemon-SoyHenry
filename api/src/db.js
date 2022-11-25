@@ -55,7 +55,7 @@ module.exports = {
 };
 
 
-//   postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/pokemon`,
+//   postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/pokemon
 
 // const sequelize = new Sequelize(DATABASE_URL, {
 //   logging: false, // set to console.log to see the raw SQL queries

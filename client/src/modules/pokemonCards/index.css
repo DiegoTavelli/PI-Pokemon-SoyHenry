@@ -219,7 +219,7 @@ img {
 	}
 }
 
-@media only screen and (max-width: 490px) {
+@media only screen and (max-width: 506px) {
 	.backgroundIndex {
 		width: 100%;
 	}
