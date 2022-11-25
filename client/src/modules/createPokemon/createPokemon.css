@@ -189,6 +189,8 @@ input::placeholder {
 	.pokemonBanner {
 		margin-top: 10px;
 	}
+	.createForm {
+	}
 }
 
 @media only screen and (max-width: 350px) {
