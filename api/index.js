@@ -27,10 +27,10 @@ try {
   console.log('--Error on Index getType Function', e)
 }
 
-const PORT = process.env.PORT || 3001
+const PORT = process.env.PORT || 8080
 // Syncing all the models at once.
 conn.sync({ force: false }).then(() => {
   server.listen(PORT, () => {
-    console.log('%s listening at 3001'); // 8080 - 3001
+    console.log('%s listening at 8080'); // 8080 - 3001
   });
 });
